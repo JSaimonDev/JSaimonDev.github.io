@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import hero_image from "../../public/images/Home-hero-ready.jpg";
-import Card_review from "../components/Card-review.astro";
+import CardReview from "../components/CardReview.astro";
+import CardList from "../components/CardList.astro";
 import { firms } from "@/libs/data/firms";
+import { lists } from "@/libs/data/lists";
 ---
 
 <Layout title="The GodFunded">
@@ -16,36 +18,79 @@ import { firms } from "@/libs/data/firms";
         id="hero_image"
       />
     </div>
-    <section class="mb-12">
-      <div class="flex justify-center gap-12 mb-20">
-        <Card_review logo={firms.FTMO.logo} />
-        <Card_review logo={firms.TFT.logo} />
-        <Card_review logo={firms.FundedNext.logo} />
-      </div>
-      <div class="flex justify-center">
-        <button
-          class="border-[#2F2F2F] border-4 px-12 py-6 text-2xl font-medium scale-100 hover:scale-105 ease-in-out duration-300"
+    <div class="flex flex-col items-center">
+      <section class="mb-36">
+        <div class="flex justify-center gap-[50px] mb-20">
+          <CardReview logo={firms.FTMO.logo} />
+          <CardReview logo={firms.TFT.logo} />
+          <CardReview logo={firms.FundedNext.logo} />
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="border-[#2F2F2F] border-4 px-12 py-6 text-2xl font-medium scale-100 hover:scale-105 ease-in-out duration-300"
+          >
+            Más empresas de fondeo</button
+          >
+        </div>
+      </section>
+      <section class="w-full bg-dark-grey p-[60px] flex flex-col items-center">
+        <h2
+          class="text-8xl corleone text-[#FFF] mb-16 tracking-wide squeezed-corleone"
         >
-          Más empresas de fondeo</button
-        >
-      </div>
-    </section>
-    <section class="w-[900px] h-[1200px] bg-dark-grey"></section>
+          Listas
+        </h2>
+        <div class="grid grid-cols-2 gap-[60px] w-[1300px] mb-20">
+          <CardList
+            name={lists.noSL.name}
+            shortDescription={lists.noSL.shortDescription}
+          />
+          <CardList
+            name={lists.noTimeLimit.name}
+            shortDescription={lists.noTimeLimit.shortDescription}
+          />
+          <CardList
+            name={lists.EA.name}
+            shortDescription={lists.EA.shortDescription}
+          />
+          <CardList
+            name={lists.tradingView.name}
+            shortDescription={lists.tradingView.shortDescription}
+          />
+          <CardList
+            name={lists.crypto.name}
+            shortDescription={lists.EA.shortDescription}
+          />
+          <CardList
+            name={lists.weekend.name}
+            shortDescription={lists.tradingView.shortDescription}
+          />
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="border-[#FFF] text-[#FFF] border-4 px-12 py-6 text-2xl font-medium scale-100 hover:scale-105 ease-in-out duration-300"
+          >
+            Más listas</button
+          >
+        </div>
+      </section>
+    </div>
+    <style>
+      main {
+        margin: auto;
+        max-width: calc(100%);
+        color: #2f2f2f;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+      #hero_image {
+        clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 87%);
+      }
+      #hero_image_wrap {
+        filter: drop-shadow(0 3px 3px rgba(50, 50, 0, 0.5));
+      }
+      .squeezed-corleone {
+        transform: scale(1, 0.9);
+      }
+    </style>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    max-width: calc(100%);
-    color: #2f2f2f;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  #hero_image {
-    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 87%);
-  }
-  #hero_image_wrap {
-    filter: drop-shadow(0 3px 3px rgba(50, 50, 0, 0.5));
-  }
-</style>
