@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Layout/Header.astro";
+import Footer from "@/components/Layout/Footer.astro";
 interface Props {
   title: string;
 }
@@ -22,6 +23,7 @@ const { title } = Astro.props;
       <Header />
     </div>
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -54,6 +56,9 @@ const { title } = Astro.props;
   .corleone {
     font-family: "Corleone", system-ui, sans-serif;
   }
+  .greatVibes {
+    font-family: "GreatVibes", system-ui, sans-serif;
+  }
   #header {
     position: relative;
     z-index: 1;
@@ -69,6 +74,13 @@ const { title } = Astro.props;
   @font-face {
     font-family: "Corleone";
     src: url("/fonts/Corleone.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "GreatVibes";
+    src: url("/fonts/GreatVibes.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

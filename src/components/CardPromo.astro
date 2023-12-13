@@ -1,0 +1,37 @@
+---
+import { type Promotion } from "@/libs/data/promotions";
+
+interface Props {
+  promotion: Promotion;
+  logo?: string;
+}
+
+const { promotion, logo } = Astro.props;
+---
+
+<div
+  class="w-[250px] h-[250px] rounded-full bg-radial border-[3px] border-medium-grey relative cursor-pointer"
+>
+  <div class="absolute">
+    <img
+      src={logo}
+      class="rounded-full opacity-0 hover:opacity-100 ease-in-out duration-300"
+    />
+  </div>
+  <div
+    class="h-full w-full rounded-full border-light-grey border-[3px] flex flex-col justify-center items-center text-[#FFF] text-base text-center gap-2"
+  >
+    <h3 class="text-6xl">
+      {promotion.discount}%
+    </h3>
+    <p>{promotion.benefit1}</p>
+    <p>{promotion.benefit2}</p>
+    <p>{promotion.benefit3}</p>
+  </div>
+
+  <style>
+    .bg-radial {
+      background: radial-gradient(circle at center, #1e4463, #0c2338);
+    }
+  </style>
+</div>
