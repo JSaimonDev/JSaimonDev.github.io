@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import hero_image from "../../public/images/Archive-hero.webp";
+import hero_image from "../../public/images/Detective-office.webp";
 import Layout from "@/layouts/Layout.astro";
-import GridCardList from "../components/cards/GridCardList.astro";
+import GridCardReview from "../components/cards/GridCardReview.astro";
 ---
 
 <Layout title="Reseñas">
@@ -16,7 +16,7 @@ import GridCardList from "../components/cards/GridCardList.astro";
         <h1
           class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
         >
-          Listas
+          Reviews
         </h1>
       </div>
       <div class="h-full">
@@ -27,6 +27,6 @@ import GridCardList from "../components/cards/GridCardList.astro";
         />
       </div>
     </div>
-    <GridCardList />
+    <GridCardReview />
   </main>
 </Layout>

@@ -10,7 +10,7 @@ const { promotion, logo } = Astro.props;
 ---
 
 <div
-  class="w-[250px] h-[250px] rounded-full bg-radial border-[3px] border-medium-grey relative cursor-pointer"
+  class="w-[250px] h-[250px] rounded-full relative cursor-pointer border-light-grey border-[8px]"
 >
   <div class="absolute">
     <img
@@ -19,19 +19,13 @@ const { promotion, logo } = Astro.props;
     />
   </div>
   <div
-    class="h-full w-full rounded-full border-light-grey border-[3px] flex flex-col justify-center items-center text-[#FFF] text-base text-center gap-2"
+    class="h-full w-full rounded-full flex flex-col justify-center items-center text-light-grey text-base text-center gap-2 p-[20px]"
   >
-    <h3 class="text-6xl">
+    <h3 class="text-7xl font-bold">
       {promotion.discount}%
     </h3>
     <p>{promotion.benefit1}</p>
     <p>{promotion.benefit2}</p>
     <p>{promotion.benefit3}</p>
   </div>
-
-  <style>
-    .bg-radial {
-      background: radial-gradient(circle at center, #1e4463, #0c2338);
-    }
-  </style>
 </div>

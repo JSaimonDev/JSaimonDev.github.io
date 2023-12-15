@@ -6,6 +6,7 @@ export default {
       "dark-grey": "#2F2F2F",
       "medium-grey": "#848484",
       "light-grey": "#E9E9E9",
+      orange: "#D95613",
     },
     extend: {},
   },

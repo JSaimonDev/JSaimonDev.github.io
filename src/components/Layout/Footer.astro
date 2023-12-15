@@ -1,13 +1,26 @@
 ---
 import { disclaimer } from "@/libs/data/legal";
+import { Image } from "astro:assets";
+import logo from "../../../public/icons/The-GodFunded-logo-light.svg";
 ---
 
 <div
-  class="bg-dark-grey h-[140px] w-full text-[#FFF] flex flex-col items-center gap-[20px] p-[20px]"
+  class="bg-dark-grey w-full text-[#FFF] flex items-center justify-between gap-[80px] py-[30px] px-[60px]"
 >
-  <p class="text-center w-[1000px] text-xs">{disclaimer}</p>
-  <div class="flex flex-row justify-between w-[600px]">
-    <p>Política de privacidad</p>
-    <p>Condiciones de uso</p>
+  <p class="text-left w-[1000px] text-xs pr-[30px]">{disclaimer}</p>
+  <ul class="grid grid-cols-2 gap-[10px] basis-[20%]">
+    <li>Home</li>
+    <li>Reviews</li>
+    <li>Ofertas</li>
+    <li>Listas</li>
+  </ul>
+  <div class="flex flex-col gap-[10px]">
+    <a href="./" class="flex justify-end">
+      <Image src={logo} alt="Logo" class="h-auto w-[400px]" />
+    </a>
+    <div class="flex flex-row justify-end gap-[20px] w-[600px]">
+      <p>Política de privacidad</p>
+      <p>Condiciones de uso</p>
+    </div>
   </div>
 </div>

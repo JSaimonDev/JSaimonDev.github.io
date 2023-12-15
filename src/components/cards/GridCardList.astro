@@ -1,0 +1,19 @@
+---
+import { lists } from "@/libs/data/lists";
+import CardList from "./CardList.astro";
+
+const keys = Object.keys(lists);
+
+// const defaultLogoPath = firms.FTMO.logoText;
+---
+
+<div class="grid grid-cols-4 w-1200px p-[80px] gap-[40px]">
+  {
+    keys.map((key) => (
+      <CardList
+        name={lists[key].name}
+        shortDescription={lists[key].shortDescription}
+      />
+    ))
+  }
+</div>
