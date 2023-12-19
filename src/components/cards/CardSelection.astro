@@ -1,7 +1,7 @@
 ---
 interface Props {
   name: string;
-  shortDescription: string;
+  shortDescription?: string;
 }
 
 const { name, shortDescription } = Astro.props;
@@ -11,5 +11,5 @@ const { name, shortDescription } = Astro.props;
   class="h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(217,86,19,1)] cursor-pointer"
 >
   <p class="text-xl mb-4 font-bold">{name}</p>
-  <!-- <p class="text-base text-medium-grey">{shortDescription}</p> -->
+  <p class="text-base text-medium-grey">{shortDescription}</p>
 </div>

@@ -1,5 +1,5 @@
 ---
-import { type Promotion } from "@/libs/data/promotions";
+import { type Promotion } from "@/libs/data/firms";
 
 interface Props {
   promotion: Promotion;
@@ -10,7 +10,7 @@ const { promotion, logo } = Astro.props;
 ---
 
 <div
-  class="w-[250px] h-[250px] rounded-full relative cursor-pointer border-light-grey border-[8px]"
+  class="w-[250px] h-[250px] rounded-full relative cursor-pointer border-[#FFF] border-[8px]"
 >
   <div class="absolute">
     <img
@@ -19,7 +19,7 @@ const { promotion, logo } = Astro.props;
     />
   </div>
   <div
-    class="h-full w-full rounded-full flex flex-col justify-center items-center text-light-grey text-base text-center gap-2 p-[20px]"
+    class="h-full w-full rounded-full flex flex-col justify-center items-center text-[#FFF] text-base text-center gap-2 p-[20px]"
   >
     <h3 class="text-7xl font-bold">
       {promotion.discount}%

@@ -1,13 +1,13 @@
 ---
 import { firms } from "@/libs/data/firms";
-import CardReview from "./CardReview.astro";
+import CardReview from "../cards/CardReview.astro";
 
 const keys = Object.keys(firms);
 
 const defaultLogoPath = firms.FTMO.logoText;
 ---
 
-<div class="grid grid-cols-4 w-1200px p-[80px] gap-[40px]">
+<div class="grid grid-cols-4 w-[1200px] gap-[40px]">
   {
     keys.map((key) => (
       <CardReview logo={firms[key].logoText || defaultLogoPath} />

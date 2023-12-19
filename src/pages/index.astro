@@ -3,11 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import hero_image from "../../public/images/Home-hero-ready.jpg";
 import CardReview from "../components/cards/CardReview.astro";
-import CardList from "../components/cards/CardList.astro";
-import CardPromo from "../components/cards/CardPromo.astro";
+import CardSelection from "../components/cards/CardSelection.astro";
+import CardPromo from "../components/cards/CardPromoHome.astro";
 import { firms } from "@/libs/data/firms";
 import { lists } from "@/libs/data/lists";
-import { promotions } from "@/libs/data/promotions";
 ---
 
 <Layout title="The GodFunded">
@@ -37,11 +36,13 @@ import { promotions } from "@/libs/data/promotions";
           class="text-light-grey bg-dark-grey flex flex-col items-center justify-center p-[40px] gap-[20px]"
         >
           <h2 class="text-6xl">Reviews</h2>
-          <button
-            class="border-light-grey text-sm p-[10px] border-4 font-medium hover:bg-light-grey hover:font-bold hover:text-dark-grey ease-in-out duration-100"
-          >
-            Más empresas de fondeo</button
-          >
+          <a href="/reviews">
+            <button
+              class="border-light-grey text-sm p-[10px] border-4 font-medium hover:bg-light-grey hover:font-bold hover:text-dark-grey ease-in-out duration-100"
+            >
+              Más empresas de fondeo</button
+            >
+          </a>
         </div>
         <CardReview logo={firms.FTMO.logoText} />
         <CardReview logo={firms.TFT.logoText} />
@@ -51,45 +52,29 @@ import { promotions } from "@/libs/data/promotions";
     <section class="w-full bg-dark-grey p-[80px] flex flex-col items-center">
       <div class="w-[1200px] grid grid-cols-4 gap-[40px]">
         <div class="flex flex-col gap-[40px]">
-          <CardList
-            name={lists.noSL.name}
-            shortDescription={lists.noSL.shortDescription}
-          />
+          <CardSelection name={lists.noSL.name} />
 
-          <CardList
-            name={lists.noTimeLimit.name}
-            shortDescription={lists.noTimeLimit.shortDescription}
-          />
+          <CardSelection name={lists.noTimeLimit.name} />
         </div>
         <div class="flex flex-col gap-[40px]">
-          <CardList
-            name={lists.EA.name}
-            shortDescription={lists.EA.shortDescription}
-          />
-          <CardList
-            name={lists.tradingView.name}
-            shortDescription={lists.tradingView.shortDescription}
-          />
+          <CardSelection name={lists.EA.name} />
+          <CardSelection name={lists.tradingView.name} />
         </div>
         <div class="flex flex-col gap-[40px]">
-          <CardList
-            name={lists.crypto.name}
-            shortDescription={lists.EA.shortDescription}
-          />
-          <CardList
-            name={lists.crypto.name}
-            shortDescription={lists.EA.shortDescription}
-          />
+          <CardSelection name={lists.crypto.name} />
+          <CardSelection name={lists.crypto.name} />
         </div>
         <div
           class="flex flex-col justify-around border-2 border-light-grey items-center p-[20px]"
         >
-          <h2 class="text-7xl text-light-grey">Listas</h2>
-          <button
-            class="border-[#FFF] text-dark-grey text-xl p-[15px] bg-[#FFF] hover:text-light-grey  hover:bg-orange ease-in-out duration-100 will-change-transform"
-          >
-            Más listas</button
-          >
+          <h2 class="text-4xl text-light-grey">Selecciones</h2>
+          <a href="/selecciones">
+            <button
+              class="border-[#FFF] text-dark-grey text-xl p-[15px] bg-[#FFF] hover:text-light-grey hover:bg-orange ease-in-out duration-100 will-change-transform"
+            >
+              Más selecciones</button
+            >
+          </a>
         </div>
       </div>
     </section>
@@ -97,21 +82,23 @@ import { promotions } from "@/libs/data/promotions";
       class="w-full bg-[#D95613] flex justify-center p-[80px] gap-[40px]"
     >
       <div class="flex flex-col justify-around items-center">
-        <h2 class="text-7xl text-light-grey">Promociones</h2>
+        <h2 class="text-7xl text-[#FFF]">Promociones</h2>
         <div class="flex justify-center">
-          <button
-            class="bg-light-grey text-orange px-12 py-6 text-2xl font-medium scale-100 hover:scale-105 ease-in-out duration-300 will-change-transform"
-          >
-            Más ofertas y descuentos
-          </button>
+          <a href="/promociones">
+            <button
+              class="bg-[#FFF] text-orange px-12 py-6 text-2xl font-medium scale-100 hover:scale-105 ease-in-out duration-300 will-change-transform"
+            >
+              Más ofertas y descuentos
+            </button>
+          </a>
         </div>
       </div>
       <CardPromo
-        promotion={promotions.BlueGuardian[0]}
+        promotion={firms.BlueGuardian.promotions![0]}
         logo={firms.BlueGuardian.logo}
       />
-      <CardPromo promotion={promotions.TFT[0]} logo={firms.TFT.logo} />
-      <CardPromo promotion={promotions.GFT[0]} logo={firms.GFT.logo} />
+      <CardPromo promotion={firms.TFT.promotions![0]} logo={firms.TFT.logo} />
+      <CardPromo promotion={firms.GFT.promotions![0]} logo={firms.GFT.logo} />
     </section>
   </main>
 

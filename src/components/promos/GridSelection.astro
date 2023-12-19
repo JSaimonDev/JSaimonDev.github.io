@@ -1,6 +1,6 @@
 ---
 import { lists } from "@/libs/data/lists";
-import CardList from "./CardList.astro";
+import CardSelection from "../cards/CardSelection.astro";
 
 const keys = Object.keys(lists);
 
@@ -10,7 +10,7 @@ const keys = Object.keys(lists);
 <div class="grid grid-cols-4 w-1200px p-[80px] gap-[40px]">
   {
     keys.map((key) => (
-      <CardList
+      <CardSelection
         name={lists[key].name}
         shortDescription={lists[key].shortDescription}
       />
