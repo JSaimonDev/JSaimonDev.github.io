@@ -1,0 +1,10 @@
+---
+import CardFirmPromo from "../cards/CardFirmPromo.astro";
+import { firms } from "@/libs/data/firms";
+
+const keys = Object.keys(firms);
+---
+
+<div class="w-[1200px] grid grid-cols-5 justify-center gap-[40px]">
+  {keys.map((key) => <CardFirmPromo firm={firms[key]} />)}
+</div>

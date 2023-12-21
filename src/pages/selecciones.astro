@@ -8,16 +8,17 @@ import GridSelection from "../components/promos/GridSelection.astro";
 <Layout title="Reseñas">
   <main>
     <div
-      class="h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] relative"
+      class="h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] relative mb-[80px]"
     >
       <div
         class="absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] translate-y-[-50%] text-light-grey greatVibes w-[40%]"
       >
-        <h1
-          class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
-        >
-          Selecciones
-        </h1>
+
+          <h1
+            class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
+          >
+            Selecciones
+          </h1>
       </div>
       <div class="h-full">
         <Image
@@ -27,6 +28,8 @@ import GridSelection from "../components/promos/GridSelection.astro";
         />
       </div>
     </div>
-    <GridSelection />
+    <div class="flex justify-center">
+      <GridSelection />
+    </div>
   </main>
 </Layout>

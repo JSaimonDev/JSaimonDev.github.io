@@ -1,19 +1,81 @@
 ---
-import { lists } from "@/libs/data/lists";
+import {
+  featureSelection,
+  instrumentSelection,
+  softwareSelection,
+  brokerSelection,
+} from "@/libs/data/selections";
 import CardSelection from "../cards/CardSelection.astro";
 
-const keys = Object.keys(lists);
-
-// const defaultLogoPath = firms.FTMO.logoText;
+const featureKeys = Object.keys(featureSelection);
+const instrumentKeys = Object.keys(instrumentSelection);
+const softwareKeys = Object.keys(softwareSelection);
+const brokerKeys = Object.keys(brokerSelection);
 ---
 
-<div class="grid grid-cols-4 w-1200px p-[80px] gap-[40px]">
-  {
-    keys.map((key) => (
-      <CardSelection
-        name={lists[key].name}
-        shortDescription={lists[key].shortDescription}
-      />
-    ))
-  }
+<div class="w-[1200px] mb-[80px] flex flex-col gap-[40px]">
+  <div
+    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center"
+  >
+    <h2 class="text-6xl">Reglas y características</h2>
+  </div>
+  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+    {
+      featureKeys.map((key) => (
+        <CardSelection
+          name={featureSelection[key].name}
+          shortDescription={featureSelection[key].shortDescription}
+          id={key}
+        />
+      ))
+    }
+  </div>
+  <div
+    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center"
+  >
+    <h2 class="text-6xl">Activos</h2>
+  </div>
+  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+    {
+      instrumentKeys.map((key) => (
+        <CardSelection
+          name={instrumentSelection[key].name}
+          shortDescription={instrumentSelection[key].shortDescription}
+          id={key}
+        />
+      ))
+    }
+  </div>
+  <div
+    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center"
+  >
+    <h2 class="text-6xl">Software</h2>
+  </div>
+  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+    {
+      softwareKeys.map((key) => (
+        <CardSelection
+          name={softwareSelection[key].name}
+          shortDescription={softwareSelection[key].shortDescription}
+          id={key}
+        />
+      ))
+    }
+  </div>
+  <div
+    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center"
+  >
+    <h2 class="text-6xl">Broker</h2>
+  </div>
+  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+    {
+      brokerKeys.map((key) => (
+        <CardSelection
+          name={brokerSelection[key].name}
+          shortDescription={brokerSelection[key].shortDescription}
+          id={key}
+        />
+      ))
+    }
+  </div>
 </div>

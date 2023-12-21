@@ -6,7 +6,12 @@ import CardReview from "../components/cards/CardReview.astro";
 import CardSelection from "../components/cards/CardSelection.astro";
 import CardPromo from "../components/cards/CardPromoHome.astro";
 import { firms } from "@/libs/data/firms";
-import { lists } from "@/libs/data/lists";
+import {
+  brokerSelection,
+  featureSelection,
+  instrumentSelection,
+  softwareSelection,
+} from "@/libs/data/selections";
 ---
 
 <Layout title="The GodFunded">
@@ -51,21 +56,15 @@ import { lists } from "@/libs/data/lists";
     </section>
     <section class="w-full bg-dark-grey p-[80px] flex flex-col items-center">
       <div class="w-[1200px] grid grid-cols-4 gap-[40px]">
-        <div class="flex flex-col gap-[40px]">
-          <CardSelection name={lists.noSL.name} />
+          <CardSelection name={featureSelection.noSL.name} id="noSL" />
 
-          <CardSelection name={lists.noTimeLimit.name} />
-        </div>
-        <div class="flex flex-col gap-[40px]">
-          <CardSelection name={lists.EA.name} />
-          <CardSelection name={lists.tradingView.name} />
-        </div>
-        <div class="flex flex-col gap-[40px]">
-          <CardSelection name={lists.crypto.name} />
-          <CardSelection name={lists.crypto.name} />
-        </div>
-        <div
-          class="flex flex-col justify-around border-2 border-light-grey items-center p-[20px]"
+          <CardSelection
+            name={featureSelection.noTimeLimit.name}
+            id="noTimeLimit"
+          />
+          <CardSelection name={softwareSelection.EA.name} id="EA" />
+          <div
+          class="flex flex-col justify-around border-2 border-light-grey items-center p-[20px] row-span-2"
         >
           <h2 class="text-4xl text-light-grey">Selecciones</h2>
           <a href="/selecciones">
@@ -76,6 +75,13 @@ import { lists } from "@/libs/data/lists";
             >
           </a>
         </div>
+          <CardSelection
+            name={softwareSelection.tradingView.name}
+            id="tradingView"
+          />
+          <CardSelection name={instrumentSelection.crypto.name} id="crypto" />
+          <CardSelection name={featureSelection.weekend.name} id="weekend" />
+        
       </div>
     </section>
     <section

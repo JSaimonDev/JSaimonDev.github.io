@@ -1,12 +1,28 @@
 ---
-import { Image } from "astro:assets";
-import hero_image from "public/images/Promotions-hero.webp";
 import Layout from "@/layouts/Layout.astro";
-import GridPromo from "../components/promos/GridPromo.astro";
+import { Image } from "astro:assets";
+import hero_image from "/public/images/Archive-hero.webp";
+import { mapIds } from "@/utils";
+import {
+  featureSelection,
+  softwareSelection,
+  instrumentSelection,
+  brokerSelection,
+} from "@/libs/data/selections";
+
+export function getStaticPaths() {
+  return mapIds(featureSelection).concat(
+    mapIds(softwareSelection),
+    mapIds(instrumentSelection),
+    mapIds(brokerSelection)
+  );
+}
+
+const { id } = Astro.params;
 ---
 
-<Layout title="Reseñas">
-  <main>
+<Layout title={``}>
+  <main class="min-h-[80vh]">
     <div
       class="h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] relative mb-[80px]"
     >
@@ -16,7 +32,7 @@ import GridPromo from "../components/promos/GridPromo.astro";
         <h1
           class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
         >
-          Promociones
+          Selecciones
         </h1>
       </div>
       <div class="h-full">
@@ -27,8 +43,6 @@ import GridPromo from "../components/promos/GridPromo.astro";
         />
       </div>
     </div>
-    <div class="flex justify-center mb-[80px]">
-      <GridPromo />
-    </div>
+    <div class="w-full flex justify-center">Hi {id}</div>
   </main>
 </Layout>

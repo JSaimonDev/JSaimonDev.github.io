@@ -1,0 +1,24 @@
+---
+import { type Firm } from "@/libs/data/firms";
+
+interface Props {
+  firm: Firm;
+}
+
+const { firm } = Astro.props;
+---
+
+<div class="flex gap-[20px]">
+  <div
+    class="w-full aspect-square h-full relative cursor-pointer rounded-full group"
+    style={{ backgroundColor: firm.bgColor }}
+  >
+    <a href={`/promociones/${firm.name}`}>
+      <img
+        src={firm.logoText}
+        class="rounded-full border-[10px] border-dark-grey h-full w-full relative
+                    ease-in-out object-contain group-hover:scale-105 duration-300"
+      />
+    </a>
+  </div>
+</div>
