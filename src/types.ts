@@ -1,0 +1,1 @@
+export type TypeSelection = "broker" | "feature" | "instrument" | "software"

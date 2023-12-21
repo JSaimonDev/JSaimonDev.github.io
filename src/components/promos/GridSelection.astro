@@ -26,6 +26,7 @@ const brokerKeys = Object.keys(brokerSelection);
           name={featureSelection[key].name}
           shortDescription={featureSelection[key].shortDescription}
           id={key}
+          type="feature"
         />
       ))
     }
@@ -42,6 +43,7 @@ const brokerKeys = Object.keys(brokerSelection);
           name={instrumentSelection[key].name}
           shortDescription={instrumentSelection[key].shortDescription}
           id={key}
+          type="instrument"
         />
       ))
     }
@@ -58,6 +60,7 @@ const brokerKeys = Object.keys(brokerSelection);
           name={softwareSelection[key].name}
           shortDescription={softwareSelection[key].shortDescription}
           id={key}
+          type="software"
         />
       ))
     }
@@ -74,6 +77,7 @@ const brokerKeys = Object.keys(brokerSelection);
           name={brokerSelection[key].name}
           shortDescription={brokerSelection[key].shortDescription}
           id={key}
+          type="broker"
         />
       ))
     }

@@ -1,6 +1,6 @@
 export interface Selection {
     name: string
-    shortDescription: string
+    shortDescription?: string
     firms?: {id: string, notes?: string} []
 }
 
@@ -28,12 +28,12 @@ export const featureSelection: { [key: string]: Selection } = {
         shortDescription: "Cuentas y empresas en las que puedes operar ni necesidad de Stop Loss"
     },
     noTimeLimit: {
-        name: "Pruebas de fondeo sin límite de tiempo",
-        shortDescription: "Tómate todo el tiempo que necesites para pasar el challengue"
+        name: "Sin límite de tiempo",
+        shortDescription: "Originalmente la mayoría de las pruebas de fondeo tenía un maximo de tiempo para superarlas, lo cual añade un extra de dificultad a los traders menos agresivos. Por suerte, hoy en día un gran número de empresas ofrecen pruebas sin límite de tiempo."
     },
     weekend: {
-        name: "Cuentas que mantener posiciones en fin de semana",
-        shortDescription: "Tener operaciones durante entre semanas puede ser imprescindible para algunos swing traders",
+        name: "Operaciones abiertas durante el fin de semana",
+        shortDescription: "Mantener operaciones durante muchos dias puede ser imprescindible para algunos swing traders",
         firms: [
             {
                 id: "FTMO",

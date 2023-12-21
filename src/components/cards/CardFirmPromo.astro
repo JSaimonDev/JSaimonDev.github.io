@@ -3,9 +3,10 @@ import { type Firm } from "@/libs/data/firms";
 
 interface Props {
   firm: Firm;
+  key: string;
 }
 
-const { firm } = Astro.props;
+const { firm, key } = Astro.props;
 ---
 
 <div class="flex gap-[20px]">
@@ -13,7 +14,7 @@ const { firm } = Astro.props;
     class="w-full aspect-square h-full relative cursor-pointer rounded-full group"
     style={{ backgroundColor: firm.bgColor }}
   >
-    <a href={`/promociones/${firm.name}`}>
+    <a href={`/promociones/${key}`}>
       <img
         src={firm.logoText}
         class="rounded-full border-[10px] border-dark-grey h-full w-full relative

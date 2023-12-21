@@ -5,6 +5,7 @@ export interface Firm{
     promotions?: Promotion[]
     bgColor: string
     name: string
+    link: URL
 }
 
 export interface Promotion {
@@ -25,14 +26,16 @@ export const firms: { [key: string]: Firm } = {
         logoText: "/images/firms/FTMO/FTMO-logo-500x250.webp",
         logoTextWhite: "/images/firms/FTMO/FTMO-logo-white-500x250.webp",
         logo: "/images/firms/FTMO/FTMO-logo-250x250.webp",
-        bgColor: "#FFF"
+        bgColor: "#FFF",
+        link: new URL("https://ftmo.com/es/")
     },
     TFT: {
-        name: "TFT",
+        name: "The Funded Trader",
         logoText: "/images/firms/TFT/TFT-logo-500x250.webp",
         logoTextWhite: "/images/firms/TFT/TFT-logo-white-500x250.webp",
         logo: "/images/firms/TFT/TFT-logo-250x250.webp",
         bgColor: "#0A2237",
+        link: new URL("https://thefundedtraderprogram.com/"),
         promotions: [
         {
             discount: 25,
@@ -45,18 +48,20 @@ export const firms: { [key: string]: Firm } = {
     ]
     },
     FundedNext: {
-        name: "FundedNext",
+        name: "Funded Next",
         logoText: "/images/firms/FundedNext/FundedNext-logo-500x250.webp",
         logoTextWhite: "/images/firms/FundedNext/FundedNext-logo-white-500x250.webp",
         logo: "/images/firms/FundedNext/FundedNext-logo-250x250.webp",
-        bgColor: "#FFF"
+        bgColor: "#FFF",
+        link: new URL ("https://fundednext.com/")
     },
     BlueGuardian: {
-        name: "BlueGuardian",
+        name: "Blue Guardian",
         logoText: "/images/firms/BlueGuardian/Blue-guardian-logo-500x250.webp",
         logoTextWhite: "/images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp",
         logo: "/images/firms/BlueGuardian/Blue-guardian-logo-400x400.webp",
         bgColor: "#FFF",
+        link: new URL ("https://www.blueguardian.com/"),
         promotions: [
         {
             discount: 20,
@@ -69,11 +74,12 @@ export const firms: { [key: string]: Firm } = {
     ]
     },
     GFT: {
-        name: "GFT",
+        name: "Goat Funded Trader",
         logoText: "/images/firms/GFT/GFT-logo-500x250.webp",
         logoTextWhite: "/images/firms/GFT/GFT-logo-white-500x250.webp",
         logo: "/images/firms/GFT/GFT-logo-400x400.webp",
         bgColor: "#002988",
+        link: new URL ("https://goatfundedtrader.com/"),
         promotions: [
         {
             discount: 17,

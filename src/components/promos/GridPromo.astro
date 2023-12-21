@@ -6,5 +6,5 @@ const keys = Object.keys(firms);
 ---
 
 <div class="w-[1200px] grid grid-cols-5 justify-center gap-[40px]">
-  {keys.map((key) => <CardFirmPromo firm={firms[key]} />)}
+  {keys.map((key) => <CardFirmPromo firm={firms[key]} key={key} />)}
 </div>
