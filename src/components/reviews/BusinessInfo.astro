@@ -1,0 +1,35 @@
+---
+import { type Firm } from "@/libs/data/firms";
+import TitleBusinessInfo from "./TitleBusinessInfo.astro";
+
+interface Props {
+  firm: Firm;
+  hq: string;
+  foundation: number;
+  ceo: string;
+}
+
+const { firm, hq, foundation, ceo } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-4 py-[20px] bg-[#FFF] rounded-[10px] divide-x-2 divide-light-grey text-center mb-[40px]"
+>
+  <div class="flex justify-center items-center">
+    <a href={firm.link}>
+      <img src={firm.logoText} />
+    </a>
+  </div>
+  <div class="flex flex-col px-[40px]">
+    <TitleBusinessInfo title="Sede" />
+    <p class="flex flex-col justify-center flex-1">{hq}</p>
+  </div>
+  <div class="flex flex-col px-[40px]">
+    <TitleBusinessInfo title="Fundación" />
+    <p class="flex flex-col justify-center flex-1 text-3xl">{foundation}</p>
+  </div>
+  <div class="flex flex-col px-[40px]">
+    <TitleBusinessInfo title="CEO" />
+    <p class="flex flex-col justify-center flex-1 text-2xl">{ceo}</p>
+  </div>
+</div>

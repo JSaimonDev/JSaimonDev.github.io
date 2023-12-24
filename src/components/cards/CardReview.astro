@@ -10,18 +10,24 @@ const { logo } = Astro.props;
 
 <div>
   <div class="w-full">
-    <img src={logo} />
+    <img src={logo} class="rounded-xl" />
   </div>
   <div class="w-full border-2 border-light-grey"></div>
   <div class="flex items-center buttons">
     <button class="h-full flex-1 group duration-200 relative">
-      <div class="absolute bg-[#2F2F2F] top-0 left-0 w-full h-full"></div>
+      <div
+        class="rounded-l-xl absolute bg-[#2F2F2F] top-0 left-0 w-full h-full"
+      >
+      </div>
       <p class="scale-100 group-hover:scale-105 ease-in-out duration-200">
         Review
       </p>
     </button>
     <button class="h-full flex-1 group duration-200 relative">
-      <div class="absolute bg-[#D95613] top-0 left-0 w-full h-full"></div>
+      <div
+        class="rounded-r-xl absolute bg-[#D95613] top-0 left-0 w-full h-full"
+      >
+      </div>
       <p class="scale-100 group-hover:scale-105 ease-in-out duration-200">
         Web
       </p>
