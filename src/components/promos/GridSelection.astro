@@ -13,13 +13,13 @@ const softwareKeys = Object.keys(softwareSelection);
 const brokerKeys = Object.keys(brokerSelection);
 ---
 
-<div class="w-[1200px] mb-[80px] flex flex-col gap-[40px]">
-  <div
-    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center rounded-xl"
-  >
-    <h2 class="text-6xl">Reglas y características</h2>
+<div
+  class="mb-[80px] flex flex-col gap-[40px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px]"
+>
+  <div class="type-header-container">
+    <h2 class="type-header">Reglas y características</h2>
   </div>
-  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+  <div class="type-grid">
     {
       featureKeys.map((key) => (
         <CardSelection
@@ -31,12 +31,10 @@ const brokerKeys = Object.keys(brokerSelection);
       ))
     }
   </div>
-  <div
-    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center rounded-xl"
-  >
-    <h2 class="text-6xl">Activos</h2>
+  <div class="type-header-container">
+    <h2 class="type-header">Activos</h2>
   </div>
-  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+  <div class="type-grid">
     {
       instrumentKeys.map((key) => (
         <CardSelection
@@ -48,12 +46,10 @@ const brokerKeys = Object.keys(brokerSelection);
       ))
     }
   </div>
-  <div
-    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center rounded-xl"
-  >
-    <h2 class="text-6xl">Software</h2>
+  <div class="type-header-container">
+    <h2 class="type-header">Software</h2>
   </div>
-  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+  <div class="type-grid">
     {
       softwareKeys.map((key) => (
         <CardSelection
@@ -65,12 +61,10 @@ const brokerKeys = Object.keys(brokerSelection);
       ))
     }
   </div>
-  <div
-    class="w-full bg-dark-grey text-[#FFF] py-[20px] pl-[40px] flex justify-center rounded-xl"
-  >
-    <h2 class="text-6xl">Broker</h2>
+  <div class="type-header-container">
+    <h2 class="type-header">Broker</h2>
   </div>
-  <div class="grid grid-cols-3 gap-[40px] mb-[40px]">
+  <div class="type-grid">
     {
       brokerKeys.map((key) => (
         <CardSelection
@@ -83,3 +77,18 @@ const brokerKeys = Object.keys(brokerSelection);
     }
   </div>
 </div>
+
+<style>
+  .type-grid {
+    @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 
+    lg:gap-[40px] md:gap-[30px] xs:gap-[20px] gap-[15px]  lg:mb-[40px]
+    sm:mb-[25px] mb-[10px];
+  }
+  .type-header {
+    @apply lg:text-6xl md:text-5xl xs:text-3xl text-2xl;
+  }
+  .type-header-container {
+    @apply w-full bg-dark-grey text-[#FFF] py-[20px] md:px-[40px]
+     xs:px-[20px] px-[15px] flex justify-center rounded-xl;
+  }
+</style>

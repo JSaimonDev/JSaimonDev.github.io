@@ -16,9 +16,9 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
     </label>
   </div>
   <ul
-    class="flex-col md:flex-row self-center mr-[40px] lg:gap-x-[40px] gap-x-[30px]
+    class="flex-col md:flex-row self-center mr-[40px] lg:gap-x-[40px] gap-x-[30px] gap-y-[10px]
   text-lg lg:text-xl text font-bold text-[#212121] bg-light-grey md:bg-opacity-0
-  hidden md:flex peer-checked:flex"
+  hidden md:flex peer-checked:flex w-full md:mb-0 mb-[20px] justify-end"
   >
     <li><a href="/reviews">Reviews</a></li>
     <li><a href="/selecciones">Selecciones</a></li>
@@ -32,9 +32,11 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
 <style>
   li {
     cursor: pointer;
+    @apply md:pl-0 pl-[50px] text-2xl md:text-xl;
   }
   .burguer {
-    width: 50px;
+    @apply w-[35px];
+    @apply xs:w-[50px];
   }
   .burguer:before,
   .burguer:after,
@@ -42,7 +44,10 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
     background: #252525;
     content: "";
     display: block;
-    height: 8px;
+    @apply xs:h-[10px];
+    @apply h-[6px];
+    @apply border-[3px];
+    @apply xs:border-[5px];
     border-radius: 3px;
     margin: 7px 0;
     transition: 0.5s;
