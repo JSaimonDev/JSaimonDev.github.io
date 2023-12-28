@@ -6,6 +6,7 @@ export interface Firm{
     bgColor: string
     name: string
     link: URL
+    hasReview: boolean
 }
 
 export interface Promotion {
@@ -27,7 +28,8 @@ export const firms: { [key: string]: Firm } = {
         logoTextWhite: "/images/firms/FTMO/FTMO-logo-white-500x250.webp",
         logo: "/images/firms/FTMO/FTMO-logo-250x250.webp",
         bgColor: "#FFF",
-        link: new URL("https://ftmo.com/es/")
+        link: new URL("https://ftmo.com/es/"),
+        hasReview: false
     },
     TFT: {
         name: "The Funded Trader",
@@ -36,11 +38,12 @@ export const firms: { [key: string]: Firm } = {
         logo: "/images/firms/TFT/TFT-logo-250x250.webp",
         bgColor: "#0A2237",
         link: new URL("https://thefundedtraderprogram.com/"),
+        hasReview: false,
         promotions: [
         {
             discount: 25,
             benefit1: "100% Bonus",
-                benefit2: "12.5% beneficio de la evaluación",
+            benefit2: "12.5% profit",
             description: "100% coste de la prueba recuperado + 12.5% beneficio de la evaluación. Válido para todo tipo de cuentas",
             code: "TFTDECEMBER25",
             endDate: new Date(2023, 11, 31)
@@ -53,6 +56,7 @@ export const firms: { [key: string]: Firm } = {
         logoTextWhite: "/images/firms/FundedNext/FundedNext-logo-white-500x250.webp",
         logo: "/images/firms/FundedNext/FundedNext-logo-250x250.webp",
         bgColor: "#FFF",
+        hasReview: false,
         link: new URL ("https://fundednext.com/")
     },
     BlueGuardian: {
@@ -61,7 +65,8 @@ export const firms: { [key: string]: Firm } = {
         logoTextWhite: "/images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp",
         logo: "/images/firms/BlueGuardian/Blue-guardian-logo-400x400.webp",
         bgColor: "#FFF",
-        link: new URL ("https://www.blueguardian.com/"),
+        link: new URL("https://www.blueguardian.com/"),
+        hasReview: false,
         promotions: [
         {
             discount: 20,
@@ -79,7 +84,8 @@ export const firms: { [key: string]: Firm } = {
         logoTextWhite: "/images/firms/GFT/GFT-logo-white-500x250.webp",
         logo: "/images/firms/GFT/GFT-logo-400x400.webp",
         bgColor: "#002988",
-        link: new URL ("https://goatfundedtrader.com/"),
+        link: new URL("https://goatfundedtrader.com/"),
+        hasReview: false,
         promotions: [
         {
             discount: 17,

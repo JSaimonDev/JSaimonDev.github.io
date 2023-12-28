@@ -4,23 +4,44 @@ import { Image } from "astro:assets";
 import logo from "../../../public/icons/The-GodFunded-logo-light.svg";
 ---
 
-<div
-  class="bg-dark-grey w-full text-[#FFF] flex items-center justify-between gap-[80px] py-[30px] px-[60px]"
->
-  <p class="text-left w-[1000px] text-xs pr-[30px]">{disclaimer}</p>
-  <ul class="grid grid-cols-2 gap-[10px] basis-[30%]">
-    <li><a href="/">Home</a></li>
-    <li><a href="/reviews">Reviews</a></li>
-    <li><a href="/promociones">Promociones</a></li>
-    <li><a href="/selecciones">Selecciones</a></li>
-  </ul>
-  <div class="flex flex-col gap-[10px] w-[40%]">
-    <a href="./" class="flex justify-end">
-      <Image src={logo} alt="Logo" class="h-auto w-[400px]" />
-    </a>
-    <div class="flex flex-row justify-end gap-[20px]">
-      <p>Política de privacidad</p>
-      <p>Condiciones de uso</p>
+<div class="bg-dark-grey w-full text-[#FFF] flex justify-center">
+  <div
+    class="xl:max-w-[1400px] w-full flex flex-col lg:flex-row items-center gap-[40px] xl:gap-[80px] py-[30px] px-[60px]"
+  >
+    <p
+      class="lg:text-left text-[0.7rem] xl:text-xs lg:pr-[30px] pr-0 text-center"
+    >
+      {disclaimer}
+    </p>
+    <ul
+      class="grid lg:grid-cols-2 lg:gap-[10px] gap-[20px] basis-full sm:grid-flow-col sm:auto-cols-max xs:grid-cols-2 grid-cols-1"
+    >
+      <li><a href="/">Home</a></li>
+      <li><a href="/reviews">Reviews</a></li>
+      <li><a href="/promociones">Promociones</a></li>
+      <li><a href="/selecciones">Selecciones</a></li>
+    </ul>
+    <div class="flex flex-col gap-[10px] basis-full">
+      <a href="./" class="flex justify-end">
+        <Image src={logo} alt="Logo" class="h-auto w-[400px]" />
+      </a>
+      <div class="flex flex-row lg:justify-end justify-center gap-[20px]">
+        <p class="text1">Política de privacidad</p>
+        <p class="text1">Condiciones de uso</p>
+      </div>
     </div>
   </div>
 </div>
+<style>
+  .text1 {
+    @apply text-xs;
+    @apply xl:text-base;
+  }
+  li {
+    @apply text-xl;
+    @apply lg:text-base;
+    @apply xl:text-xl;
+    @apply text-center;
+    @apply lg:justify-end;
+  }
+</style>

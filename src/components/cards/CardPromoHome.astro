@@ -10,7 +10,9 @@ const { promotion, logo } = Astro.props;
 ---
 
 <div
-  class="w-[250px] h-[250px] rounded-full relative cursor-pointer border-[#FFF] border-[8px]"
+  class="xl:w-[235px] xl:h-[235px] md:w-[180px] md:h-[180px] xs:w-[280px]
+  xs:h-[280px] w-full h-full aspect-square rounded-full relative cursor-pointer
+   border-[#FFF] xl:border-[8px] border-[6px]"
 >
   <div class="absolute">
     <img
@@ -19,13 +21,16 @@ const { promotion, logo } = Astro.props;
     />
   </div>
   <div
-    class="h-full w-full rounded-full flex flex-col justify-center items-center text-[#FFF] text-base text-center gap-2 p-[20px]"
+    class="text-base xl:text-lg h-full w-full rounded-full flex flex-col justify-center
+    items-center text-[#FFF] text-center xs:gap-0 p-[20px] gap-[3vw]"
   >
-    <h3 class="text-7xl font-bold">
+    <h3
+      class="xl:text-7xl md:text-5xl xs:text-7xl text-[15vw] font-bold xs:my-0 my-[15px]"
+    >
       {promotion.discount}%
     </h3>
-    <p>{promotion.benefit1}</p>
-    <p>{promotion.benefit2}</p>
-    <p>{promotion.benefit3}</p>
+    <p class="xl:text-xl xs:text-lg text-[6vw]">{promotion.benefit1}</p>
+    <p class="xl:text-xl xs:text-lg text-[6vw]">{promotion.benefit2}</p>
+    <p class="xl:text-xl xs:text-lg text-[6vw]">{promotion.benefit3}</p>
   </div>
 </div>

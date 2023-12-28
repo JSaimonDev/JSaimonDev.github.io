@@ -1,6 +1,6 @@
 ---
 import { type Firm } from "@/libs/data/firms";
-import TitleBusinessInfo from "./TitleBusinessInfo.astro";
+import TitleInfo from "./TitleInfo.astro";
 
 interface Props {
   firm: Firm;
@@ -13,7 +13,7 @@ const { firm, hq, foundation, ceo } = Astro.props;
 ---
 
 <div
-  class="grid grid-cols-4 py-[20px] bg-[#FFF] rounded-[10px] divide-x-2 divide-light-grey text-center mb-[40px]"
+  class="grid grid-cols-4 py-[20px] bg-[#FFF] rounded-[10px] divide-x-2 divide-light-grey text-center mb-[60px]"
 >
   <div class="flex justify-center items-center">
     <a href={firm.link}>
@@ -21,15 +21,15 @@ const { firm, hq, foundation, ceo } = Astro.props;
     </a>
   </div>
   <div class="flex flex-col px-[40px]">
-    <TitleBusinessInfo title="Sede" />
+    <TitleInfo title="Sede" />
     <p class="flex flex-col justify-center flex-1">{hq}</p>
   </div>
   <div class="flex flex-col px-[40px]">
-    <TitleBusinessInfo title="Fundación" />
+    <TitleInfo title="Fundación" />
     <p class="flex flex-col justify-center flex-1 text-3xl">{foundation}</p>
   </div>
   <div class="flex flex-col px-[40px]">
-    <TitleBusinessInfo title="CEO" />
+    <TitleInfo title="CEO" />
     <p class="flex flex-col justify-center flex-1 text-2xl">{ceo}</p>
   </div>
 </div>

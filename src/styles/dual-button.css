@@ -4,7 +4,7 @@
     gap: 5px;
     --b: px;
     /* the border thickness */
-    --h: 70px;
+    --h: 50px;
     /* the height */
 }
 
@@ -12,7 +12,7 @@
     --_c: #E9E9E9;
     flex: calc(1.1 + var(--_s, 0));
     min-width: 0;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 400;
     height: var(--h);
     cursor: pointer;
@@ -26,6 +26,21 @@
     transition: flex .4s;
 }
 
+ @media (min-width: 420px) {
+     .buttons button {
+         font-size: 30px;
+     }
+ }
+
+  @media (min-width: 420px) {
+      .buttons {
+        --h: 70px;
+      }
+  }@media screen and (min-width: 768px) and (max-width: 1024px) {
+        .buttons {
+                --h: 50px;
+            }
+        }
 .buttons button+button {
     --_c: #E9E9E9;
     flex: calc(0.9 + var(--_s, 0));

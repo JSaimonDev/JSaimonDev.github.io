@@ -1,13 +1,30 @@
 ---
 import { firms } from "@/libs/data/firms";
 import BusinessInfo from "@/components/reviews/BusinessInfo.astro";
+import TechInfo from "@/components/reviews/TechInfo.astro";
 import Button from "@/components/button.astro";
+import { mapIds } from "@/utils";
+import Review from "@/layouts/Review.astro";
+
+export function getStaticPaths() {
+  return mapIds(firms);
+}
 ---
 
-<BusinessInfo
-  firm={firms.FTMO}
-  hq="Praga 1, Calle Purkynova 2121/3, 110 00, República Checa"
-  foundation={215}
-  ceo="Otakar Suffner"
-/>
-<Button text="Crea ahora tu cuenta en FTMO" link={firms.FTMO.link} />
+<Review>
+  <BusinessInfo
+    firm={firms.FTMO}
+    hq="Praga 1, Calle Purkynova 2121/3, 110 00, República Checa"
+    foundation={215}
+    ceo="Otakar Suffner"
+  />
+  <Button text="Crea ahora tu cuenta en FTMO" link={firms.FTMO.link} />
+  <TechInfo
+    brokers="Broker propio"
+    currency="USD, GBP, EUR, CZK, CAD, AUD, CHF"
+    fee="Divisas: 3$/lote\n Acciones: 0,004%\n Metales: 0,001%\n Índices y crypto: 0"
+    leverage="1:100"
+    instruments="Divisas, índices, metales y acciones"
+    platforms="Metatrader 4, Metatrader 5, cTrader y DXTrade"
+  />
+</Review>
