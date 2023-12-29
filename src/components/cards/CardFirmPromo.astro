@@ -11,13 +11,14 @@ const { firm, key } = Astro.props;
 
 <div class="flex gap-[20px]">
   <div
-    class="w-full aspect-square h-full relative cursor-pointer rounded-full hover:scale-105 duration-300 ease-in-out"
+    class="w-full aspect-square h-full relative cursor-pointer rounded-full 
+    hover:scale-105 duration-300 ease-in-out"
     style={{ backgroundColor: firm.bgColor }}
   >
     <a href={`/promociones/${key}`}>
       <img
         src={firm.logoText}
-        class="rounded-full shadow-lg h-full w-full relative
+        class="rounded-full shadow-[0_3px_5px_2px_rgba(0,0,0,0.3)] h-full w-full relative
         object-contain"
       />
     </a>

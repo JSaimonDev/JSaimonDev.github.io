@@ -45,13 +45,11 @@ const { title } = Astro.props;
   .responsive-section {
     max-width: 500px;
   }
-
   @media (min-width: 768px) {
     .responsive-section {
       max-width: 800px;
     }
   }
-
   @media (min-width: 1024px) {
     .responsive-section {
       max-width: 980px;
@@ -65,7 +63,6 @@ const { title } = Astro.props;
       max-width: 1200px;
     }
   }
-
   code {
     font-family:
       Menlo,
@@ -115,5 +112,19 @@ const { title } = Astro.props;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+  }
+  .hero-section {
+    @apply xs:h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] 
+      relative lg:mb-[80px] md:mb-[60px] sm:mb-[50px] xs:mb-[40px] mb-[20px];
+  }
+  .hero-section-header-container {
+    @apply absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] 
+        translate-y-[-50%] text-light-grey greatVibes;
+  }
+  .hero-section-header {
+    @apply w-full text-center lg:text-8xl xs:text-7xl text-6xl
+  }
+  .hero-section-image {
+    @apply lg:object-contain min-w-full lg:h-auto h-full object-cover scale-110 lg:translate-y-[-180px] lg:translate-x-[50px]
   }
 </style>

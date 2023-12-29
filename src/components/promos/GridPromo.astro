@@ -5,6 +5,8 @@ import { firms } from "@/libs/data/firms";
 const keys = Object.keys(firms);
 ---
 
-<div class="w-[1200px] grid grid-cols-5 justify-center gap-[40px]">
+<div class="w-[1200px] grid xl:grid-cols-5 justify-center lg:gap-[40px]
+md:gap-[30px] sm:gap-[25px] gap-[20px] lg:mx-[40px] md:mx-[30px] sm:mx-[25px] mx-[20px]
+lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
   {keys.map((key) => <CardFirmPromo firm={firms[key]} key={key} />)}
 </div>

@@ -1,32 +1,13 @@
 ---
-import { Image } from "astro:assets";
 import hero_image from "public/images/Promotions-hero.webp";
 import Layout from "@/layouts/Layout.astro";
 import GridPromo from "../components/promos/GridPromo.astro";
+import HeroSection from "@/components/HeroSection.astro";
 ---
 
 <Layout title="Reseñas">
   <main>
-    <div
-      class="h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] relative mb-[80px]"
-    >
-      <div
-        class="absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] translate-y-[-50%] text-light-grey greatVibes w-[40%]"
-      >
-        <h1
-          class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
-        >
-          Promociones
-        </h1>
-      </div>
-      <div class="h-full">
-        <Image
-          src={hero_image}
-          alt="Hero image"
-          class="lg:object-contain min-w-full lg:h-auto h-full object-cover scale-110 lg:translate-y-[-180px] lg:translate-x-[50px]"
-        />
-      </div>
-    </div>
+    <HeroSection hero_image={hero_image} />
     <div class="flex justify-center mb-[80px]">
       <GridPromo />
     </div>
