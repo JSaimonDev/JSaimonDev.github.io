@@ -10,3 +10,16 @@ export const mapIds = (data: { [key: string]: Firm | Selection }) => {
   const paths = ids.map(id => ({ params: { id } }));
   return paths;
 }
+
+export const getBreadcrumbItems = (pathname: string) => {
+  let segments = pathname.split("/");
+  let breadcrumbItems: { title: string; url: string }[] = [];
+  segments.forEach((segment, index) => {
+    let url = segments.slice(0, index + 1).join("/");
+    breadcrumbItems.push({ title: segment, url: url });
+  });
+  breadcrumbItems[0].title = "Inicio"
+  breadcrumbItems[0].url = '/'
+  console.log(breadcrumbItems)
+  return breadcrumbItems
+}

@@ -1,17 +1,39 @@
 ---
+import { getBreadcrumbItems } from "@/utils";
+
 interface Props {
-  items: { title: string; url: string }[];
+  altTitle?: string;
+  altUrl?: string;
+  altIndex?: number;
 }
 
-const { items } = Astro.props;
+const { altTitle, altUrl, altIndex } = Astro.props;
+
+const breadcrumbsItems = getBreadcrumbItems(Astro.url.pathname);
+
+if (altTitle && altUrl && altIndex) {
+  breadcrumbsItems[altIndex].title = altTitle;
+  breadcrumbsItems[altIndex].url = altUrl;
+}
 ---
 
-<nav>
-  <ol>
+<nav
+  class="responsive-section justify-start mb-[40px] shadow-md py-[8px] px-[16px] bg-[#FFF] rounded-lg"
+>
+  <ol class="flex">
     {
-      items.map((item, index) => (
-        <li>
-          <a href={item.url}>{item.title}</a>
+      breadcrumbsItems.map((item, index) => (
+        <li class="text-2xl text-dark-grey">
+          {index > 0 && <span class="ml-[8px] mr-[4px]">{">"}</span>}
+          {index < breadcrumbsItems.length - 1 ? (
+            <a href={item.url}>
+              {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
+            </a>
+          ) : (
+            <span class="text-medium-grey">
+              {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
+            </span>
+          )}
         </li>
       ))
     }

@@ -3,9 +3,11 @@ import { Image } from "astro:assets";
 
 interface Props {
   hero_image: ImageMetadata;
+  title: string;
+  extraClassImage?: string;
 }
 
-const { hero_image } = Astro.props;
+const { hero_image, title, extraClassImage } = Astro.props;
 ---
 
 <div
@@ -17,14 +19,14 @@ const { hero_image } = Astro.props;
         translate-y-[-50%] text-light-grey greatVibes"
   >
     <h1 class="w-full text-center lg:text-8xl xs:text-7xl text-6xl">
-      Promociones
+      {title}
     </h1>
   </div>
   <div class="h-full">
     <Image
       src={hero_image}
       alt="Hero image"
-      class="lg:object-contain min-w-full lg:h-auto h-full object-cover scale-110 lg:translate-y-[-180px] lg:translate-x-[50px]"
+      class={`lg:object-contain min-w-full lg:h-auto h-full object-cover scale-110 ${extraClassImage}`}
     />
   </div>
 </div>

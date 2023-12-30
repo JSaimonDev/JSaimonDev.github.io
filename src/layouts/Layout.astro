@@ -74,9 +74,6 @@ const { title } = Astro.props;
       Courier New,
       monospace;
   }
-  .corleone {
-    font-family: "Corleone", system-ui, sans-serif;
-  }
   .greatVibes {
     font-family: "GreatVibes", system-ui, sans-serif;
   }
@@ -84,20 +81,6 @@ const { title } = Astro.props;
     position: relative;
     z-index: 1;
     box-shadow: 0 1px 8px rgb(0 0 0 / 0.3);
-  }
-  @font-face {
-    font-family: "LexendDeca";
-    src: url("/fonts/LexendDeca.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Corleone";
-    src: url("/fonts/Corleone.ttf") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
   }
   @font-face {
     font-family: "GreatVibes";
@@ -112,19 +95,5 @@ const { title } = Astro.props;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-  }
-  .hero-section {
-    @apply xs:h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] 
-      relative lg:mb-[80px] md:mb-[60px] sm:mb-[50px] xs:mb-[40px] mb-[20px];
-  }
-  .hero-section-header-container {
-    @apply absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] 
-        translate-y-[-50%] text-light-grey greatVibes;
-  }
-  .hero-section-header {
-    @apply w-full text-center lg:text-8xl xs:text-7xl text-6xl
-  }
-  .hero-section-image {
-    @apply lg:object-contain min-w-full lg:h-auto h-full object-cover scale-110 lg:translate-y-[-180px] lg:translate-x-[50px]
   }
 </style>

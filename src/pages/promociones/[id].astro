@@ -1,10 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import hero_image from "/public/images/Promotions-hero.webp";
 import Layout from "@/layouts/Layout.astro";
 import { firms } from "@/libs/data/firms.ts";
 import { formatDate } from "@/utils.ts";
 import { mapIds } from "@/utils.ts";
+import HeroSection from "@/components/HeroSection.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
 
 export function getStaticPaths() {
   return mapIds(firms);
@@ -15,27 +16,9 @@ const { id } = Astro.params;
 
 <Layout title={`Promociones en ${firms[id].name}`}>
   <main class="min-h-[80vh]">
-    <div
-      class="h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] relative mb-[80px]"
-    >
-      <div
-        class="absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] translate-y-[-50%] text-light-grey greatVibes w-[40%]"
-      >
-        <h1
-          class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
-        >
-          Promociones
-        </h1>
-      </div>
-      <div class="h-full">
-        <Image
-          src={hero_image}
-          alt="Hero image"
-          class="object-cover scale-110 translate-y-[-180px] translate-x-[50px]"
-        />
-      </div>
-    </div>
-    <div class="w-full flex justify-center">
+    <HeroSection hero_image={hero_image} title="Promociones" />
+    <div class="w-full flex flex-col items-center justify-center">
+      <Breadcrumb />
       <div
         class="bg-dark-grey px-[40px] pb-[40px] pt-[20px] w-[1200px] mb-[80px] rounded-[20px] text-[#fff]"
       >

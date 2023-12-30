@@ -1,9 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Image } from "astro:assets";
 import hero_image from "/public/images/Archive-hero.webp";
 import { mapIds } from "@/utils";
 import { firms } from "@/libs/data/firms";
+import HeroSection from "@/components/HeroSection.astro";
 import {
   featureSelection,
   softwareSelection,
@@ -41,30 +41,15 @@ else
 
 <Layout title={``}>
   <main class="min-h-[80vh]">
-    <div
-      class="h-[300px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)] relative mb-[80px]"
-    >
-      <div
-        class="absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] translate-y-[-50%] text-light-grey greatVibes w-[40%]"
-      >
-        <h1
-          class="w-full translate-x-[0px] translate-y-[0px] text-center text-8xl"
-        >
-          Selecciones
-        </h1>
-      </div>
-      <div class="h-full">
-        <Image
-          src={hero_image}
-          alt="Hero image"
-          class="object-cover scale-110 translate-y-[-180px] translate-x-[50px]"
-        />
-      </div>
-    </div>
+    <HeroSection
+      hero_image={hero_image}
+      title="Selecciones"
+      title=""
+    />
     <div class="w-full mb-[80px] flex justify-center">
-      <div class="flex flex-col gap-[40px] w-[1200px]">
+      <div class="flex flex-col gap-[40px] mx-[20px]">
         <div
-          class="w-[1200px] bg-dark-grey text-[#FFF] py-[20px] px-[40px] rounded-xl"
+          class="w-full bg-dark-grey text-[#FFF] py-[20px] px-[40px] rounded-xl"
         >
           <div class="flex justify-left flex-col gap-[15px] w-fit mb-[15px]">
             <h2 class="text-5xl">
