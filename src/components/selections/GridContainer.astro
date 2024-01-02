@@ -1,0 +1,50 @@
+---
+import CardSelection from "../cards/CardSelection.astro";
+import { type TypeSelection } from "@/types.ts";
+import { type Selection } from "@/libs/data/selections";
+
+interface Props {
+  type?: TypeSelection;
+  selections: { [key: string]: Selection };
+  title: string
+}
+
+const { type, selections, title } = Astro.props;
+const selectionKeys = Object.keys(selections);
+---
+
+<div class="border-[#FFF] border-[6px] p-[30px] rounded-xl shadow-xl">
+  <h2
+    class="text-6xl mb-[20px] bg-gradient-to-r from-orange to-[#d3a717] inline-block text-transparent bg-clip-text
+      p-[10px] font-bold"
+  >
+    {title}
+  </h2>
+  <div class="type-grid">
+    {
+      selectionKeys.map((key) => (
+        <CardSelection
+          name={selections[key].name}
+          shortDescription={selections[key].shortDescription}
+          id={key}
+          type={type}
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .type-grid {
+    @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 
+    lg:gap-[40px] md:gap-[30px] xs:gap-[20px] gap-[15px];
+  }
+  .type-header {
+    @apply lg:text-5xl md:text-4xl xs:text-3xl text-2xl;
+  }
+  .type-header-container {
+    @apply w-full bg-dark-grey text-[#FFF] py-[20px] md:px-[40px]
+    xs:px-[20px] px-[15px] flex rounded-xl
+    shadow-md;
+  }
+</style>

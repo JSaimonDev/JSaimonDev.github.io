@@ -17,10 +17,13 @@ const { id } = Astro.params;
 <Layout title={`Promociones en ${firms[id].name}`}>
   <main class="min-h-[80vh]">
     <HeroSection hero_image={hero_image} title="Promociones" />
-    <div class="w-full flex flex-col items-center justify-center">
+    <!-- <div class="w-full flex flex-col items-center justify-center"> -->
+    <div
+      class="mb-[80px] flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px] items-center"
+    >
       <Breadcrumb />
       <div
-        class="bg-dark-grey px-[40px] pb-[40px] pt-[20px] w-[1200px] mb-[80px] rounded-[20px] text-[#fff]"
+        class="bg-dark-grey px-[40px] pb-[40px] pt-[20px] rounded-[20px] text-[#fff]"
       >
         <div class="w-full h-[200px] flex justify-center">
           <img src={firms[id].logoTextWhite} />

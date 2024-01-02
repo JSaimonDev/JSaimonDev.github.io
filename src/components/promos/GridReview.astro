@@ -1,20 +1,23 @@
 ---
 import { firms } from "@/libs/data/firms";
 import CardReview from "../cards/CardReview.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
 
 const keys = Object.keys(firms);
 
 const defaultLogoPath = firms.FTMO.logoText;
 ---
 
-<div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 responsive-section sm:gap-[40px] gap-[20px] mx-[20px]">
-  {
-    keys.map((key) => (
-      <CardReview
-        logo={firms[key].logoText || defaultLogoPath}
-        isReview={firms[key].hasReview}
-        id={key}
-      />
-    ))
-  }
+<div class="mb-[80px] flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px]">
+  <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[20px]">
+    {
+      keys.map((key) => (
+        <CardReview
+          logo={firms[key].logoText || defaultLogoPath}
+          isReview={firms[key].hasReview}
+          id={key}
+        />
+      ))
+    }
+  </div>
 </div>

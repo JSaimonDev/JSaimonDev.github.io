@@ -3,14 +3,13 @@ import hero_image from "../../public/images/Archive-hero.webp";
 import Layout from "@/layouts/Layout.astro";
 import GridSelection from "../components/promos/GridSelection.astro";
 import HeroSection from "@/components/HeroSection.astro";
-import Breadcrumb from "@/components/breadcrumb.astro";
+
 ---
 
 <Layout title="Reseñas">
   <main class="min-h-[85vh]">
     <HeroSection hero_image={hero_image} title="Selecciones" />
     <div class="flex flex-col items-center justify-center">
-      <Breadcrumb />
       <GridSelection />
     </div>
   </main>

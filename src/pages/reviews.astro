@@ -3,7 +3,6 @@ import hero_image from "../../public/images/Detective-office.webp";
 import Layout from "@/layouts/Layout.astro";
 import GridReview from "../components/promos/GridReview.astro";
 import HeroSection from "@/components/HeroSection.astro";
-import Breadcrumb from "@/components/breadcrumb.astro";
 ---
 
 <Layout title="Reseñas">
@@ -14,9 +13,8 @@ import Breadcrumb from "@/components/breadcrumb.astro";
       extraClassImage="lg:translate-y-[-180px] lg:translate-x-[50px]"
     />
     <div
-      class="flex flex-col items-center justify-center md:mb-[80px] xs:mb-[40px] mb-[30px]"
+      class="flex flex-col items-center justify-center"
     >
-      <Breadcrumb />
       <GridReview />
     </div>
   </main>

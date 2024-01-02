@@ -8,6 +8,7 @@ export default {
       "light-grey": "#E9E9E9",
       orange: "#D95613",
       green: "#52BD1E",
+      transparent: "rgba(0, 0, 0, 0)",
     },
     screens: {
       xs: "420px",

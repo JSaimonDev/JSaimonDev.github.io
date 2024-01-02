@@ -10,6 +10,7 @@ import {
   instrumentSelection,
   brokerSelection,
 } from "@/libs/data/selections";
+import Breadcrumb from "@/components/breadcrumb.astro";
 
 export function getStaticPaths() {
   return mapIds(featureSelection).concat(
@@ -40,14 +41,11 @@ else
 ---
 
 <Layout title={``}>
-  <main class="min-h-[80vh]">
-    <HeroSection
-      hero_image={hero_image}
-      title="Selecciones"
-      title=""
-    />
+  <main class="min-h-[80vh] pt-[60px]">
+    <!-- <HeroSection hero_image={hero_image} title="Selecciones" title="" /> -->
     <div class="w-full mb-[80px] flex justify-center">
-      <div class="flex flex-col gap-[40px] mx-[20px]">
+      <div class="flex flex-col gap-[40px] mx-[20px] responsive-section">
+        <Breadcrumb altIndex={2} altTitle={foundSelection[id].name}/>
         <div
           class="w-full bg-dark-grey text-[#FFF] py-[20px] px-[40px] rounded-xl"
         >

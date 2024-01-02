@@ -3,28 +3,32 @@ import { Image } from "astro:assets";
 import logo from "../../../public/icons/The-GodFunded-logo.svg";
 ---
 
-<div
-  class="flex bg-[#e9e9e9] w-full md:h-[70px] lg:h-[90px] justify-between flex-col md:flex-row gap-x-[20px]"
->
-  <input type="checkbox" id="toggle" class="hidden peer" />
-  <div class="flex md:justify-start justify-between gap-[20px] w-full">
-    <a href="/">
-      <Image src={logo} alt="Logo" class="p-4 ml-[10px] md:h-full w-full" />
-    </a>
-    <label for="toggle" class="md:hidden mr-6 flex items-center">
-      <div class="burguer"></div>
-    </label>
-  </div>
-  <ul
-    class="flex-col md:flex-row self-center mr-[40px] lg:gap-x-[40px] gap-x-[30px] gap-y-[10px]
-  text-lg lg:text-xl text font-bold text-[#212121] bg-light-grey md:bg-opacity-0
-  hidden md:flex peer-checked:flex w-full md:mb-0 mb-[20px] justify-end"
+<div class="bg-[#e9e9e9] w-full md:h-[70px] lg:h-[90px] flex justify-center">
+  <nav
+    class="md:max-w-[800px] lg:max-w-[980px] lg:w-[980px] xl:max-w-[1200px]
+     xl:w-[1200px] sm:mx-[30px] mx-0 w-full pl-[10px] sm:px-0
+     justify-between flex-col md:flex-row gap-x-[20px] flex"
   >
-    <li><a href="/reviews">Reviews</a></li>
-    <li><a href="/selecciones">Selecciones</a></li>
-    <li><a href="/promociones">Promociones</a></li>
-    <li>Guías</li>
-  </ul>
+    <div class="flex md:justify-start justify-between gap-[20px] w-full">
+      <a href="/">
+        <Image src={logo} alt="Logo" class="lg:py-[15px] py-[12px] md:h-full w-full" />
+      </a>
+      <label for="toggle" class="md:hidden mr-6 flex items-center">
+        <div class="burguer"></div>
+      </label>
+    </div>
+    <ul
+      class="flex-col md:flex-row self-center lg:gap-x-[40px] gap-x-[30px] gap-y-[10px]
+  text-lg lg:text-xl text font-[600] text-[#212121] bg-light-grey md:bg-opacity-0
+  hidden md:flex peer-checked:flex w-full md:mb-0 mb-[20px] justify-end"
+    >
+      <li><a href="/reviews">Reviews</a></li>
+      <li><a href="/selecciones">Selecciones</a></li>
+      <li><a href="/promociones">Promociones</a></li>
+      <li>Guías</li>
+    </ul>
+    <input type="checkbox" id="toggle" class="hidden peer" />
+  </nav>
 </div>
 
 <script></script>

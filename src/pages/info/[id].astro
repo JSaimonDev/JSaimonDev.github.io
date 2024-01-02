@@ -5,7 +5,6 @@ import TechInfo from "@/components/reviews/TechInfo.astro";
 import Button from "@/components/button.astro";
 import { mapIds } from "@/utils";
 import Review from "@/layouts/Review.astro";
-import Breadcrumb from "@/components/breadcrumb.astro";
 
 export function getStaticPaths() {
   return mapIds(firms);
@@ -13,7 +12,6 @@ export function getStaticPaths() {
 ---
 
 <Review>
-  <Breadcrumb altIndex={1} altTitle="Reviews" altUrl="/reviews" />
   <BusinessInfo
     firm={firms.FTMO}
     hq="Praga 1, Calle Purkynova 2121/3, 110 00, República Checa"

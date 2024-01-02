@@ -18,12 +18,12 @@ if (altTitle && altIndex) {
 ---
 
 <nav
-  class="responsive-section justify-start w-full shadow-md py-[8px] px-[16px] bg-[#FFF] rounded-lg"
+  class=""
 >
   <ol class="flex flex-wrap">
     {
       breadcrumbsItems.map((item, index) => (
-        <li class="lg:text-2xl md:text-xl text-lg text-dark-grey">
+        <li class="lg:text-xl md:text-xl text-lg text-[#FFF]">
           {index > 0 && <span class="ml-[8px] mr-[4px]">{">"}</span>}
           {index < breadcrumbsItems.length - 1 ? (
             <a href={item.url}>

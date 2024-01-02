@@ -2,6 +2,7 @@
 import hero_image from "../../public/images/Detective-office.webp";
 import Layout from "@/layouts/Layout.astro";
 import HeroSection from "@/components/HeroSection.astro";
+import Breadcrumb from "@/components/breadcrumb.astro";
 ---
 
 <Layout title="Reseñas">
@@ -10,9 +11,14 @@ import HeroSection from "@/components/HeroSection.astro";
       hero_image={hero_image}
       title="Review"
       extraClassImage="lg:translate-y-[-180px] lg:translate-x-[50px]"
+      altIndex={1}
+      altTitle="Reviews"
+      altUrl="/reviews"
     />
+    <div
+      class="mb-[80px] flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px] items-center"
+    >
+      <slot />
+    </div>
   </main>
-  <div class="flex flex-col items-center justify-center mb-[80px] w-[1200px]">
-    <slot />
-  </div>
 </Layout>
