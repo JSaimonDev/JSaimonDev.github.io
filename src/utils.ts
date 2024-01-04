@@ -12,7 +12,8 @@ export const mapIds = (data: { [key: string]: Firm | Selection }) => {
 }
 
 export const getBreadcrumbItems = (pathname: string) => {
-  let segments = pathname.split("/");
+  let cleanedPathname = pathname.replace(/\/+$/, "");
+let segments = cleanedPathname.split("/");
   let breadcrumbItems: { title: string; url: string }[] = [];
   segments.forEach((segment, index) => {
     let url = segments.slice(0, index + 1).join("/");
@@ -20,6 +21,5 @@ export const getBreadcrumbItems = (pathname: string) => {
   });
   breadcrumbItems[0].title = "Inicio"
   breadcrumbItems[0].url = '/'
-  console.log(breadcrumbItems)
   return breadcrumbItems
 }
