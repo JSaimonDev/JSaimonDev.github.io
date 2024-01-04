@@ -5,7 +5,6 @@ import { firms } from "@/libs/data/firms.ts";
 import { formatDate } from "@/utils.ts";
 import { mapIds } from "@/utils.ts";
 import HeroSection from "@/components/HeroSection.astro";
-import Breadcrumb from "@/components/breadcrumb.astro";
 
 export function getStaticPaths() {
   return mapIds(firms);
@@ -21,7 +20,6 @@ const { id } = Astro.params;
     <div
       class="mb-[80px] flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px] items-center"
     >
-      <Breadcrumb />
       <div
         class="bg-dark-grey px-[40px] pb-[40px] pt-[20px] rounded-[20px] text-[#fff]"
       >
