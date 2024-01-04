@@ -6,16 +6,24 @@ import { type Selection } from "@/libs/data/selections";
 interface Props {
   type?: TypeSelection;
   selections: { [key: string]: Selection };
-  title: string
+  title: string;
+  startColor: string;
+  endColor: string;
+  shadowColor?: "blue" | "green" | "grey";
 }
 
-const { type, selections, title } = Astro.props;
+const { type, selections, title, startColor, endColor, shadowColor } =
+  Astro.props;
 const selectionKeys = Object.keys(selections);
 ---
 
-<div class="border-[#FFF] border-[6px] p-[30px] rounded-xl shadow-xl">
+<div
+  class="border-[#FFF] border-[6px] md:p-[30px] xs:p-[25px] p-[20px] rounded-xl shadow-xl bg-ligther-grey"
+>
   <h2
-    class="text-6xl mb-[20px] bg-gradient-to-r from-orange to-[#d3a717] inline-block text-transparent bg-clip-text
+    style=`background: linear-gradient(to right, ${startColor}, ${endColor});
+    -webkit-background-clip: text`
+    class="md:text-6xl sm:text-5xl xs:text-4xl text-3xl mb-[20px] inline-block text-transparent
       p-[10px] font-bold"
   >
     {title}
@@ -28,6 +36,7 @@ const selectionKeys = Object.keys(selections);
           shortDescription={selections[key].shortDescription}
           id={key}
           type={type}
+          shadowColor={shadowColor}
         />
       ))
     }

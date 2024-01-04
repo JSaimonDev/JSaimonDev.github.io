@@ -6,15 +6,25 @@ interface Props {
   shortDescription?: string;
   id: string;
   type?: TypeSelection;
+  shadowColor?: "blue" | "green" | "grey";
 }
 
-const { name, shortDescription, id } = Astro.props;
+const { name, shortDescription, id, shadowColor } = Astro.props;
+
+let shadowClass =
+  "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(217,86,19,0.5)] shadow-md cursor-pointer rounded-xl";
+if (shadowColor === "blue")
+  shadowClass =
+    "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(86,84,188,0.5)] shadow-md cursor-pointer rounded-xl";
+else if (shadowColor === "green")
+  shadowClass =
+    "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(70,130,59,0.5)] shadow-md cursor-pointer rounded-xl";
+else if (shadowColor === "grey")
+  shadowClass =
+    "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(69,69,69,0.5)] shadow-md cursor-pointer rounded-xl";
 ---
 
-<a
-  href={`/selecciones/${id}`}
-  class="h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(217,86,19,1)] shadow-md cursor-pointer rounded-xl"
->
+<a href={`/selecciones/${id}`} class={shadowClass}>
   <p class="xl:text-xl text-lg font-bold">{name}</p>
   {
     shortDescription && (

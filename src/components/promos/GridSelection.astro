@@ -5,35 +5,41 @@ import {
   softwareSelection,
   brokerSelection,
 } from "@/libs/data/selections";
-import CardSelection from "../cards/CardSelection.astro";
 import GridContainer from "@/components/selections/GridContainer.astro";
-
-const featureKeys = Object.keys(featureSelection);
-const instrumentKeys = Object.keys(instrumentSelection);
-const softwareKeys = Object.keys(softwareSelection);
-const brokerKeys = Object.keys(brokerSelection);
 ---
 
 <div
-  class="mb-[80px] flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px]"
+  class="flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section lg:m-[40px] xs:m-[30px] m-[20px]"
 >
-  <GridContainer selections={featureSelection} type="feature" title="Reglas y características"/>
-  <GridContainer selections={instrumentSelection} type="instrument" title="Instrumentos"/>
-  <GridContainer selections={softwareSelection} type="software" title="Software"/>
-  <GridContainer selections={brokerSelection} type="broker" title="Broker"/>
+  <GridContainer
+    selections={featureSelection}
+    type="feature"
+    title="Reglas y características"
+    startColor="#D95613"
+    endColor="#d3a717"
+  />
+  <GridContainer
+    selections={instrumentSelection}
+    type="instrument"
+    title="Instrumentos"
+    endColor="#649cef"
+    startColor="#5654bc"
+    shadowColor="blue"
+  />
+  <GridContainer
+    selections={softwareSelection}
+    type="software"
+    title="Software"
+    startColor="#46823b"
+    endColor="#38c168"
+    shadowColor="green"
+  />
+  <GridContainer
+    selections={brokerSelection}
+    type="broker"
+    title="Broker"
+    startColor="#454545"
+    endColor="#b2b2b2"
+    shadowColor="grey"
+  />
 </div>
-
-<style>
-  .type-grid {
-    @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 
-    lg:gap-[40px] md:gap-[30px] xs:gap-[20px] gap-[15px];
-  }
-  .type-header {
-    @apply lg:text-5xl md:text-4xl xs:text-3xl text-2xl;
-  }
-  .type-header-container {
-    @apply w-full bg-dark-grey text-[#FFF] py-[20px] md:px-[40px]
-    xs:px-[20px] px-[15px] flex rounded-xl
-    shadow-md;
-  }
-</style>

@@ -9,25 +9,36 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
      xl:w-[1200px] sm:mx-[30px] mx-0 w-full pl-[10px] sm:px-0
      justify-between flex-col md:flex-row gap-x-[20px] flex"
   >
+    <input type="checkbox" id="toggle" class="hidden peer" />
     <div class="flex md:justify-start justify-between gap-[20px] w-full">
       <a href="/">
-        <Image src={logo} alt="Logo" class="lg:py-[15px] py-[12px] md:h-full w-full" />
+        <Image
+          src={logo}
+          alt="Logo"
+          class="lg:py-[15px] py-[12px] md:h-full w-full"
+        />
       </a>
       <label for="toggle" class="md:hidden mr-6 flex items-center">
-        <div class="burguer"></div>
+        <!-- <div class="burguer"></div> -->
+        <div
+          class="hamburger-lines md:scale-100 sm:scale-95 xs:scale-90 scale-[70%]"
+        >
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
       </label>
     </div>
     <ul
       class="flex-col md:flex-row self-center lg:gap-x-[40px] gap-x-[30px] gap-y-[10px]
-  text-lg lg:text-xl text font-[600] text-[#212121] bg-light-grey md:bg-opacity-0
-  hidden md:flex peer-checked:flex w-full md:mb-0 mb-[20px] justify-end"
+ font-[600] text-[#212121] bg-light-grey md:bg-opacity-0
+  hidden md:flex peer-checked:flex w-full md:mb-0 mb-[20px] justify-end md:mt-0 mt-[10px]"
     >
       <li><a href="/reviews">Reviews</a></li>
       <li><a href="/selecciones">Selecciones</a></li>
       <li><a href="/promociones">Promociones</a></li>
       <li>Guías</li>
     </ul>
-    <input type="checkbox" id="toggle" class="hidden peer" />
   </nav>
 </div>
 
@@ -36,7 +47,7 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
 <style>
   li {
     cursor: pointer;
-    @apply md:pl-0 pl-[50px] text-2xl md:text-xl;
+    @apply md:pl-0 xs:pl-[55px] md:text-xl sm:text-2xl xs:text-xl text-lg xs:text-left text-center xs:ml-0 ml-[-10px];
   }
   .burguer {
     @apply w-[35px];
@@ -61,5 +72,48 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
   }
   #toggle:checked ~ div label .burguer:after {
     transform: translateY(-7px) rotate(-135deg);
+  }
+  .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+  .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #toggle:checked ~ div label .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  #toggle:checked ~ div label .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  #toggle:checked ~ div label .hamburger-lines .line3 {
+    transform: rotate(-45deg);
   }
 </style>

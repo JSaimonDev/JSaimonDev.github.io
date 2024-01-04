@@ -10,7 +10,6 @@ import {
   instrumentSelection,
   brokerSelection,
 } from "@/libs/data/selections";
-import Breadcrumb from "@/components/breadcrumb.astro";
 
 export function getStaticPaths() {
   return mapIds(featureSelection).concat(
@@ -41,28 +40,20 @@ else
 ---
 
 <Layout title={``}>
-  <main class="min-h-[80vh] pt-[60px]">
-    <!-- <HeroSection hero_image={hero_image} title="Selecciones" title="" /> -->
+  <main class="min-h-[80vh]">
+    <HeroSection
+      hero_image={hero_image}
+      title={foundSelection[id].name}
+      isSelection
+    />
     <div class="w-full mb-[80px] flex justify-center">
-      <div class="flex flex-col gap-[40px] mx-[20px] responsive-section">
-        <Breadcrumb altIndex={2} altTitle={foundSelection[id].name}/>
-        <div
-          class="w-full bg-dark-grey text-[#FFF] py-[20px] px-[40px] rounded-xl"
-        >
-          <div class="flex justify-left flex-col gap-[15px] w-fit mb-[15px]">
-            <h2 class="text-5xl">
-              {foundSelection[id].name}
-            </h2>
-            <hr class="w-full" />
-          </div>
-          <p>
-            {foundSelection[id].shortDescription}
-          </p>
-        </div>
-        <ul class="ml-[40px]">
+      <div
+        class="flex flex-col gap-[40px] mx-[20px] responsive-section border-[#FFF] border-[6px] p-[30px] rounded-xl shadow-xl"
+      >
+        <ul class="flex flex-col gap-[20px]">
           {
             foundSelection[id].firms?.map((firm) => (
-              <li class="mb-[20px]">
+              <li class="bg-[#FFF] rounded-lg p-[20px] shadow-md hover:shadow-[0_0_10px_2px_rgba(217,86,19,0.5)] cursor-pointer">
                 <a href={firms[firm.id].link}>
                   <h3 class="text-3xl mb-[10px] flex items-center gap-[10px] cursor-pointer">
                     <img src="/icons/bullet-list.svg" class="h-[30px]" />

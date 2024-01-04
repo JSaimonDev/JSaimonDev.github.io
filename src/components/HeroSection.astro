@@ -9,15 +9,23 @@ interface Props {
   altTitle?: string;
   altUrl?: string;
   altIndex?: number;
+  isSelection?: boolean;
 }
 
-const { hero_image, title, extraClassImage, altTitle, altIndex, altUrl } =
-  Astro.props;
+const {
+  hero_image,
+  title,
+  extraClassImage,
+  altTitle,
+  altIndex,
+  altUrl,
+  isSelection,
+} = Astro.props;
 ---
 
 <div
   class="xs:h-[350px] h-[400px] min-h-[350px] overflow-hidden shadow-[0_3px_3px_0px_rgba(50,50,0,0.5)]
-      relative lg:mb-[80px] md:mb-[60px] sm:mb-[50px] xs:mb-[40px] mb-[20px]"
+      relative"
 >
   <div
     class="absolute z-20 text-light-grey w-full h-full flex justify-center items-center bg-[rgba(15,15,15,0.8)]
@@ -27,11 +35,17 @@ const { hero_image, title, extraClassImage, altTitle, altIndex, altUrl } =
       class="md:max-w-[800px] lg:max-w-[980px] lg:w-[980px] xl:max-w-[1200px]
      xl:w-[1200px] md:mx-[40px] sm:mx-[30px] mx-0 w-full px-[30px] sm:px-0"
     >
-      <h1
-        class="w-full lg:text-8xl xs:text-7xl text-5xl md:text-left text-center greatVibes mb-[10px]"
-      >
-        {title}
-      </h1>
+      {
+        isSelection ? (
+          <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
+            {title}
+          </h1>
+        ) : (
+          <h1 class="w-full lg:text-8xl xs:text-7xl text-5xl md:text-left text-center greatVibes mb-[10px]">
+            {title}
+          </h1>
+        )
+      }
       <p class="md:w-[60%] w-full mb-[20px]">
         Es muy importante conocer todos los detalles antes de elegir una empresa
         de fondeo. Cada una de ellas funciona de manera diferente, y si no lo

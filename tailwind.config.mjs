@@ -5,10 +5,13 @@ export default {
     colors: {
       "dark-grey": "#252525",
       "medium-grey": "#848484",
+      "medium-light-grey": "#A9A9A9",
       "light-grey": "#E9E9E9",
+      "ligther-grey": "#F1F1F1",
       orange: "#D95613",
       green: "#52BD1E",
       transparent: "rgba(0, 0, 0, 0)",
+      blue: "#2274a5",
     },
     screens: {
       xs: "420px",
