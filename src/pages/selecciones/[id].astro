@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import hero_image from "/public/images/Archive-hero.webp";
 import { mapIds } from "@/utils";
 import { firms } from "@/libs/data/firms";
-import HeroSection from "@/components/HeroSection.astro";
+import HeroPage from "@/components/HeroPage.astro";
 import {
   featureSelection,
   softwareSelection,
@@ -41,14 +41,14 @@ else
 
 <Layout title={``}>
   <main class="min-h-[80vh]">
-    <HeroSection
+    <HeroPage
       hero_image={hero_image}
       title={foundSelection[id].name}
       isSelection
     />
-    <div class="w-full mb-[80px] flex justify-center">
+    <div class="flex justify-center w-full">
       <div
-        class="flex flex-col gap-[40px] mx-[20px] responsive-section border-[#FFF] border-[6px] p-[30px] rounded-xl shadow-xl"
+        class="flex flex-col w-full responsive-section design-section margin-section"
       >
         <ul class="flex flex-col gap-[20px]">
           {

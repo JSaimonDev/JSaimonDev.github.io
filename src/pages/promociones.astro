@@ -2,15 +2,14 @@
 import hero_image from "public/images/Promotions-hero.webp";
 import Layout from "@/layouts/Layout.astro";
 import GridPromo from "../components/promos/GridPromo.astro";
-import HeroSection from "@/components/HeroSection.astro";
+import HeroPage from "@/components/HeroPage.astro";
 
 ---
 
 <Layout title="Reseñas">
   <main>
-    <HeroSection hero_image={hero_image} title="Promociones" />
+    <HeroPage hero_image={hero_image} title="Promociones" />
     <div class="flex flex-col items-center justify-center">
-
       <GridPromo />
     </div>
   </main>
