@@ -1,5 +1,5 @@
 export interface Firm{
-    logoTextWhite?: string
+    logoPromos?: string
     logoText: string
     logo?: string
     promotions?: Promotion[]
@@ -25,7 +25,7 @@ export const firms: { [key: string]: Firm } = {
     FTMO: {
         name: "FTMO",
         logoText: "/images/firms/FTMO/FTMO-logo-500x250.webp",
-        logoTextWhite: "/images/firms/FTMO/FTMO-logo-white-500x250.webp",
+        logoPromos: "/images/firms/FTMO/FTMO-logo-white-500x250.webp",
         logo: "/images/firms/FTMO/FTMO-logo-250x250.webp",
         bgColor: "#FFF",
         link: new URL("https://ftmo.com/es/"),
@@ -34,7 +34,7 @@ export const firms: { [key: string]: Firm } = {
     TFT: {
         name: "The Funded Trader",
         logoText: "/images/firms/TFT/TFT-logo-500x250.webp",
-        logoTextWhite: "/images/firms/TFT/TFT-logo-white-500x250.webp",
+        logoPromos: "/images/firms/TFT/TFT-logo-white-500x250.webp",
         logo: "/images/firms/TFT/TFT-logo-250x250.webp",
         bgColor: "#0A2237",
         link: new URL("https://thefundedtraderprogram.com/"),
@@ -47,13 +47,21 @@ export const firms: { [key: string]: Firm } = {
             description: "100% coste de la prueba recuperado + 12.5% beneficio de la evaluación. Válido para todo tipo de cuentas",
             code: "TFTDECEMBER25",
             endDate: new Date(2023, 11, 31)
+            },
+                    {
+            discount: 25,
+            benefit1: "100% Bonus",
+            benefit2: "12.5% profit",
+            description: "100% coste de la prueba recuperado + 12.5% beneficio de la evaluación. Válido para todo tipo de cuentas",
+            code: "TFTDECEMBER25",
+            endDate: new Date(2023, 11, 31)
         }
     ]
     },
     FundedNext: {
         name: "Funded Next",
         logoText: "/images/firms/FundedNext/FundedNext-logo-500x250.webp",
-        logoTextWhite: "/images/firms/FundedNext/FundedNext-logo-white-500x250.webp",
+        logoPromos: "/images/firms/FundedNext/FundedNext-logo-white-500x250.webp",
         logo: "/images/firms/FundedNext/FundedNext-logo-250x250.webp",
         bgColor: "#FFF",
         hasReview: false,
@@ -62,7 +70,7 @@ export const firms: { [key: string]: Firm } = {
     BlueGuardian: {
         name: "Blue Guardian",
         logoText: "/images/firms/BlueGuardian/Blue-guardian-logo-500x250.webp",
-        logoTextWhite: "/images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp",
+        logoPromos: "/images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp",
         logo: "/images/firms/BlueGuardian/Blue-guardian-logo-400x400.webp",
         bgColor: "#FFF",
         link: new URL("https://www.blueguardian.com/"),
@@ -81,7 +89,7 @@ export const firms: { [key: string]: Firm } = {
     GFT: {
         name: "Goat Funded Trader",
         logoText: "/images/firms/GFT/GFT-logo-500x250.webp",
-        logoTextWhite: "/images/firms/GFT/GFT-logo-white-500x250.webp",
+        logoPromos: "/images/firms/GFT/GFT-logo-white-500x250.webp",
         logo: "/images/firms/GFT/GFT-logo-400x400.webp",
         bgColor: "#002988",
         link: new URL("https://goatfundedtrader.com/"),

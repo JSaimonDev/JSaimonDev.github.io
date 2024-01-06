@@ -2,9 +2,9 @@
 import hero_image from "/public/images/Promotions-hero.webp";
 import Layout from "@/layouts/Layout.astro";
 import { firms } from "@/libs/data/firms.ts";
-import { formatDate } from "@/utils.ts";
 import { mapIds } from "@/utils.ts";
 import HeroPage from "@/components/HeroPage.astro";
+import CardPromoDetails from "@/components/cards/CardPromoDetails.astro";
 
 export function getStaticPaths() {
   return mapIds(firms);
@@ -15,52 +15,25 @@ const { id } = Astro.params;
 
 <Layout title={`Promociones en ${firms[id].name}`}>
   <main class="min-h-[80vh]">
-    <HeroPage hero_image={hero_image} title="Promociones" />
-    <!-- <div class="w-full flex flex-col items-center justify-center"> -->
-    <div
-      class="mb-[80px] flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section md:mx-[40px] xs:mx-[30px] mx-[20px] items-center"
-    >
+    <HeroPage hero_image={hero_image} titleLogo={firms[id].logoPromos} />
+    <div class="flex justify-center w-full">
       <div
-        class="bg-dark-grey px-[40px] pb-[40px] pt-[20px] rounded-[20px] text-[#fff]"
+        class="flex flex-col items-center justify-start responsive-section margin-section w-full lg:gap-[40px] xs:gap-[30px] gap-[20px]"
       >
-        <div class="w-full h-[200px] flex justify-center">
-          <img src={firms[id].logoTextWhite} />
-        </div>
-        <div class="px-[40px]">
-          <table class="w-full text-center divide-y divide-[#fff] divide">
-            <thead>
-              <tr class="text-3xl">
-                <th class="w-1/6 py-[20px]">Descuento</th>
-                <th class="w-3/6 py-[20px]">Descripción</th>
-                <th class="w-1/6 py-[20px]">Fecha límite</th>
-                <th class="w-1/6 py-[20px]">Código</th>
-              </tr>
-            </thead>
-            <tbody class="text-lg">
-              {
-                firms[id].promotions != null ? (
-                  firms[id].promotions?.map((promotion) => (
-                    <tr>
-                      <th class=" text-3xl text-green">
-                        {promotion.discount}%
-                      </th>
-                      <th class="py-[20px] pr-[30px]">
-                        {promotion.description}
-                      </th>
-                      <th class="py-[20px]">{formatDate(promotion.endDate)}</th>
-                      <th class="py-[20px]">{promotion.code}</th>
-                    </tr>
-                  ))
-                ) : (
-                  <td colspan="4" class="py-[40px]">
-                    No hay ningúna promoción actualmente para esta empresa de
-                    fondeo.
-                  </td>
-                )
-              }
-            </tbody>
-          </table>
-        </div>
+        {
+          firms[id].promotions != null ? (
+            firms[id].promotions?.map((promotion) => (
+              <CardPromoDetails
+                code={promotion.code}
+                description={promotion.description}
+                discount={promotion.discount}
+                endDate={promotion.endDate}
+              />
+            ))
+          ) : (
+            <CardPromoDetails isNoPromo />
+          )
+        }
       </div>
     </div>
   </main>

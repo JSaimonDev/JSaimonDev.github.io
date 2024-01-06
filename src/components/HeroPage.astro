@@ -4,12 +4,13 @@ import BreadcrumbHeader from "./BreadcrumbHero.astro";
 
 interface Props {
   hero_image: ImageMetadata;
-  title: string;
+  title?: string;
   extraClassImage?: string;
   altTitle?: string;
   altUrl?: string;
   altIndex?: number;
   isSelection?: boolean;
+  titleLogo?: string;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   altIndex,
   altUrl,
   isSelection,
+  titleLogo,
 } = Astro.props;
 ---
 
@@ -31,11 +33,16 @@ const {
     class="absolute z-20 text-light-grey w-full h-full flex justify-center items-center bg-[rgba(15,15,15,0.8)]
     md:bg-transparent"
   >
-    <div
-      class="responsive-section margin-section w-full"
-    >
+    <div class="responsive-section margin-section w-full">
       {
-        isSelection ? (
+        titleLogo ? (
+          <h1 class="w-full flex md:justify-start justify-center">
+            <img
+              src={titleLogo}
+              class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
+            />
+          </h1>
+        ) : isSelection ? (
           <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
             {title}
           </h1>

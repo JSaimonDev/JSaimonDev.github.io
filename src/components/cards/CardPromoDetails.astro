@@ -1,0 +1,58 @@
+---
+import { formatDate } from "@/utils.ts";
+
+interface Props {
+  discount?: number;
+  description?: string;
+  code?: string;
+  endDate?: Date;
+  isNoPromo?: boolean;
+}
+
+const { discount, description, code, endDate, isNoPromo } = Astro.props;
+---
+
+<section class="design-section text-center w-full">
+  {
+    isNoPromo ? (
+      <div class="xl:text-2xl sm:text-xl xs:text-lg text-base">
+        No hay ningúna promoción actualmente para esta empresa de fondeo.
+      </div>
+    ) : (
+      <div class="grid grid-cols-6 gap-[20px]">
+        <div class="lg:col-span-2 sm:col-span-3 col-span-6 cell">
+          <div class="text-medium-grey">Consigue un descuento del</div>
+          <div class="flex justify-center items-center flex-1">
+            <div class="xl:text-6xl lg:text-5xl md:text-6xl text-green xs:text-5xl text-4xl">
+              {discount}%
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2 sm:col-span-3 col-span-6 cell">
+          <div class="text-medium-grey">Finaliza el</div>
+          <div class="flex justify-center items-center flex-1">
+            <div class="xl:text-4xl lg:text-3xl md:text-4xl xs:text-3xl text-2xl">
+              {endDate && formatDate(endDate)}
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2 col-span-6 cell">
+          <div class="text-medium-grey">Introduce el código</div>
+          <div class="flex justify-center items-center flex-1">
+            <div class="xl:text-4xl lg:text-3xl md:text-4xl xs:text-3xl text-2xl">
+              {code}
+            </div>
+          </div>
+        </div>
+        <div class="col-span-6 cell xl:text-2xl sm:text-xl xs:text-lg text-base">
+          {description}
+        </div>
+      </div>
+    )
+  }
+</section>
+<style>
+  .cell {
+    @apply p-[20px] bg-[#FFF] shadow-md rounded-xl flex flex-col justify-between items-center gap-[10px];
+  }
+</style>
