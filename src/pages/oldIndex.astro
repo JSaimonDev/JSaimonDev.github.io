@@ -38,47 +38,41 @@ import {
         />
       </div>
     </div>
-    <section class="flex justify-center w-full">
-      <div class="responsive-section margin-section">
+    <section class="flex flex-col items-center p-[40px] lg:p-[80px]">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[40px] responsive-section"
+      >
         <div
-          class="design-section grid grid-cols-9 lg:gap-[40px] md:gap-[30px] gap-[20px]"
+          class="text-light-grey bg-dark-grey flex flex-col items-center justify-center
+           xl:p-[40px] lg:p-[35px] p-[15px] lg:gap-[20px] rounded-xl md:col-span-3 lg:col-span-1"
         >
-          <h2
-            style=`background: linear-gradient(to right, #D95613, #d3a717);
-            -webkit-background-clip:text`
-            class="md:text-8xl sm:text-7xl xs:text-6xl text-5xl inline-block text-transparent
-            p-[10px] font-bold col-span-3"
-          >
-            Reviews
-          </h2>
-          <p class="col-span-6 h-full pt-[12px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <CardReview
-            logo={firms.FTMO.logoText}
-            webLink={firms.FTMO.link}
-            colSpan={2}
-          />
-          <CardReview logo={firms.TFT.logoText} colSpan={2} />
-          <CardReview logo={firms.FundedNext.logoText} colSpan={2} />
-          <CardReview logo={firms.FundedNext.logoText} colSpan={2} />
-          <a href="/reviews" class="flex justify-center items-center">
-            <svg
-              height="72px"
-              viewBox="0 0 24 24"
-              width="72px"
-              xmlns="http://www.w3.org/2000/svg"
-              class="fill-dark-grey"
-              ><path
-                d="m17 13h-4v4h-2v-4h-4v-2h4v-4h2v4h4m-5-9a10 10 0 0 0 -10 10 10 10 0 0 0 10 10 10 10 0 0 0 10-10 10 10 0 0 0 -10-10z"
-              ></path></svg
+          <h2 class="xl:text-6xl lg:text-5xl xs:text-6xl text-4xl">Reviews</h2>
+          <a href="/reviews">
+            <button
+              class="rounded-lg border-light-grey xl:text-sm text-[0.7rem] p-[10px] border-4 font-medium
+               hover:bg-light-grey hover:font-bold hover:text-dark-grey ease-in-out duration-100
+               hidden lg:block"
+            >
+              Más empresas de fondeo</button
             >
           </a>
         </div>
+        <CardReview logo={firms.FTMO.logoText} webLink={firms.FTMO.link} />
+        <CardReview logo={firms.TFT.logoText} />
+        <CardReview logo={firms.FundedNext.logoText} />
       </div>
+      <a
+        href="/reviews"
+        class="w-full flex justify-center max-w-[500px] md:max-w-fit"
+      >
+        <button
+          class="rounded-lg border-dark-grey text-xl p-[10px] border-4 font-medium
+               hover:bg-light-grey hover:font-bold hover:text-dark-grey ease-in-out duration-100
+               lg:hidden mt-[60px] mb-[20px] w-full"
+        >
+          Más empresas de fondeo</button
+        >
+      </a>
     </section>
     <section
       class="w-full bg-dark-grey p-[40px] lg:p-[80px] flex flex-col items-center"
