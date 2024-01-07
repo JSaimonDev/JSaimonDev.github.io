@@ -2,7 +2,6 @@
 import { firms } from "@/libs/data/firms";
 import BusinessInfo from "@/components/reviews/BusinessInfo.astro";
 import TechInfo from "@/components/reviews/TechInfo.astro";
-import Button from "@/components/button.astro";
 import { mapIds } from "@/utils";
 import Review from "@/layouts/Review.astro";
 
@@ -18,7 +17,13 @@ export function getStaticPaths() {
     foundation={215}
     ceo="Otakar Suffner"
   />
-  <Button text="Crea ahora tu cuenta en FTMO" link={firms.FTMO.link} />
+  <a href={firms.FTMO.link} class="mb-[60px]">
+    <button
+      class="py-[20px] px-[40px] text-3xl bg-orange text-[#FFF] rounded-xl"
+    >
+      Crea ahora tu cuenta en FTMO
+    </button>
+  </a>
   <TechInfo
     brokers="Broker propio"
     currency="USD, GBP, EUR, CZK, CAD, AUD, CHF"

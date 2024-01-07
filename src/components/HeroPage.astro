@@ -11,6 +11,11 @@ interface Props {
   altIndex?: number;
   isSelection?: boolean;
   titleLogo?: string;
+  button1Text?: string;
+  button1Link?: string;
+  button2Text?: string;
+  button2Link?: string;
+  hasButtons?: boolean;
 }
 
 const {
@@ -22,6 +27,11 @@ const {
   altUrl,
   isSelection,
   titleLogo,
+  button1Link,
+  button1Text,
+  button2Link,
+  button2Text,
+  hasButtons,
 } = Astro.props;
 ---
 
@@ -33,36 +43,61 @@ const {
     class="absolute z-20 text-light-grey w-full h-full flex justify-center items-center bg-[rgba(15,15,15,0.8)]
     md:bg-transparent"
   >
-    <div class="responsive-section margin-section w-full">
-      {
-        titleLogo ? (
-          <h1 class="w-full flex md:justify-start justify-center">
-            <img
-              src={titleLogo}
-              class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
-            />
-          </h1>
-        ) : isSelection ? (
-          <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
-            {title}
-          </h1>
-        ) : (
-          <h1 class="w-full lg:text-8xl xs:text-7xl text-5xl md:text-left text-center greatVibes mb-[10px]">
-            {title}
-          </h1>
-        )
-      }
-      <p class="md:w-[60%] w-full mb-[20px]">
-        Es muy importante conocer todos los detalles antes de elegir una empresa
-        de fondeo. Cada una de ellas funciona de manera diferente, y si no lo
-        tienes todo en cuenta desde un principio, es posible que tengas
-        problemas en un futuro, o incluso llegues a perder la cuenta.
-      </p>
-      <BreadcrumbHeader
-        altIndex={altIndex}
-        altTitle={altTitle}
-        altUrl={altUrl}
-      />
+    <div class="responsive-section margin-section w-full flex justify-between">
+      <div>
+        {
+          titleLogo ? (
+            <h1 class="w-full flex md:justify-start justify-center">
+              <img
+                src={titleLogo}
+                class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
+              />
+            </h1>
+          ) : isSelection ? (
+            <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
+              {title}
+            </h1>
+          ) : (
+            <h1 class="w-full lg:text-8xl xs:text-7xl text-5xl md:text-left text-center greatVibes mb-[10px]">
+              {title}
+            </h1>
+          )
+        }
+        <p class="xl:w-[70%] lg:w-[75%] md:w-[72%] mb-[20px]">
+          Es muy importante conocer todos los detalles antes de elegir una
+          empresa de fondeo. Cada una de ellas funciona de manera diferente, y
+          si no lo tienes todo en cuenta desde un principio, es posible que
+          tengas problemas en un futuro, o incluso llegues a perder la cuenta.
+        </p>
+        <BreadcrumbHeader
+          altIndex={altIndex}
+          altTitle={altTitle}
+          altUrl={altUrl}
+        />
+      </div>
+      <div
+        class="md:flex hidden flex-col justify-center gap-[50px] xl:basis-[300px] md:basis-[260px] shrink-0"
+      >
+        {
+          hasButtons && (
+            <>
+              <a href={button1Link}>
+                <button
+                  class="border-[4px] border-light-grey shadow-[0_0px_10px_3px_rgba(255,255,255,0.5)]
+        text-[#FFF] w-full"
+                >
+                  {button1Text}
+                </button>
+              </a>
+              <a href={button2Link}>
+                <button class="bg-light-grey text-dark-grey w-full">
+                  {button2Text}
+                </button>
+              </a>
+            </>
+          )
+        }
+      </div>
     </div>
   </div>
   <div
@@ -79,3 +114,10 @@ const {
     />
   </div>
 </div>
+<style>
+  button {
+    @apply p-[12px] rounded-lg text-2xl;
+  }
+  a {
+  }
+</style>

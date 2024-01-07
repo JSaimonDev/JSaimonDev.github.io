@@ -53,15 +53,15 @@ else
         <ul class="flex flex-col gap-[20px]">
           {
             foundSelection[id].firms?.map((firm) => (
-              <li class="bg-[#FFF] rounded-lg p-[20px] shadow-md hover:shadow-[0_0_10px_2px_rgba(217,86,19,0.5)] cursor-pointer">
-                <a href={firms[firm.id].link}>
+              <a href={firms[firm.id].link}>
+                <li class="bg-[#FFF] rounded-lg p-[20px] shadow-md hover:shadow-[0_0_10px_2px_rgba(217,86,19,0.5)] cursor-pointer">
                   <h3 class="text-3xl mb-[10px] flex items-center gap-[10px] cursor-pointer">
                     <img src="/icons/bullet-list.svg" class="h-[30px]" />
                     {firms[firm.id].name}
                   </h3>
-                </a>
-                <p class="ml-[40px]">{firm.notes}</p>
-              </li>
+                  <p class="ml-[40px]">{firm.notes}</p>
+                </li>
+              </a>
             ))
           }
         </ul>

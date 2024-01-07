@@ -5,7 +5,7 @@ export interface Firm{
     promotions?: Promotion[]
     bgColor: string
     name: string
-    link: URL
+    link: string
     hasReview: boolean
 }
 
@@ -28,7 +28,7 @@ export const firms: { [key: string]: Firm } = {
         logoPromos: "/images/firms/FTMO/FTMO-logo-white-500x250.webp",
         logo: "/images/firms/FTMO/FTMO-logo-250x250.webp",
         bgColor: "#FFF",
-        link: new URL("https://ftmo.com/es/"),
+        link: "https://ftmo.com/es/",
         hasReview: false
     },
     TFT: {
@@ -37,7 +37,7 @@ export const firms: { [key: string]: Firm } = {
         logoPromos: "/images/firms/TFT/TFT-logo-white-500x250.webp",
         logo: "/images/firms/TFT/TFT-logo-250x250.webp",
         bgColor: "#0A2237",
-        link: new URL("https://thefundedtraderprogram.com/"),
+        link: "https://thefundedtraderprogram.com/",
         hasReview: false,
         promotions: [
         {
@@ -59,13 +59,13 @@ export const firms: { [key: string]: Firm } = {
     ]
     },
     FundedNext: {
-        name: "Funded Next",
+        name: "FundedNext",
         logoText: "/images/firms/FundedNext/FundedNext-logo-500x250.webp",
         logoPromos: "/images/firms/FundedNext/FundedNext-logo-white-500x250.webp",
         logo: "/images/firms/FundedNext/FundedNext-logo-250x250.webp",
         bgColor: "#FFF",
         hasReview: false,
-        link: new URL ("https://fundednext.com/")
+        link: "https://fundednext.com/"
     },
     BlueGuardian: {
         name: "Blue Guardian",
@@ -73,7 +73,7 @@ export const firms: { [key: string]: Firm } = {
         logoPromos: "/images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp",
         logo: "/images/firms/BlueGuardian/Blue-guardian-logo-400x400.webp",
         bgColor: "#FFF",
-        link: new URL("https://www.blueguardian.com/"),
+        link: "https://www.blueguardian.com/",
         hasReview: false,
         promotions: [
         {
@@ -92,7 +92,7 @@ export const firms: { [key: string]: Firm } = {
         logoPromos: "/images/firms/GFT/GFT-logo-white-500x250.webp",
         logo: "/images/firms/GFT/GFT-logo-400x400.webp",
         bgColor: "#002988",
-        link: new URL("https://goatfundedtrader.com/"),
+        link: "https://goatfundedtrader.com/",
         hasReview: false,
         promotions: [
         {
