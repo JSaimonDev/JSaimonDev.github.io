@@ -5,31 +5,33 @@ import TitleInfo from "./TitleInfo.astro";
 interface Props {
   firm: Firm;
   hq: string;
-  foundation: number;
+  foundation: string;
   ceo: string;
 }
 
 const { firm, hq, foundation, ceo } = Astro.props;
 ---
 
-<div
-  class="grid grid-cols-4 py-[20px] bg-[#FFF] rounded-[10px] divide-x-2 divide-light-grey text-center mb-[60px]"
->
-  <div class="flex justify-center items-center">
-    <a href={firm.link}>
-      <img src={firm.logoText} />
-    </a>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Sede" />
-    <p class="flex flex-col justify-center flex-1">{hq}</p>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Fundación" />
-    <p class="flex flex-col justify-center flex-1 text-3xl">{foundation}</p>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="CEO" />
-    <p class="flex flex-col justify-center flex-1 text-2xl">{ceo}</p>
+<div class="info-section">
+  <h2
+    style="background: linear-gradient(to right, #454545, #929292); -webkit-background-clip:text;"
+    class="gradient-title-sm text-left w-full mb-[10px]"
+  >
+    Información de la empresa
+  </h2>
+  <hr class="mb-[20px]" />
+  <div class="info-grid">
+    <div class="info-cell">
+      <TitleInfo title="Sede" />
+      <p class="info-cell-text">{hq}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Fundación" />
+      <p class="info-cell-text">{foundation}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="CEO" />
+      <p class="info-cell-text">{ceo}</p>
+    </div>
   </div>
 </div>

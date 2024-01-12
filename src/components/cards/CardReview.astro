@@ -6,13 +6,12 @@ interface Props {
   webLink?: string;
   isReview?: boolean;
   id?: string;
-  colSpan?: number;
 }
 
-const { logo, id, webLink, isReview, colSpan } = Astro.props;
+const { logo, id, webLink, isReview } = Astro.props;
 ---
 
-<div class={`col-span-${colSpan}`}>
+<div>
   <div class="w-full">
     <img src={logo} class="rounded-xl" />
   </div>

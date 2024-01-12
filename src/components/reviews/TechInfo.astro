@@ -15,32 +15,38 @@ const { instruments, fee, leverage, currency, brokers, platforms } =
   Astro.props;
 ---
 
-<div
-  class="grid grid-cols-3 py-[20px] bg-[#FFF] rounded-[10px] divide-x-2 divide-light-grey text-center mb-[40px] gap-y-[20px]"
->
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Instrumentos" />
-    <p class="flex flex-col justify-center flex-1">{instruments}</p>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Comisión" />
-    <p class="flex flex-col justify-center flex-1">{fee}</p>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Apalancamiento" />
-    <p class="flex flex-col justify-center flex-1 text-3xl">{leverage}</p>
-  </div>
-  <hr class="col-span-3" />
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Divisa principal" />
-    <p class="flex flex-col justify-center flex-1 text-2xl">{currency}</p>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Brokers" />
-    <p class="flex flex-col justify-center flex-1 text-2xl">{brokers}</p>
-  </div>
-  <div class="flex flex-col px-[40px]">
-    <TitleInfo title="Plataformas" />
-    <p class="flex flex-col justify-center flex-1 text-2xl">{platforms}</p>
+<div class="info-section">
+  <h2
+    style="background: linear-gradient(to right, #454545, #929292); -webkit-background-clip:text;"
+    class="gradient-title-sm text-left w-full mb-[10px]"
+  >
+    Datos técnicos
+  </h2>
+  <hr class="mb-[20px]" />
+  <div class="info-grid">
+    <div class="info-cell">
+      <TitleInfo title="Instrumentos" />
+      <p class="info-cell-text">{instruments}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Comisión" />
+      <p class="info-cell-text">{fee}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Apalancamiento" />
+      <p class="info-cell-text">{leverage}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Divisa principal" />
+      <p class="info-cell-text">{currency}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Brokers" />
+      <p class="info-cell-text">{brokers}</p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Plataformas" />
+      <p class="info-cell-text">{platforms}</p>
+    </div>
   </div>
 </div>

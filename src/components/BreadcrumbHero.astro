@@ -1,5 +1,5 @@
 ---
-import { getBreadcrumbItems } from "@/utils";
+import { getPathnameItems } from "@/utils";
 
 interface Props {
   altTitle?: string;
@@ -9,7 +9,7 @@ interface Props {
 
 const { altTitle, altUrl, altIndex } = Astro.props;
 
-const breadcrumbsItems = getBreadcrumbItems(Astro.url.pathname);
+const breadcrumbsItems = getPathnameItems(Astro.url.pathname);
 
 if (altTitle && altIndex) {
   breadcrumbsItems[altIndex].title = altTitle;

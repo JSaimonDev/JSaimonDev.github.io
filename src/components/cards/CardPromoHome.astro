@@ -1,5 +1,5 @@
 ---
-import { type Promotion } from "@/libs/data/firms";
+import { type Promotion } from "@/libs/data/promotions";
 
 interface Props {
   promotion: Promotion;
@@ -10,8 +10,7 @@ const { promotion, logo } = Astro.props;
 ---
 
 <div
-  class="xl:w-[235px] xl:h-[235px] md:w-[180px] md:h-[180px] xs:w-[280px]
-  xs:h-[280px] w-full h-full aspect-square rounded-full relative cursor-pointer
+  class="w-full h-full aspect-square rounded-full relative cursor-pointer
    border-[#FFF] xl:border-[8px] border-[6px]"
 >
   <div class="absolute">
@@ -25,12 +24,18 @@ const { promotion, logo } = Astro.props;
     items-center text-[#FFF] text-center xs:gap-0 p-[20px] gap-[3vw]"
   >
     <h3
-      class="xl:text-7xl md:text-5xl xs:text-7xl text-[15vw] font-bold xs:my-0 my-[15px]"
+      class="xl:text-7xl lg:text-5xl md:text-3xl sm:text-6xl xs:text-4xl text-[16vw] font-bold xs:my-0 my-[15px]"
     >
       {promotion.discount}%
     </h3>
-    <p class="xl:text-xl xs:text-lg text-[6vw]">{promotion.benefit1}</p>
-    <p class="xl:text-xl xs:text-lg text-[6vw]">{promotion.benefit2}</p>
-    <p class="xl:text-xl xs:text-lg text-[6vw]">{promotion.benefit3}</p>
+    <p class="xl:text-xl sm:text-base xs:text-xs text-[6vw]">
+      {promotion.benefit1}
+    </p>
+    <p class="xl:text-xl sm:text-base xs:text-xs text-[6vw]">
+      {promotion.benefit2}
+    </p>
+    <p class="xl:text-xl sm:text-base xs:text-xs text-[6vw]">
+      {promotion.benefit3}
+    </p>
   </div>
 </div>

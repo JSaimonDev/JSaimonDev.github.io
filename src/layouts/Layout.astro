@@ -46,6 +46,36 @@ const { title } = Astro.props;
   .design-section {
     @apply md:p-[50px] xs:p-[40px] p-[20px] border-[#FFF] border-[6px] rounded-xl shadow-xl bg-ligther-grey;
   }
+  .design-section-dark {
+    @apply md:p-[50px] xs:p-[40px] p-[20px] border-[#FFF] border-[6px] rounded-xl shadow-xl;
+  }
+  .info-design-section {
+    @apply md:p-[50px]  md:border-[#FFF] md:border-[6px] md:rounded-xl md:shadow-xl md:bg-ligther-grey;
+  }
+  .info-section {
+    @apply p-[40px] bg-[#FFF] rounded-[10px] text-center shadow-md w-full;
+  }
+  .info-cell {
+    @apply flex flex-col gap-[20px];
+  }
+  .info-cell-text {
+    @apply flex flex-col justify-center flex-1 text-lg;
+  }
+  .info-grid {
+    @apply grid lg:grid-cols-3 sm:grid-cols-2 gap-y-[15px] lg:gap-x-[40px] md:gap-x-[30px] sm:gap-x-[20px];
+  }
+  .gradient-title-lg {
+    @apply lg:text-8xl md:text-7xl sm:text-8xl xs:text-6xl text-5xl inline-block text-transparent 
+    font-bold col-span-3 xs:text-left text-center w-full;
+  }
+  .gradient-title-md {
+    @apply lg:text-7xl md:text-6xl sm:text-6xl xs:text-[2.6rem] text-4xl inline-block text-transparent
+       font-bold col-span-3 xs:text-left text-center w-full;
+  }
+  .gradient-title-sm {
+    @apply lg:text-4xl sm:text-3xl xs:text-2xl text-xl inline-block text-transparent
+      font-bold;
+  }
   code {
     font-family:
       Menlo,

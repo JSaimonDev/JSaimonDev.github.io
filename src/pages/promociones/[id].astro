@@ -2,6 +2,7 @@
 import hero_image from "/public/images/Promotions-hero.webp";
 import Layout from "@/layouts/Layout.astro";
 import { firms } from "@/libs/data/firms.ts";
+import { promotions } from "@/libs/data/promotions";
 import { mapIds } from "@/utils.ts";
 import HeroPage from "@/components/HeroPage.astro";
 import CardPromoDetails from "@/components/cards/CardPromoDetails.astro";
@@ -31,8 +32,8 @@ const { id } = Astro.params;
         class="flex flex-col items-center justify-start responsive-section margin-section w-full lg:gap-[40px] xs:gap-[30px] gap-[20px]"
       >
         {
-          firms[id].promotions != null ? (
-            firms[id].promotions?.map((promotion) => (
+          promotions[id].length >0 ? (
+            promotions[id]?.map((promotion) => (
               <CardPromoDetails
                 code={promotion.code}
                 description={promotion.description}

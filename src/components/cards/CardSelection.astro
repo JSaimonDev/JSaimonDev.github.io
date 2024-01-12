@@ -6,7 +6,7 @@ interface Props {
   shortDescription?: string;
   id: string;
   type?: TypeSelection;
-  shadowColor?: "blue" | "green" | "grey";
+  shadowColor?: "blue" | "green" | "grey" | "orangeFull";
 }
 
 const { name, shortDescription, id, shadowColor } = Astro.props;
@@ -19,6 +19,9 @@ if (shadowColor === "blue")
 else if (shadowColor === "green")
   shadowClass =
     "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(70,130,59,0.5)] shadow-md cursor-pointer rounded-xl";
+else if (shadowColor === "orangeFull")
+  shadowClass =
+    "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(217,86,19,1)] shadow-md cursor-pointer rounded-xl";
 else if (shadowColor === "grey")
   shadowClass =
     "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(69,69,69,0.5)] shadow-md cursor-pointer rounded-xl";

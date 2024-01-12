@@ -11,6 +11,7 @@ interface Props {
   altIndex?: number;
   isSelection?: boolean;
   titleLogo?: string;
+  titleLogoLink?: string;
   button1Text?: string;
   button1Link?: string;
   button2Text?: string;
@@ -27,6 +28,7 @@ const {
   altUrl,
   isSelection,
   titleLogo,
+  titleLogoLink,
   button1Link,
   button1Text,
   button2Link,
@@ -48,10 +50,12 @@ const {
         {
           titleLogo ? (
             <h1 class="w-full flex md:justify-start justify-center">
-              <img
-                src={titleLogo}
-                class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
-              />
+              <a href={titleLogoLink}>  
+                <img
+                  src={titleLogo}
+                  class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
+                />
+              </a>
             </h1>
           ) : isSelection ? (
             <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
@@ -84,13 +88,16 @@ const {
               <a href={button1Link}>
                 <button
                   class="border-[4px] border-light-grey shadow-[0_0px_10px_3px_rgba(255,255,255,0.5)]
-        text-[#FFF] w-full"
+        text-[#FFF] w-full scale-100 hover:scale-105 duration-300 ease-in-out bg-[rgba(0,0,0,0.3)] will-change-transform"
                 >
                   {button1Text}
                 </button>
               </a>
               <a href={button2Link}>
-                <button class="bg-light-grey text-dark-grey w-full">
+                <button
+                  class="bg-light-grey text-dark-grey w-full scale-100 hover:scale-105 duration-300
+                 ease-in-out transform will-change-transform"
+                >
                   {button2Text}
                 </button>
               </a>
@@ -116,7 +123,7 @@ const {
 </div>
 <style>
   button {
-    @apply p-[12px] rounded-lg text-2xl;
+    @apply py-[12px] px-[20px] rounded-lg text-2xl;
   }
   a {
   }

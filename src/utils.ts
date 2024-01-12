@@ -11,7 +11,7 @@ export const mapIds = (data: { [key: string]: Firm | Selection }) => {
   return paths;
 }
 
-export const getBreadcrumbItems = (pathname: string) => {
+export const getPathnameItems = (pathname: string) => {
   let cleanedPathname = pathname.replace(/\/+$/, "");
 let segments = cleanedPathname.split("/");
   let breadcrumbItems: { title: string; url: string }[] = [];
