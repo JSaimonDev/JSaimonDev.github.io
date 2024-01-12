@@ -5,34 +5,34 @@ import { mapIds } from "@/utils";
 import { firms } from "@/libs/data/firms";
 import HeroPage from "@/components/HeroPage.astro";
 import {
-  featureSelection,
-  softwareSelection,
-  instrumentSelection,
-  brokerSelection,
-} from "@/libs/data/selections";
+  featureList,
+  softwareList,
+  instrumentList,
+  brokerList,
+} from "@/libs/data/lists";
 
 export function getStaticPaths() {
-  return mapIds(featureSelection).concat(
-    mapIds(softwareSelection),
-    mapIds(instrumentSelection),
-    mapIds(brokerSelection)
+  return mapIds(featureList).concat(
+    mapIds(softwareList),
+    mapIds(instrumentList),
+    mapIds(brokerList)
   );
 }
 
 const { id } = Astro.params;
 
-let foundSelection;
+let foundList;
 
-if (Object.keys(featureSelection).includes(id))
-  foundSelection = featureSelection;
-else if (Object.keys(softwareSelection).includes(id))
-  foundSelection = softwareSelection;
-else if (Object.keys(instrumentSelection).includes(id))
-  foundSelection = instrumentSelection;
-else if (Object.keys(brokerSelection).includes(id))
-  foundSelection = brokerSelection;
+if (Object.keys(featureList).includes(id))
+  foundList = featureList;
+else if (Object.keys(softwareList).includes(id))
+  foundList = softwareList;
+else if (Object.keys(instrumentList).includes(id))
+  foundList = instrumentList;
+else if (Object.keys(brokerList).includes(id))
+  foundList = brokerList;
 else
-  foundSelection = {
+  foundList = {
     id: {
       name: "This list doesn't exist",
     },
@@ -43,8 +43,8 @@ else
   <main class="min-h-[80vh]">
     <HeroPage
       hero_image={hero_image}
-      title={foundSelection[id].name}
-      isSelection
+      title={foundList[id].name}
+      isList
     />
     <div class="flex justify-center w-full">
       <div
@@ -52,7 +52,7 @@ else
       >
         <ul class="flex flex-col gap-[20px]">
           {
-            foundSelection[id].firms?.map((firm) => (
+            foundList[id].firms?.map((firm) => (
               <a href={firms[firm.id].link}>
                 <li class="bg-[#FFF] rounded-lg p-[20px] shadow-md hover:shadow-[0_0_10px_2px_rgba(217,86,19,0.5)] cursor-pointer">
                   <h3 class="text-3xl mb-[10px] flex items-center gap-[10px] cursor-pointer">

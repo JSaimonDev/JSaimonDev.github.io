@@ -1,1 +1,1 @@
-export type TypeSelection = "broker" | "feature" | "instrument" | "software"
+export type TypeList = "broker" | "feature" | "instrument" | "software"

@@ -1,25 +1,25 @@
 ---
 import {
-  featureSelection,
-  instrumentSelection,
-  softwareSelection,
-  brokerSelection,
-} from "@/libs/data/selections";
-import GridContainer from "@/components/selections/GridContainer.astro";
+  featureList,
+  instrumentList,
+  softwareList,
+  brokerList,
+} from "@/libs/data/lists";
+import GridContainer from "@/components/lists/GridContainer.astro";
 ---
 
 <div
   class="flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section margin-section"
 >
   <GridContainer
-    selections={featureSelection}
+    lists={featureList}
     type="feature"
     title="Reglas y características"
     startColor="#D95613"
     endColor="#d3a717"
   />
   <GridContainer
-    selections={instrumentSelection}
+    lists={instrumentList}
     type="instrument"
     title="Instrumentos"
     endColor="#649cef"
@@ -27,7 +27,7 @@ import GridContainer from "@/components/selections/GridContainer.astro";
     shadowColor="blue"
   />
   <GridContainer
-    selections={softwareSelection}
+    lists={softwareList}
     type="software"
     title="Software"
     startColor="#46823b"
@@ -35,7 +35,7 @@ import GridContainer from "@/components/selections/GridContainer.astro";
     shadowColor="green"
   />
   <GridContainer
-    selections={brokerSelection}
+    lists={brokerList}
     type="broker"
     title="Broker"
     startColor="#454545"

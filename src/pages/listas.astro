@@ -1,15 +1,15 @@
 ---
 import hero_image from "../../public/images/Archive-hero.webp";
 import Layout from "@/layouts/Layout.astro";
-import GridSelection from "@/components/selections/GridSelection.astro";
+import GridList from "@/components/lists/GridList.astro";
 import HeroPage from "@/components/HeroPage.astro";
 ---
 
 <Layout title="Reseñas">
   <main class="min-h-[85vh]">
-    <HeroPage hero_image={hero_image} title="Selecciones" />
+    <HeroPage hero_image={hero_image} title="Listas" />
     <div class="flex flex-col items-center justify-center">
-      <GridSelection />
+      <GridList />
     </div>
   </main>
 </Layout>

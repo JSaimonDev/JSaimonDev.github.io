@@ -1,20 +1,20 @@
 ---
-import CardSelection from "../cards/CardSelection.astro";
-import { type TypeSelection } from "@/types.ts";
-import { type Selection } from "@/libs/data/selections";
+import CardList from "../cards/CardList.astro";
+import { type TypeList } from "@/types.ts";
+import { type List } from "@/libs/data/lists";
 
 interface Props {
-  type?: TypeSelection;
-  selections: { [key: string]: Selection };
+  type?: TypeList;
+  lists: { [key: string]: List };
   title: string;
   startColor: string;
   endColor: string;
   shadowColor?: "blue" | "green" | "grey";
 }
 
-const { type, selections, title, startColor, endColor, shadowColor } =
+const { type, lists, title, startColor, endColor, shadowColor } =
   Astro.props;
-const selectionKeys = Object.keys(selections);
+const listKeys = Object.keys(lists);
 ---
 
 <div
@@ -30,10 +30,10 @@ const selectionKeys = Object.keys(selections);
   </h2>
   <div class="type-grid">
     {
-      selectionKeys.map((key) => (
-        <CardSelection
-          name={selections[key].name}
-          shortDescription={selections[key].shortDescription}
+      listKeys.map((key) => (
+        <CardList
+          name={lists[key].name}
+          shortDescription={lists[key].shortDescription}
           id={key}
           type={type}
           shadowColor={shadowColor}

@@ -1,11 +1,11 @@
 ---
-import { type TypeSelection } from "@/types.ts";
+import { type TypeList } from "@/types.ts";
 
 interface Props {
   name: string;
   shortDescription?: string;
   id: string;
-  type?: TypeSelection;
+  type?: TypeList;
   shadowColor?: "blue" | "green" | "grey" | "orangeFull";
 }
 
@@ -27,7 +27,7 @@ else if (shadowColor === "grey")
     "h-full bg-[#FFFFFF] p-6 hover:shadow-[0_0_10px_2px_rgba(69,69,69,0.5)] shadow-md cursor-pointer rounded-xl";
 ---
 
-<a href={`/selecciones/${id}`} class={shadowClass}>
+<a href={`/lists/${id}`} class={shadowClass}>
   <p class="xl:text-xl text-lg font-bold">{name}</p>
   {
     shortDescription && (

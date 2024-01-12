@@ -1,10 +1,10 @@
-export interface Selection {
+export interface List {
     name: string
     shortDescription?: string
     firms?: {id: string, notes?: string} []
 }
 
-export const softwareSelection: { [key: string]: Selection } = {
+export const softwareList: { [key: string]: List } = {
     tradingView: {
         name: "Empresas de fondeo compatibles con Tradigview",
         shortDescription: "Opera comodamente desde el software de analisis técnico más popular"
@@ -15,14 +15,14 @@ export const softwareSelection: { [key: string]: Selection } = {
     },
 }
 
-export const instrumentSelection: { [key: string]: Selection } = {
+export const instrumentList: { [key: string]: List } = {
         crypto: {
         name: "Empresas de fondeo que ofrecen Criptomonedas",
         shortDescription: "Si te gusta el mundo crypto también tienes opciones para conseguir capital"
     },
 }
 
-export const featureSelection: { [key: string]: Selection } = {
+export const featureList: { [key: string]: List } = {
      noSL: {
         name: "Cuentas fondeadas sin Stop Loss",
         shortDescription: "Cuentas y empresas en las que puedes operar ni necesidad de Stop Loss"
@@ -57,6 +57,6 @@ export const featureSelection: { [key: string]: Selection } = {
     }
 }
 
-export const brokerSelection: { [key: string]: Selection } = {
+export const brokerList: { [key: string]: List } = {
     
 }

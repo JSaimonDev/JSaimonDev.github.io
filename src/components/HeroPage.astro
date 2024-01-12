@@ -9,7 +9,7 @@ interface Props {
   altTitle?: string;
   altUrl?: string;
   altIndex?: number;
-  isSelection?: boolean;
+  isList?: boolean;
   titleLogo?: string;
   titleLogoLink?: string;
   button1Text?: string;
@@ -26,7 +26,7 @@ const {
   altTitle,
   altIndex,
   altUrl,
-  isSelection,
+  isList,
   titleLogo,
   titleLogoLink,
   button1Link,
@@ -57,7 +57,7 @@ const {
                 />
               </a>
             </h1>
-          ) : isSelection ? (
+          ) : isList ? (
             <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
               {title}
             </h1>
