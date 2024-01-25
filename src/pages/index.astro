@@ -39,222 +39,206 @@ import {
         />
       </div>
     </div>
-    <section
-      class="flex justify-center w-full
-    xl:py-[60px] lg:py-[50px] md:py-[40px] sm:py-[30px] xs:py-[20px] py-[15px]"
-    >
-      <div class="responsive-section margin-section">
-        <div class="design-section flex flex-col gap-[20px]">
-          <div class="flex justify-between lg:gap-[20px]">
-            <h2
-              style=`background: linear-gradient(to right, #D95613, #d3a717);
+    <div class="w-full flex flex-col justify-center items-center">
+      <div class="margin-section responsive-section gap-[40px] flex flex-col">
+        <section class="flex justify-center w-full">
+          <div class="design-section flex flex-col gap-[30px]">
+            <div class="flex justify-between lg:gap-[20px]">
+              <h2
+                style=`background: linear-gradient(to right, #D95613, #e2a828);
         -webkit-background-clip:text`
-              class="title-index-lg"
-            >
-              Reviews
-            </h2>
-            <a
-              href="/reviews"
-              class="flex flex-col justify-center items-center gap-[10px]"
-            >
-              <svg
-                viewBox="0 0 512 512"
-                class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
-                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
-                ><path
-                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
-                ></path></svg
+                class="title-index-lg"
               >
-            </a>
-          </div>
-          <p class="col-span-6 h-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <div
-            class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[30px] md:gap-[20px] gap-[30px]"
-          >
-            <CardReview
-              logo={firms.FTMO.logoText}
-              webLink={firms.FTMO.link}
-              id="FTMO"
-            />
-            <CardReview logo={firms.TFT.logoText} id="TFT" />
-            <CardReview logo={firms.FundedNext.logoText} id="FundedNext" />
-            <div class="lg:block md:hidden block">
-              <CardReview logo={firms.GFT.logoText} id="GFT" />
+                Reviews
+              </h2>
+              <a
+                href="/reviews"
+                class="flex flex-col justify-center items-center gap-[10px]"
+              >
+                <svg
+                  viewBox="0 0 512 512"
+                  class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
+                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
+                  ><path
+                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
+                  ></path></svg
+                >
+              </a>
             </div>
-          </div>
-          <a class="xs:hidden w-full" href="/reviews">
-            <button
-              class="border-dark-grey border-[3px] rounded-lg w-full p-[4px]"
+            <div
+              class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[30px] md:gap-[20px] gap-[30px]"
             >
-              Más reviews &rarr;
-            </button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section
-      class="flex justify-center w-full bg-dark-grey text-[#FFF]
-    xl:py-[60px] lg:py-[50px] md:py-[40px] sm:py-[30px] xs:py-[20px] py-[15px]"
-    >
-      <div class="responsive-section margin-section">
-        <div class="design-section-dark flex flex-col gap-[20px]">
-          <div class="flex justify-between">
-            <h2
-              style=`background: linear-gradient(to right, #eaeaea, #aaaaaa);
-            -webkit-background-clip:text`
-              class="title-index-lg"
-            >
-              Listas
-            </h2>
-            <a
-              href="/listas"
-              class="flex flex-col justify-center items-center gap-[10px]"
-            >
-              <svg
-                viewBox="0 0 512 512"
-                class="fill-light-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
-                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
-                ><path
-                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
-                ></path></svg
+              <CardReview
+                logo={firms.FTMO.logoText}
+                webLink={firms.FTMO.link}
+                id="FTMO"
+              />
+              <CardReview logo={firms.TFT.logoText} id="TFT" />
+              <CardReview logo={firms.FundedNext.logoText} id="FundedNext" />
+              <div class="lg:block md:hidden block">
+                <CardReview logo={firms.GFT.logoText} id="GFT" />
+              </div>
+            </div>
+            <a class="xs:hidden w-full" href="/reviews">
+              <button
+                class="border-dark-grey border-[3px] rounded-lg w-full p-[4px]"
               >
+                Más reviews &rarr;
+              </button>
             </a>
           </div>
-          <p class="col-span-8 h-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <div
-            class="responsive-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] max-w-[500px] w-full text-dark-grey"
-          >
-            <CardList
-              name={featureList.noSL.name}
-              id="noSL"
-              shadowColor="orangeFull"
-            />
+        </section>
+        <section class="flex justify-center w-full">
+          <div class="design-section w-full flex flex-col gap-[40px]">
+            <div class="flex justify-between">
+              <h2
+                style=`background: linear-gradient(to right, #D95613, #e2a828);
+            -webkit-background-clip:text`
+                class="title-index-sm"
+              >
+                Promociones
+              </h2>
+              <a
+                href="/promociones"
+                class="flex flex-col justify-center items-center gap-[10px]"
+              >
+                <svg
+                  viewBox="0 0 512 512"
+                  class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
+                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
+                  ><path
+                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
+                  ></path></svg
+                >
+              </a>
+            </div>
+            <div
+              class="grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 place-items-center gap-[40px]"
+            >
+              <CardPromo
+                promotion={promotions.BlueGuardian[0]}
+                logo={firms.BlueGuardian.logo}
+                firm="BlueGuardian"
+              />
+              <CardPromo
+                promotion={promotions.TFT[0]}
+                logo={firms.TFT.logo}
+                firm="TFT"
+              />
+              <CardPromo
+                promotion={promotions.GFT[0]}
+                logo={firms.GFT.logo}
+                firm="GFT"
+              />
+              <CardPromo
+                promotion={promotions.GFT[0]}
+                logo={firms.GFT.logo}
+                firm="GFT"
+              />
+            </div>
+            <a class="xs:hidden w-full" href="/reviews">
+              <button
+                class="border-dark-grey border-[3px] rounded-lg w-full p-[4px]"
+              >
+                Más promociones &rarr;
+              </button>
+            </a>
+          </div>
+        </section>
+        <section class="flex justify-center w-full">
+          <div class="design-section-dark flex flex-col gap-[30px] w-full">
+            <div class="flex justify-between">
+              <h2
+                style=`background: linear-gradient(to right, #D95613, #e2a828);
+            -webkit-background-clip:text`
+                class="title-index-lg"
+              >
+                Listas
+              </h2>
+              <a
+                href="/listas"
+                class="flex flex-col justify-center items-center gap-[10px]"
+              >
+                <svg
+                  viewBox="0 0 512 512"
+                  class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
+                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
+                  ><path
+                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
+                  ></path></svg
+                >
+              </a>
+            </div>
+            <div
+              class="responsive-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] w-full text-dark-grey"
+            >
+              <CardList
+                name={featureList.noSL.name}
+                id="noSL"
+                shadowColor="orangeFull"
+              />
 
-            <CardList
-              name={featureList.noTimeLimit.name}
-              id="noTimeLimit"
-              shadowColor="orangeFull"
-            />
-            <CardList
-              name={softwareList.EA.name}
-              id="EA"
-              shadowColor="orangeFull"
-            />
-            <CardList
-              name={softwareList.tradingView.name}
-              id="tradingView"
-              shadowColor="orangeFull"
-            />
-            <CardList
-              name={instrumentList.crypto.name}
-              id="crypto"
-              shadowColor="orangeFull"
-            />
-            <CardList
-              name={featureList.weekend.name}
-              id="weekend"
-              shadowColor="orangeFull"
-            />
-          </div>
-          <a class="xs:hidden w-full" href="/reviews">
-            <button
-              class="border-light-grey border-[3px] rounded-lg w-full p-[4px]"
-            >
-              Más listas &rarr;
-            </button>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section
-      class="flex justify-center w-full bg-[#D95613] text-[#FFF]
-    xl:py-[60px] lg:py-[50px] md:py-[40px] sm:py-[30px] xs:py-[20px] py-[15px]"
-    >
-      <div class="responsive-section margin-section">
-        <div class="design-section-dark flex flex-col gap-[20px]">
-          <div class="flex justify-between">
-            <h2
-              style=`background: linear-gradient(to right, #fff, #eaeaea);
-            -webkit-background-clip:text`
-              class="title-index-sm"
-            >
-              Promociones
-            </h2>
-            <a
-              href="/promociones"
-              class="flex flex-col justify-center items-center gap-[10px]"
-            >
-              <svg
-                viewBox="0 0 512 512"
-                class="fill-[#FFF] lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
-                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
-                ><path
-                  d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
-                ></path></svg
+              <CardList
+                name={featureList.noTimeLimit.name}
+                id="noTimeLimit"
+                shadowColor="orangeFull"
+              />
+              <CardList
+                name={softwareList.EA.name}
+                id="EA"
+                shadowColor="orangeFull"
+              />
+              <CardList
+                name={softwareList.tradingView.name}
+                id="tradingView"
+                shadowColor="orangeFull"
+              />
+              <CardList
+                name={instrumentList.crypto.name}
+                id="crypto"
+                shadowColor="orangeFull"
+              />
+              <CardList
+                name={featureList.weekend.name}
+                id="weekend"
+                shadowColor="orangeFull"
+              />
+            </div>
+            <a class="xs:hidden w-full" href="/reviews">
+              <button
+                class="border-light-grey border-[3px] rounded-lg w-full p-[4px]"
               >
+                Más listas &rarr;
+              </button>
             </a>
           </div>
-          <p class="col-span-8 h-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <div
-            class="grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 gap-[40px] lg:gap-[30px] md:gap-[25px] xs:px-[0px] px-[10%] justify-center"
-          >
-            <CardPromo
-              promotion={promotions.BlueGuardian[0]}
-              logo={firms.BlueGuardian.logo}
-            />
-            <CardPromo promotion={promotions.TFT[0]} logo={firms.TFT.logo} />
-            <CardPromo promotion={promotions.GFT[0]} logo={firms.GFT.logo} />
-            <CardPromo promotion={promotions.GFT[0]} logo={firms.GFT.logo} />
-          </div>
-          <a class="xs:hidden w-full" href="/reviews">
-            <button
-              class="border-[#FFF] border-[3px] rounded-lg w-full p-[4px]"
-            >
-              Más promociones &rarr;
-            </button>
-          </a>
-        </div>
+        </section>
       </div>
-    </section>
+    </div>
+
+    <style>
+      main {
+        margin: auto;
+        max-width: calc(100%);
+        color: #2f2f2f;
+        font-size: 20px;
+        line-height: 1.6;
+      }
+      .title-index-lg {
+        @apply lg:text-7xl sm:text-6xl text-5xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
+      }
+      .title-index-sm {
+        @apply lg:text-7xl sm:text-6xl text-4xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
+      }
+      .arrow-clip-hero-image {
+        clip-path: polygon(0 0, 100% 0%, 100% 80%, 49% 100%, 0 80%);
+      }
+      .arrow-clip-wrap {
+        filter: drop-shadow(0 3px 3px rgba(50, 50, 0, 0.5));
+      }
+      .arrow-clip-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 50%, 49% 100%, 0 50%);
+      }
+    </style>
   </main>
-
-  <style>
-    main {
-      margin: auto;
-      max-width: calc(100%);
-      color: #2f2f2f;
-      font-size: 20px;
-      line-height: 1.6;
-    }
-    .title-index-lg {
-      @apply lg:text-8xl sm:text-7xl text-5xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center w-full;
-    }
-    .title-index-sm {
-      @apply lg:text-7xl sm:text-6xl text-4xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center w-full;
-    }
-    .arrow-clip-hero-image {
-      clip-path: polygon(0 0, 100% 0%, 100% 80%, 49% 100%, 0 80%);
-    }
-    .arrow-clip-wrap {
-      filter: drop-shadow(0 3px 3px rgba(50, 50, 0, 0.5));
-    }
-    .arrow-clip-section {
-      clip-path: polygon(0 0, 100% 0%, 100% 50%, 49% 100%, 0 50%);
-    }
-  </style>
 </Layout>

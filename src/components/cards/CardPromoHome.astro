@@ -4,38 +4,56 @@ import { type Promotion } from "@/libs/data/promotions";
 interface Props {
   promotion: Promotion;
   logo?: string;
+  firm: string;
 }
 
-const { promotion, logo } = Astro.props;
+const { promotion, logo, firm } = Astro.props;
 ---
 
 <div
-  class="w-full h-full aspect-square rounded-full relative cursor-pointer
-   border-[#FFF] xl:border-[8px] border-[6px]"
+  class="flex flex-col items-center bg-[#FFF] rounded-lg w-full p-[30px] gap-[10px]
+  h-full text-center text-medium-grey shadow-lg"
 >
-  <div class="absolute">
-    <img
-      src={logo}
-      class="rounded-full opacity-0 hover:opacity-100 ease-in-out duration-300"
-    />
-  </div>
-  <div
-    class="text-base xl:text-lg h-full w-full rounded-full flex flex-col justify-center
-    items-center text-[#FFF] text-center xs:gap-0 p-[20px] gap-[3vw]"
-  >
-    <h3
-      class="xl:text-7xl lg:text-5xl md:text-3xl sm:text-6xl xs:text-4xl text-[16vw] font-bold xs:my-0 my-[15px]"
-    >
-      {promotion.discount}%
-    </h3>
-    <p class="xl:text-xl sm:text-base xs:text-xs text-[6vw]">
-      {promotion.benefit1}
-    </p>
-    <p class="xl:text-xl sm:text-base xs:text-xs text-[6vw]">
-      {promotion.benefit2}
-    </p>
-    <p class="xl:text-xl sm:text-base xs:text-xs text-[6vw]">
-      {promotion.benefit3}
-    </p>
+  <p class="text-sm">Descuento</p>
+  <p class="text-6xl text-green">{promotion.discount}%</p>
+  {
+    promotion.benefit1 && (
+      <div class="w-full">
+        <hr />
+        {promotion.benefit1}
+      </div>
+    )
+  }
+  {
+    promotion.benefit2 && (
+      <div class="w-full">
+        <hr />
+        {promotion.benefit2}
+      </div>
+    )
+  }
+  {
+    promotion.benefit3 && (
+      <div class="w-full">
+        <hr />
+        {promotion.benefit3}
+      </div>
+    )
+  }
+  <div class="flex-1 justify-end flex flex-col">
+    <a href={`/promociones/${firm}`}>
+      <button
+        class="bg-dark-grey rounded-xl text-[#FFF] py-[20px] px-[40px] mt-[20px]
+       shadow-lg scale-100 hover:scale-105 ease-in-out duration-300 will-change-transform"
+      >
+        <img src={promotion.logoUrl} />
+      </button>
+    </a>
   </div>
 </div>
+
+<style>
+  hr {
+    @apply mb-[10px] border-medium-grey;
+  }
+</style>

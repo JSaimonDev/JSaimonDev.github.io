@@ -9,7 +9,7 @@ export default {
       "light-grey": "#E9E9E9",
       "ligther-grey": "#F1F1F1",
       orange: "#D95613",
-      green: "#52BD1E",
+      green: "#46a019",
       transparent: "rgba(0, 0, 0, 0)",
       blue: "#2274a5",
     },

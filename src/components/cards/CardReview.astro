@@ -11,7 +11,7 @@ interface Props {
 const { logo, id, webLink, isReview } = Astro.props;
 ---
 
-<div>
+<!-- <div>
   <div class="w-full">
     <img src={logo} class="rounded-xl" />
   </div>
@@ -41,4 +41,10 @@ const { logo, id, webLink, isReview } = Astro.props;
       </a>
     </button>
   </div>
-</div>
+</div> -->
+<a
+  href={isReview ? `/review/${id}` : `/info/${id}`}
+  class="w-full scale-100 hover:scale-105 ease-in-out duration-300 transform shadow-lg"
+>
+  <img src={logo} class="rounded-xl" />
+</a>

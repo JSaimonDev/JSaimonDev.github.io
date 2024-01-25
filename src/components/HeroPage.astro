@@ -50,7 +50,7 @@ const {
         {
           titleLogo ? (
             <h1 class="w-full flex md:justify-start justify-center">
-              <a href={titleLogoLink}>  
+              <a href={titleLogoLink}>
                 <img
                   src={titleLogo}
                   class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
@@ -68,10 +68,7 @@ const {
           )
         }
         <p class="xl:w-[70%] lg:w-[75%] md:w-[72%] mb-[20px]">
-          Es muy importante conocer todos los detalles antes de elegir una
-          empresa de fondeo. Cada una de ellas funciona de manera diferente, y
-          si no lo tienes todo en cuenta desde un principio, es posible que
-          tengas problemas en un futuro, o incluso llegues a perder la cuenta.
+          <slot />
         </p>
         <BreadcrumbHeader
           altIndex={altIndex}

@@ -8,6 +8,8 @@ export interface Promotion {
     starDate?: Date
     endDate: Date
     description?: string
+    logoUrl: string
+
 }
 
 export const promotions: { [key: string]: Promotion[] } = {
@@ -20,7 +22,8 @@ export const promotions: { [key: string]: Promotion[] } = {
                 benefit2: "12.5% profit",
                 description: "100% coste de la prueba recuperado + 12.5% beneficio de la evaluación. Válido para todo tipo de cuentas",
                 code: "TFTDECEMBER25",
-                endDate: new Date(2023, 11, 31)
+            endDate: new Date(2023, 11, 31),
+                logoUrl: "images/firms/TFT/TFT-logo-white-500x250.webp"
             }
     ]
 ,
@@ -31,7 +34,8 @@ export const promotions: { [key: string]: Promotion[] } = {
             benefit1: "Reembolso del 100%",
             condition: "Solo cuentas Rapid y Unlimited",
             endDate: new Date(2023, 11, 31),
-            code: "DEC1"
+            code: "DEC1",
+            logoUrl: "images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp"
         }
 
     ],
@@ -41,7 +45,8 @@ export const promotions: { [key: string]: Promotion[] } = {
             benefit1: "135% Reembolso",
             code: "GFTDECEMBER17",
             endDate: new Date(2023, 11, 31),
-            condition: "Solo cuentas 8K, 15k y 25k"
+            condition: "Solo cuentas 8K, 15k y 25k",
+            logoUrl: "images/firms/GFT/GFT-logo-white-500x250.webp"
         }
     ]
 }
