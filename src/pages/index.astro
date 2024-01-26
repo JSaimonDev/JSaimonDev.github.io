@@ -43,7 +43,7 @@ import {
       <div class="margin-section responsive-section gap-[40px] flex flex-col">
         <section class="flex justify-center w-full">
           <div class="design-section flex flex-col gap-[30px]">
-            <div class="flex justify-between lg:gap-[20px]">
+            <div class="flex xs:justify-between justify-center lg:gap-[20px]">
               <h2
                 style=`background: linear-gradient(to right, #D95613, #e2a828);
         -webkit-background-clip:text`
@@ -55,10 +55,7 @@ import {
                 href="/reviews"
                 class="flex flex-col justify-center items-center gap-[10px]"
               >
-                <svg
-                  viewBox="0 0 512 512"
-                  class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
-                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
+                <svg viewBox="0 0 512 512" class="arrow-more"
                   ><path
                     d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
                   ></path></svg
@@ -66,7 +63,7 @@ import {
               </a>
             </div>
             <div
-              class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[30px] md:gap-[20px] gap-[30px]"
+              class="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 lg:gap-[30px] md:gap-[20px] gap-[15px]"
             >
               <CardReview
                 logo={firms.FTMO.logoText}
@@ -102,10 +99,7 @@ import {
                 href="/promociones"
                 class="flex flex-col justify-center items-center gap-[10px]"
               >
-                <svg
-                  viewBox="0 0 512 512"
-                  class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
-                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
+                <svg viewBox="0 0 512 512" class="arrow-more"
                   ><path
                     d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
                   ></path></svg
@@ -113,7 +107,7 @@ import {
               </a>
             </div>
             <div
-              class="grid md:grid-cols-4 xs:grid-cols-2 grid-cols-1 place-items-center gap-[40px]"
+              class="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 place-items-center lg:gap-[30px] md:gap-[20px] gap-[15px]"
             >
               <CardPromo
                 promotion={promotions.BlueGuardian[0]}
@@ -130,11 +124,13 @@ import {
                 logo={firms.GFT.logo}
                 firm="GFT"
               />
-              <CardPromo
-                promotion={promotions.GFT[0]}
-                logo={firms.GFT.logo}
-                firm="GFT"
-              />
+              <div class="lg:block md:hidden block h-full">
+                <CardPromo
+                  promotion={promotions.GFT[0]}
+                  logo={firms.GFT.logo}
+                  firm="GFT"
+                />
+              </div>
             </div>
             <a class="xs:hidden w-full" href="/reviews">
               <button
@@ -159,10 +155,7 @@ import {
                 href="/listas"
                 class="flex flex-col justify-center items-center gap-[10px]"
               >
-                <svg
-                  viewBox="0 0 512 512"
-                  class="fill-dark-grey lg:w-[72px] lg:h-[72px] md:w-[55px] md:h-[55px] sm:w-[72px] sm:h-[72px]
-                w-[55px] h-[55px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform"
+                <svg viewBox="0 0 512 512" class="arrow-more"
                   ><path
                     d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
                   ></path></svg
@@ -228,16 +221,11 @@ import {
         @apply lg:text-7xl sm:text-6xl text-5xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
       }
       .title-index-sm {
-        @apply lg:text-7xl sm:text-6xl text-4xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
+        @apply lg:text-7xl sm:text-6xl text-4xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center w-full;
       }
-      .arrow-clip-hero-image {
-        clip-path: polygon(0 0, 100% 0%, 100% 80%, 49% 100%, 0 80%);
-      }
-      .arrow-clip-wrap {
-        filter: drop-shadow(0 3px 3px rgba(50, 50, 0, 0.5));
-      }
-      .arrow-clip-section {
-        clip-path: polygon(0 0, 100% 0%, 100% 50%, 49% 100%, 0 50%);
+      .arrow-more {
+        @apply fill-dark-grey lg:w-[65px] lg:h-[65px] sm:w-[55px] sm:h-[55px]
+                w-[45px] h-[45px] xs:block hidden scale-100 hover:scale-105 duration-300 ease-in-out will-change-transform;
       }
     </style>
   </main>
