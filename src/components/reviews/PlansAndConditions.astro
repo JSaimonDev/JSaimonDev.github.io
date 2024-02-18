@@ -7,10 +7,21 @@ interface Props {
   maxProfit?: string;
   depositOptions?: string;
   withdrawalOptions?: string;
+  scaling?: string;
+  paymentType?: string;
+  priceRange?: string
 }
 
-const { phases, maxAllocation, maxProfit, depositOptions, withdrawalOptions } =
-  Astro.props;
+const {
+  phases,
+  maxAllocation,
+  maxProfit,
+  depositOptions,
+  withdrawalOptions,
+  scaling,
+  paymentType,
+  priceRange
+} = Astro.props;
 ---
 
 <div class="info-section">
@@ -46,6 +57,24 @@ const { phases, maxAllocation, maxProfit, depositOptions, withdrawalOptions } =
       <TitleInfo title="Opciones de retiro" />
       <p class="info-cell-text">
         {withdrawalOptions}
+      </p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Escalado" />
+      <p class="info-cell-text">
+        {scaling}
+      </p>
+    </div>
+    <div class="info-cell">
+      <TitleInfo title="Tipo de pago" />
+      <p class="info-cell-text">
+        {paymentType}
+      </p>
+    </div>
+        <div class="info-cell">
+      <TitleInfo title="Rango de precios" />
+      <p class="info-cell-text">
+        {priceRange}
       </p>
     </div>
   </div>

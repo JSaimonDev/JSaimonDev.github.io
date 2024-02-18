@@ -3,6 +3,7 @@ import { firms } from "@/libs/data/firms";
 import BusinessInfo from "@/components/reviews/BusinessInfo.astro";
 import TechInfo from "@/components/reviews/TechInfo.astro";
 import PlansAndConditions from "@/components/reviews/PlansAndConditions.astro";
+import Rules from "@/components/reviews/Rules.astro";
 import { mapIds } from "@/utils";
 import hero_image from "../../../public/images/Detective-office.webp";
 import Layout from "@/layouts/Layout.astro";
@@ -46,6 +47,8 @@ const infoFirm = info[firmName];
           hq={infoFirm?.hq}
           foundation={infoFirm?.foundation}
           ceo={infoFirm?.ceo}
+          trustPilotScore={infoFirm?.trustPilotScore}
+          trustPilotStars={infoFirm?.trustPilotStars}
         />
 
         <TechInfo
@@ -61,6 +64,18 @@ const infoFirm = info[firmName];
           maxAllocation={infoFirm?.maxAllocation}
           depositOptions={infoFirm?.depositOptions}
           withdrawalOptions={infoFirm?.withdrawalOptions}
+          scaling={infoFirm?.scaling}
+          paymentType={infoFirm?.paymentType}
+          priceRange={infoFirm?.priceRange}
+        />
+        <Rules
+          minDays={infoFirm?.minDays}
+          maxDays={infoFirm?.maxDays}
+          news={infoFirm?.news}
+          ea={infoFirm?.ea}
+          stopLoss={infoFirm?.stopLoss}
+          copyTrading={infoFirm.copyTrading}
+          weekend={infoFirm.weekend}
         />
         <div
           class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"

@@ -1,15 +1,19 @@
 ---
 import { type Firm } from "@/libs/data/firms";
 import TitleInfo from "./TitleInfo.astro";
+import { decodeHtmlEntity } from "@/utils";
 
 interface Props {
   firm: Firm;
   hq: string;
   foundation: string;
   ceo: string;
+  trustPilotScore: string;
+  trustPilotStars: string;
 }
 
-const { firm, hq, foundation, ceo } = Astro.props;
+const { firm, hq, foundation, ceo, trustPilotScore, trustPilotStars } =
+  Astro.props;
 ---
 
 <div class="info-section">
@@ -32,6 +36,13 @@ const { firm, hq, foundation, ceo } = Astro.props;
     <div class="info-cell">
       <TitleInfo title="CEO" />
       <p class="info-cell-text">{ceo}</p>
+    </div>
+    <div class="info-cell col-start-2">
+      <TitleInfo title="Puntuación Truspilot" />
+      <p class="info-cell-text">
+        {trustPilotScore}<br />
+        {decodeHtmlEntity(trustPilotStars)}
+      </p>
     </div>
   </div>
 </div>

@@ -24,9 +24,10 @@ else if (shadowColor === "grey")
 
 <a
   href={`/lists/${id}`}
-  class={`${shadowClass} flex gap-[15px] shadow-md cursor-pointer rounded-xl h-full bg-[#FFFFFF] p-6 duration-300 ease-in-out`}
+  class={`${shadowClass} flex md:gap-[15px] gap-[10px] shadow-md cursor-pointer rounded-xl h-full bg-[#FFFFFF] p-6 duration-300 ease-in-out`}
 >
-  <img src="/icons/bullet-list.svg" class="h-[30px]" />
+  <img src="/icons/bullet-list.svg" class="lg:h-[30px] md:h-[25px] xs:h-[20px] h-[15px]
+  lg:mt-0 md:mt-[1px] xs:mt-[4px] mt-[6px]" />
   <div>
     <p class="xl:text-xl text-lg font-bold">{name}</p>
     {

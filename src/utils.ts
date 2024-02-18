@@ -13,7 +13,7 @@ export const mapIds = (data: { [key: string]: Firm | List }) => {
 
 export const getPathnameItems = (pathname: string) => {
   let cleanedPathname = pathname.replace(/\/+$/, "");
-let segments = cleanedPathname.split("/");
+  let segments = cleanedPathname.split("/");
   let breadcrumbItems: { title: string; url: string }[] = [];
   segments.forEach((segment, index) => {
     let url = segments.slice(0, index + 1).join("/");
@@ -22,4 +22,10 @@ let segments = cleanedPathname.split("/");
   breadcrumbItems[0].title = "Inicio"
   breadcrumbItems[0].url = '/'
   return breadcrumbItems
+}
+
+export const decodeHtmlEntity = (str: string) => {
+ return str.replace(/&#(\d+);/g, function(match, dec) {
+    return String.fromCharCode(dec);
+ });
 }
