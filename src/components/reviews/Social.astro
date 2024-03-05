@@ -1,0 +1,41 @@
+---
+import SocialIcon from "./SocialIcon.astro";
+
+interface Props {
+  facebookLink?: string;
+  xLink?: string;
+  instagramLink?: string;
+  tiktokLink?: string;
+  youtubeLink?: string;
+  discordLink?: string;
+  linkedinLink?: string;
+}
+
+const {
+  facebookLink,
+  xLink,
+  instagramLink,
+  tiktokLink,
+  youtubeLink,
+  discordLink,
+  linkedinLink,
+} = Astro.props;
+---
+
+<div class="info-section">
+  <div class="flex justify-center gap-[36px]">
+    {facebookLink && <SocialIcon link={facebookLink} site="facebook" />}
+    {xLink && <SocialIcon link={xLink} site="x" />}
+    {instagramLink && <SocialIcon link={instagramLink} site="instagram" />}
+    {tiktokLink && <SocialIcon link={tiktokLink} site="tiktok" />}
+    {youtubeLink && <SocialIcon link={youtubeLink} site="youtube" />}
+    {
+      discordLink && (
+        <div class="flex flex-col justify-center">
+          <SocialIcon link={discordLink} site="discord" />
+        </div>
+      )
+    }
+    {linkedinLink && <SocialIcon link={linkedinLink} site="linkedin" />}
+  </div>
+</div>

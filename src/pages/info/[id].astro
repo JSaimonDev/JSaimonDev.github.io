@@ -4,6 +4,7 @@ import BusinessInfo from "@/components/reviews/BusinessInfo.astro";
 import TechInfo from "@/components/reviews/TechInfo.astro";
 import PlansAndConditions from "@/components/reviews/PlansAndConditions.astro";
 import Rules from "@/components/reviews/Rules.astro";
+import Social from "@/components/reviews/Social.astro";
 import { mapIds } from "@/utils";
 import hero_image from "../../../public/images/Detective-office.webp";
 import Layout from "@/layouts/Layout.astro";
@@ -76,6 +77,15 @@ const infoFirm = info[firmName];
           stopLoss={infoFirm?.stopLoss}
           copyTrading={infoFirm.copyTrading}
           weekend={infoFirm.weekend}
+        />
+        <Social
+          facebookLink={infoFirm?.facebookLink}
+          xLink={infoFirm?.xLink}
+          instagramLink={infoFirm?.instagramLink}
+          tiktokLink={infoFirm?.tiktokLink}
+          youtubeLink={infoFirm?.youtubeLink}
+          discordLink={infoFirm?.discordLink}
+          linkedinLink={infoFirm?.linkedinLink}
         />
         <div
           class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"

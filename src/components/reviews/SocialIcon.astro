@@ -1,0 +1,58 @@
+---
+import facebook from "../../../public/icons/social/facebook-logo.svg";
+import x from "../../../public/icons/social/x-logo.svg";
+import instagram from "../../../public/icons/social/instagram-logo.svg";
+import tiktok from "../../../public/icons/social/tiktok-logo.svg";
+import discord from "../../../public/icons/social/discord-logo.svg";
+import linkedin from "../../../public/icons/social/linkedin-logo.svg";
+import youtube from "../../../public/icons/social/youtube-logo.svg";
+
+import { Image } from "astro:assets";
+
+interface Props {
+  link: string;
+  site: Site;
+}
+
+const { link, site } = Astro.props;
+
+type Site =
+  | "facebook"
+  | "x"
+  | "instagram"
+  | "tiktok"
+  | "youtube"
+  | "discord"
+  | "linkedin";
+let logo = facebook;
+
+switch (site) {
+  case "facebook":
+    logo = facebook;
+    break;
+  case "x":
+    logo = x;
+    break;
+  case "instagram":
+    logo = instagram;
+    break;
+  case "tiktok":
+    logo = tiktok;
+    break;
+  case "discord":
+    logo = discord;
+    break;
+  case "linkedin":
+    logo = linkedin;
+    break;
+  case "youtube":
+    logo = youtube;
+    break;
+  default:
+    break;
+}
+---
+
+<a href={link}>
+  <Image src={logo} alt={"logo-" + site} width={40} />
+</a>

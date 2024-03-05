@@ -27,6 +27,13 @@ export const info: {[key: string]: Info} = {
         ea: "Permitido",
         stopLoss: "No obligatorio",
         copyTrading: "Permitido",
-        weekend: "Permitido en cuenta swing"
+        weekend: "Permitido en cuenta swing",
+        facebookLink: "https://facebook.com/ftmocom/",
+        xLink: "https://x.com/FTMO_com",
+        instagramLink: "https://instagram.com/ftmocom/",
+        youtubeLink: "https://www.youtube.com/channel/UCypUrEOeDRA5_uLMnKBVpZg?sub_confirmation=1",
+        tiktokLink: "https://www.tiktok.com/@ftmocom",
+        discordLink: "https://discord.com/invite/8j7r5XaaW6",
+        linkedinLink: "https://www.linkedin.com/company/ftmo/"
     }
 }
