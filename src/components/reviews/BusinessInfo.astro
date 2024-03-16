@@ -1,15 +1,15 @@
 ---
 import { type Firm } from "@/libs/data/firms";
-import TitleInfo from "./TitleInfo.astro";
+import InfoCell from "./InfoCell.astro";
 import { decodeHtmlEntity } from "@/utils";
 
 interface Props {
-  firm: Firm;
-  hq: string;
-  foundation: string;
-  ceo: string;
-  trustPilotScore: string;
-  trustPilotStars: string;
+  firm?: Firm;
+  hq?: string;
+  foundation?: string;
+  ceo?: string;
+  trustPilotScore?: string;
+  trustPilotStars?: string;
 }
 
 const { firm, hq, foundation, ceo, trustPilotScore, trustPilotStars } =
@@ -25,24 +25,19 @@ const { firm, hq, foundation, ceo, trustPilotScore, trustPilotStars } =
   </h2>
   <hr class="mb-[20px]" />
   <div class="info-grid">
-    <div class="info-cell">
-      <TitleInfo title="Sede" />
-      <p class="info-cell-text">{hq}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Fundación" />
-      <p class="info-cell-text">{foundation}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="CEO" />
-      <p class="info-cell-text">{ceo}</p>
-    </div>
-    <div class="info-cell col-start-2">
-      <TitleInfo title="Puntuación Truspilot" />
-      <p class="info-cell-text">
-        {trustPilotScore}<br />
-        {decodeHtmlEntity(trustPilotStars)}
-      </p>
-    </div>
+    <InfoCell title="Sede" data1={hq} />
+    <InfoCell title="Fundación" data1={foundation} />
+    <InfoCell title="CEO" data1={ceo} />
+    {
+      trustPilotStars && (
+        <div class="col-start-2">
+          <InfoCell
+            title="Puntuación Trustpilot"
+            data1={trustPilotScore}
+            data2={decodeHtmlEntity(trustPilotStars)}
+          />
+        </div>
+      )
+    }
   </div>
 </div>

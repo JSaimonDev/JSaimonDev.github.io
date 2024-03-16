@@ -2,7 +2,7 @@ export interface Firm{
     logoPromos?: string
     logoText: string
     logo?: string
-    bgColor: string
+    bgColor?: string
     name: string
     link: string
     hasReview: boolean
@@ -53,6 +53,27 @@ export const firms: { [key: string]: Firm } = {
         logo: "/images/firms/GFT/GFT-logo-400x400.webp",
         bgColor: "#002988",
         link: "https://goatfundedtrader.com/",
+        hasReview: false
+    },
+    The5ers: {
+        name: "The 5%ers",
+        logoText: "/images/firms/The5ers/The5ers-logo-500x250.webp",
+        logoPromos: "/images/firms/The5ers/The5ers-logo-white-500x250.webp",
+        link: "https://the5ers.com/",
+        hasReview: false
+    },
+    TTP: {
+        name: "The Trading Pit",
+        logoText: "/images/firms/TTP/TTP-logo-500x250.webp",
+        logoPromos: "/images/firms/TTP/TTP-logo-white-500x250.webp",
+        link: "https://www.thetradingpit.com/",
+        hasReview: false
+    },
+    Topstep: {
+        name: "Topstep",
+        logoText: "/images/firms/Topstep/Topstep-logo-500x250.webp",
+        logoPromos: "/images/firms/Topstep/Topstep-logo-white-500x250.webp",
+        link: "https://www.topstep.com/",
         hasReview: false
     }
 }

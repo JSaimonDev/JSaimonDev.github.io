@@ -1,5 +1,6 @@
 ---
 import TitleInfo from "./TitleInfo.astro";
+import InfoCell from "./InfoCell.astro";
 
 interface Props {
   phases?: string;
@@ -8,8 +9,9 @@ interface Props {
   depositOptions?: string;
   withdrawalOptions?: string;
   scaling?: string;
+  accountType?: string;
   paymentType?: string;
-  priceRange?: string
+  priceRange?: string;
 }
 
 const {
@@ -19,8 +21,9 @@ const {
   depositOptions,
   withdrawalOptions,
   scaling,
+  accountType,
   paymentType,
-  priceRange
+  priceRange,
 } = Astro.props;
 ---
 
@@ -33,49 +36,14 @@ const {
   </h2>
   <hr class="mb-[20px]" />
   <div class="info-grid">
-    <div class="info-cell">
-      <TitleInfo title="Fases" />
-      <p class="info-cell-text">{phases}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Capital máximo" />
-      <p class="info-cell-text">
-        {maxAllocation}
-      </p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Porcentaje de beneficio" />
-      <p class="info-cell-text">{maxProfit}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Opciones de depósito" />
-      <p class="info-cell-text">
-        {depositOptions}
-      </p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Opciones de retiro" />
-      <p class="info-cell-text">
-        {withdrawalOptions}
-      </p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Escalado" />
-      <p class="info-cell-text">
-        {scaling}
-      </p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Tipo de pago" />
-      <p class="info-cell-text">
-        {paymentType}
-      </p>
-    </div>
-        <div class="info-cell">
-      <TitleInfo title="Rango de precios" />
-      <p class="info-cell-text">
-        {priceRange}
-      </p>
-    </div>
+    <InfoCell title="Fases" data1={phases} />
+    <InfoCell title="Capital máximo" data1={maxAllocation} />
+    <InfoCell title="Porcentaje de beneficio" data1={maxProfit} />
+    <InfoCell title="Opciones de depósito" data1={depositOptions} />
+    <InfoCell title="Opciones de retiro" data1={withdrawalOptions} />
+    <InfoCell title="Escalado" data1={scaling} />
+    <InfoCell title="Tipo de cuenta" data1={accountType} />
+    <InfoCell title="Tipo de pago" data1={paymentType} />
+    <InfoCell title="Rango de precios" data1={priceRange} />
   </div>
 </div>

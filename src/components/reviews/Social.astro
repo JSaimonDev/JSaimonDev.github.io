@@ -9,6 +9,8 @@ interface Props {
   youtubeLink?: string;
   discordLink?: string;
   linkedinLink?: string;
+  telegramLink?: string;
+  redditLink?: string;
 }
 
 const {
@@ -19,6 +21,8 @@ const {
   youtubeLink,
   discordLink,
   linkedinLink,
+  telegramLink,
+  redditLink,
 } = Astro.props;
 ---
 
@@ -37,5 +41,7 @@ const {
       )
     }
     {linkedinLink && <SocialIcon link={linkedinLink} site="linkedin" />}
+    {telegramLink && <SocialIcon link={telegramLink} site="telegram" />}
+    {redditLink && <SocialIcon link={redditLink} site="reddit" />}
   </div>
 </div>

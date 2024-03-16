@@ -6,6 +6,8 @@ import tiktok from "../../../public/icons/social/tiktok-logo.svg";
 import discord from "../../../public/icons/social/discord-logo.svg";
 import linkedin from "../../../public/icons/social/linkedin-logo.svg";
 import youtube from "../../../public/icons/social/youtube-logo.svg";
+import telegram from "../../../public/icons/social/telegram-logo.svg";
+import reddit from "../../../public/icons/social/reddit-logo.svg";
 
 import { Image } from "astro:assets";
 
@@ -23,7 +25,9 @@ type Site =
   | "tiktok"
   | "youtube"
   | "discord"
-  | "linkedin";
+  | "linkedin"
+  | "telegram"
+  | "reddit";
 let logo = facebook;
 
 switch (site) {
@@ -47,6 +51,12 @@ switch (site) {
     break;
   case "youtube":
     logo = youtube;
+    break;
+  case "telegram":
+    logo = telegram;
+    break;
+  case "reddit":
+    logo = reddit;
     break;
   default:
     break;

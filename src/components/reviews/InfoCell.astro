@@ -1,0 +1,31 @@
+---
+import TitleInfo from "./TitleInfo.astro";
+
+interface Props {
+  title: string;
+  data1?: string | number | undefined;
+  data2?: string | number | undefined;
+}
+
+const { title, data1, data2 } = Astro.props;
+---
+
+<!-- {
+  data1 && (
+    <div class="info-cell">
+      <TitleInfo title={title} />
+      <p class="info-cell-text" set:html={data1} />
+      {data2 && <p>{data2}</p>}
+    </div>
+  )
+} -->{
+  data1 && (
+    <div class="info-cell">
+      <div class="h-full mt-[10px] border-[2px] border-[#FFF] bg-[#FFF] rounded-[5px] p-[15px] shadow-[0_2px_3px_2px_rgba(50,50,0,0.1)]">
+        <p class="text-orange text-xl mb-[10px]">{title}</p>
+        <p class="info-cell-text" set:html={data1} />
+        {data2 && <p>{data2}</p>}
+      </div>
+    </div>
+  )
+}

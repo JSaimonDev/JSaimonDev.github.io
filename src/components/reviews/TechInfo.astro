@@ -1,14 +1,13 @@
 ---
-import { type Firm } from "@/libs/data/firms";
-import TitleInfo from "./TitleInfo.astro";
+import InfoCell from "./InfoCell.astro";
 
 interface Props {
-  instruments: string;
-  fee: string;
-  leverage: string;
-  currency: string;
-  brokers: string;
-  platforms: string;
+  instruments?: string;
+  fee?: string;
+  leverage?: string;
+  currency?: string;
+  brokers?: string;
+  platforms?: string;
 }
 
 const { instruments, fee, leverage, currency, brokers, platforms } =
@@ -24,29 +23,11 @@ const { instruments, fee, leverage, currency, brokers, platforms } =
   </h2>
   <hr class="mb-[20px]" />
   <div class="info-grid">
-    <div class="info-cell">
-      <TitleInfo title="Instrumentos" />
-      <p class="info-cell-text">{instruments}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Comisión" />
-      <p class="info-cell-text">{fee}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Apalancamiento" />
-      <p class="info-cell-text">{leverage}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Divisa principal" />
-      <p class="info-cell-text">{currency}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Brokers" />
-      <p class="info-cell-text">{brokers}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Plataformas" />
-      <p class="info-cell-text">{platforms}</p>
-    </div>
+    <InfoCell title="Instrumentos" data1={instruments} />
+    <InfoCell title="Comisión" data1={fee} />
+    <InfoCell title="Apalancamiento" data1={leverage} />
+    <InfoCell title="Divisa principal" data1={currency} />
+    <InfoCell title="Brokers" data1={brokers} />
+    <InfoCell title="Plataformas" data1={platforms} />
   </div>
 </div>

@@ -45,47 +45,52 @@ const infoFirm = info[firmName];
       >
         <BusinessInfo
           firm={firms[firmName]}
-          hq={infoFirm?.hq}
-          foundation={infoFirm?.foundation}
-          ceo={infoFirm?.ceo}
-          trustPilotScore={infoFirm?.trustPilotScore}
-          trustPilotStars={infoFirm?.trustPilotStars}
+          hq={infoFirm?.bussinessInfo.hq}
+          foundation={infoFirm?.bussinessInfo.foundation}
+          ceo={infoFirm?.bussinessInfo.ceo}
+          trustPilotScore={infoFirm?.bussinessInfo.trustPilotScore}
+          trustPilotStars={infoFirm?.bussinessInfo.trustPilotStars}
         />
 
         <TechInfo
-          brokers={infoFirm?.brokers}
-          currency={infoFirm?.currency}
-          fee={infoFirm?.fee}
-          leverage={infoFirm?.leverage}
-          instruments={infoFirm?.instruments}
-          platforms={infoFirm?.platforms}
+          brokers={infoFirm?.techInfo.brokers}
+          currency={infoFirm?.techInfo.currency}
+          fee={infoFirm?.techInfo.fee}
+          leverage={infoFirm?.techInfo.leverage}
+          instruments={infoFirm?.techInfo.instruments}
+          platforms={infoFirm?.techInfo.platforms}
         />
         <PlansAndConditions
-          phases={infoFirm?.phases}
-          maxAllocation={infoFirm?.maxAllocation}
-          depositOptions={infoFirm?.depositOptions}
-          withdrawalOptions={infoFirm?.withdrawalOptions}
-          scaling={infoFirm?.scaling}
-          paymentType={infoFirm?.paymentType}
-          priceRange={infoFirm?.priceRange}
+          phases={infoFirm?.plansAndConditions.phases}
+          maxAllocation={infoFirm?.plansAndConditions.maxAllocation}
+          depositOptions={infoFirm?.plansAndConditions.depositOptions}
+          withdrawalOptions={infoFirm?.plansAndConditions.withdrawalOptions}
+          scaling={infoFirm?.plansAndConditions.scaling}
+          accountType={infoFirm?.plansAndConditions.accountType}
+          paymentType={infoFirm?.plansAndConditions.paymentType}
+          priceRange={infoFirm?.plansAndConditions.priceRange}
         />
         <Rules
-          minDays={infoFirm?.minDays}
-          maxDays={infoFirm?.maxDays}
-          news={infoFirm?.news}
-          ea={infoFirm?.ea}
-          stopLoss={infoFirm?.stopLoss}
-          copyTrading={infoFirm.copyTrading}
-          weekend={infoFirm.weekend}
+          minDays={infoFirm?.rules.minDays}
+          maxDays={infoFirm?.rules.maxDays}
+          news={infoFirm?.rules.news}
+          ea={infoFirm?.rules.ea}
+          stopLoss={infoFirm?.rules.stopLoss}
+          tradeCopier={infoFirm.rules.tradeCopier}
+          weekend={infoFirm.rules.weekend}
+          martingale={infoFirm.rules.martingale}
+          hedging={infoFirm.rules.hedging}
         />
         <Social
-          facebookLink={infoFirm?.facebookLink}
-          xLink={infoFirm?.xLink}
-          instagramLink={infoFirm?.instagramLink}
-          tiktokLink={infoFirm?.tiktokLink}
-          youtubeLink={infoFirm?.youtubeLink}
-          discordLink={infoFirm?.discordLink}
-          linkedinLink={infoFirm?.linkedinLink}
+          facebookLink={infoFirm?.social.facebookLink}
+          xLink={infoFirm?.social.xLink}
+          instagramLink={infoFirm?.social.instagramLink}
+          tiktokLink={infoFirm?.social.tiktokLink}
+          youtubeLink={infoFirm?.social.youtubeLink}
+          discordLink={infoFirm?.social.discordLink}
+          linkedinLink={infoFirm?.social.linkedinLink}
+          telegramLink={infoFirm?.social.telegramLink}
+          redditLink={infoFirm?.social.redditLink}
         />
         <div
           class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"

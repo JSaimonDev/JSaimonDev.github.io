@@ -1,5 +1,6 @@
 ---
 import TitleInfo from "./TitleInfo.astro";
+import InfoCell from "./InfoCell.astro";
 
 interface Props {
   minDays?: string;
@@ -7,11 +8,14 @@ interface Props {
   news?: string;
   ea?: string;
   stopLoss?: string;
-  copyTrading?: string;
+  tradeCopier?: string;
   weekend?: string;
+  martingale?: string
+  hedging?: string
 }
 
-const { minDays, maxDays, news, ea, stopLoss, copyTrading, weekend } = Astro.props;
+const { minDays, maxDays, news, ea, stopLoss, tradeCopier, weekend, martingale, hedging } =
+  Astro.props;
 ---
 
 <div class="info-section">
@@ -19,37 +23,18 @@ const { minDays, maxDays, news, ea, stopLoss, copyTrading, weekend } = Astro.pro
     style="background: linear-gradient(to right, #454545, #929292); -webkit-background-clip:text;"
     class="gradient-title-sm text-left w-full mb-[10px]"
   >
-    Planes y condiciones
+    Reglas y limitaciones
   </h2>
   <hr class="mb-[20px]" />
   <div class="info-grid">
-    <div class="info-cell">
-      <TitleInfo title="Mínimo de días operados (prueba)" />
-      <p class="info-cell-text">{minDays}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Limite de dias (prueba)" />
-      <p class="info-cell-text">{maxDays}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Operar noticias" />
-      <p class="info-cell-text">{news}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Expert Advisor" />
-      <p class="info-cell-text">{ea}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Stop loss" />
-      <p class="info-cell-text">{stopLoss}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Copy Trading (a uno mismo)" />
-      <p class="info-cell-text">{copyTrading}</p>
-    </div>
-    <div class="info-cell">
-      <TitleInfo title="Posición abierta en fin de semana" />
-      <p class="info-cell-text">{weekend}</p>
-    </div>
+    <InfoCell title="Mínimo de días operados (prueba)" data1={minDays} />
+    <InfoCell title="Limite de dias (prueba)" data1={maxDays} />
+    <InfoCell title="Operar noticias" data1={news} />
+    <InfoCell title="Expert Advisor" data1={ea} />
+    <InfoCell title="Stop loss" data1={stopLoss} />
+    <InfoCell title="Trade Copier" data1={tradeCopier} />
+    <InfoCell title="Posición abierta en fin de semana" data1={weekend} />
+    <InfoCell title="Martingala" data1={martingale} />
+    <InfoCell title="Hedging" data1={hedging} />
   </div>
 </div>
