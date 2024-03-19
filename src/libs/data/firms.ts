@@ -8,7 +8,6 @@ export interface Firm{
     hasReview: boolean
 }
 
-
 export const firms: { [key: string]: Firm } = {
     FTMO: {
         name: "FTMO",
@@ -74,6 +73,63 @@ export const firms: { [key: string]: Firm } = {
         logoText: "/images/firms/Topstep/Topstep-logo-500x250.webp",
         logoPromos: "/images/firms/Topstep/Topstep-logo-white-500x250.webp",
         link: "https://www.topstep.com/",
+        hasReview: false
+    },
+    Apex: {
+        name: "Apex Trading Fuding",
+        logoText: "/images/firms/Apex/Apex-logo-500x250.webp",
+        logoPromos: "/images/firms/Apex/Apex-logo-white.webp",
+        link: "https://apextraderfunding.com/",
+        hasReview: false
+
+    },
+    STF: {
+        name: "Skilled Funded Traders",
+        logoText: "/images/firms/STF/STF-logo-500x250.webp",
+        logoPromos: "/images/firms/STF/STF-logo-white.webp",
+        link: "https://skilledfundedtraders.com/",
+        hasReview: false
+    },
+    TFF: {
+        name: "True Forex Funds",
+        logoText: "/images/firms/TFF/TFF-logo-500x250.webp",
+        logoPromos: "/images/firms/TFF/TFF-logo-white-500x250.webp",
+        link: "https://trueforexfunds.com/",
+        hasReview: false
+    },
+    FundingPips: {
+        name: "Funding Pips",
+        logoText: "/images/firms/FundingPips/FundingPips-logo-500x250.webp",
+        logoPromos: "/images/firms/FundingPips/FundingPips-logo-white.webp",
+        link: "https://fundingpips.com/",
+        hasReview: false
+    },
+    FundingTraders: {
+        name: "Funding Traders",
+        logoText: "/images/firms/FundingTraders/FundingTraders-logo-500x250.webp",
+        logoPromos: "/images/firms/FundingTraders/FundingTraders-logo-white.webp",
+        link: "https://fundingpips.com/",
+        hasReview: false
+    },
+    DarwinexZero: {
+        name: "Darwinex Zero",
+        logoText: "/images/firms/DarwinexZero/DarwinexZero-logo-500x250.webp",
+        logoPromos: "/images/firms/DarwinexZero/DarwinexZero-logo-white.webp",
+        link: "https://fundingtraders.com/",
+        hasReview: false
+    },
+    E8: {
+        name: "E8 Markets",
+        logoText: "/images/firms/E8/E8-logo-500x250.webp",
+        logoPromos: "/images/firms/E8/E8-logo-white.webp",
+        link: "https://e8markets.com/",
+        hasReview: false
+    },
+    Audacity: {
+        name: "Audacity",
+        logoText: "/images/firms/Audacity/Audacity-logo-500x250.webp",
+        logoPromos: "/images/firms/Audacity/Audacity-logo-white.webp",
+        link: "https://e8markets.com/",
         hasReview: false
     }
 }

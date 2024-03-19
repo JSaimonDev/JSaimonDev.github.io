@@ -10,12 +10,23 @@ interface Props {
   stopLoss?: string;
   tradeCopier?: string;
   weekend?: string;
-  martingale?: string
-  hedging?: string
+  martingale?: string;
+  hedging?: string;
+  grid?: string;
 }
 
-const { minDays, maxDays, news, ea, stopLoss, tradeCopier, weekend, martingale, hedging } =
-  Astro.props;
+const {
+  minDays,
+  maxDays,
+  news,
+  ea,
+  stopLoss,
+  tradeCopier,
+  weekend,
+  martingale,
+  hedging,
+  grid,
+} = Astro.props;
 ---
 
 <div class="info-section">
@@ -36,5 +47,6 @@ const { minDays, maxDays, news, ea, stopLoss, tradeCopier, weekend, martingale, 
     <InfoCell title="Posición abierta en fin de semana" data1={weekend} />
     <InfoCell title="Martingala" data1={martingale} />
     <InfoCell title="Hedging" data1={hedging} />
+    <InfoCell title="Grid" data1={grid} />
   </div>
 </div>

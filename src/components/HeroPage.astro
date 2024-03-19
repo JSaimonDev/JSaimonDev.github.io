@@ -46,14 +46,14 @@ const {
     md:bg-transparent"
   >
     <div class="responsive-section margin-section w-full flex justify-between">
-      <div>
+      <div class="pr-[150px]">
         {
           titleLogo ? (
             <h1 class="w-full flex md:justify-start justify-center">
               <a href={titleLogoLink}>
                 <img
                   src={titleLogo}
-                  class="lg:h-[100px] xs:h-[80px] h-[70px] mb-[30px] object-contain"
+                  class="lg:h-[70px] xs:h-[60px] h-[50px] mb-[30px] object-contain"
                 />
               </a>
             </h1>
@@ -67,9 +67,9 @@ const {
             </h1>
           )
         }
-        <p class="xl:w-[70%] lg:w-[75%] md:w-[72%] mb-[20px]">
+        <div class="mb-[20px]">
           <slot />
-        </p>
+        </div>
         <BreadcrumbHeader
           altIndex={altIndex}
           altTitle={altTitle}

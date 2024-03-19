@@ -198,7 +198,7 @@ export const info: {[key: string]: Info} = {
             currency: "USD",
             fee: "Divisas y Materias primas: 5$/lote(CTrader) y 7$/lote(DXTrade)\<br>Índices y Crypto: 0",
             leverage: "Divisas ➤ 1:50 - 1:100\<br>Materias primas e Índices ➤ 1:20 \<br> Crypto ➤ 1:2",
-            instruments: "Divisas, índices, oro, materias primas y crypto",
+            instruments: "Divisas, índices, materias primas y crypto",
             platforms: "DXTrade, CTrader y Match Trader"
         },
         plansAndConditions: {
@@ -367,6 +367,366 @@ export const info: {[key: string]: Info} = {
             xLink: "https://twitter.com/Topstep",
             linkedinLink: "https://www.linkedin.com/company/topstep",
             discordLink: "https://discord.gg/topstep"
+        }
+    },
+    Apex: {
+        bussinessInfo: {
+            hq: "Apex Trader Funding Inc., 2028 E. Ben White Blvd Ste 240 -9873, Austin, TX 78741",
+            foundation: "2021",
+            ceo: "Darrell Martin",
+            trustPilotScore: "4.8",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733; &#9733;",
+        },
+        techInfo: {
+            brokers: "Rithmic y Tradovate",
+            currency: "USD",
+            fee: "<a href='https://support.atf.com/hc/en-us/articles/4404825514139-Commissions-for-Rithmic' style='color: #4cccd3;'>Rhithmic (link)</a><a href='https://support.atf.com/hc/en-us/articles/13391308020891-Commissions-for-Tradovate' style='color: #4cccd3;'>Tradovate (link)</a>",
+            leverage: "No ofrece apalancamiento",
+            instruments: "Futuros",
+            platforms: "Ninjatrader, Tradingview, Quantower, RTrader y otras populares plataformas de futuros"
+        },
+        plansAndConditions: {
+            phases: '1',
+            maxAllocation: '100.000',
+            maxSplit: "100% par alos primeros 25.000$ y 90% para el resto",
+            depositOptions: "Tarjeta",
+            withdrawalOptions: "Transferencia",
+            scaling: "No",
+            accountType: "Prueba de fondeo",
+            paymentType: "Suscripción",
+            priceRange: "Suscripción: 147$-677$"
+        },
+        rules: {
+            minDays: "7",
+            maxDays: "Sin límite",
+            news: "Permitido",
+            stopLoss: "No es obligatorio",
+            tradeCopier: "Permitido",
+            weekend: "No permitido"
+        },
+        social: {
+            facebookLink: "https://www.facebook.com/groups/apextraderfunding",
+            instagramLink: "https://www.instagram.com/apextraderfunding/",
+            youtubeLink: "https://www.youtube.com/c/ApexTraderFunding/videos"
+        }
+    },
+    STF: {
+        bussinessInfo: {
+            hq: "Estados Unidos",
+            foundation: "2023",
+            ceo: "Omar Agag, Palden Bhutia, y Riz Iqbal",
+            trustPilotScore: "4.4",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733;"
+        },
+        techInfo: {
+            brokers: "Purple Trading y Voyage Markets",
+            currency: "USD",
+            fee: "Divisas: 7$/lote\<br>Metales: 3$/lote\<br>Índices, crudo y crypto: 0",
+            leverage: "Divisas ➤ 1:30 - 1:100\<br>Materias primas ➤ 1:10 - 1:30 \<br> Índices ➤ 1:5 - 1:20 Crypto ➤ 1:1 - 1:2",
+            instruments: "Divisas, índices, metales, materias primas y crypto",
+            platforms: "DXTrade, CTrader"
+        },
+        plansAndConditions: {
+            phases: "2",
+            maxAllocation: "400.000 $",
+            masSplit: "85%",
+            depositOptions: "Google Pay, Apple Pay, tarjeta y crypto",
+            withdrawalOptions: "Crypto",
+            scaling: "Hasta 2 millones y 90% beneficio",
+            accountType: "Prueba de fondeo",
+            paymentType: "Único",
+            priceRange: "33$ - 1539$",
+        },
+        rules: {
+            minDays: "Standard y Expert: 0 días\<br>Skilled: 5 días",
+            maxDays: "Sin límite",
+            news: "Solo permitido durante la prueba",
+            ea: "Standard y Skilled: Permitido\<br>Expert: No permitido",
+            stopLoss: "No es obligatorio",
+            martingale: "No permitido",
+            grid: "No permitido",
+            hedging: "No permitido",
+            tradeCopier: "Permitidio",
+            weekend: "Permitido solo en cuentas swing"
+        },
+        social: {
+            tiktokLink: "https://www.tiktok.com/@skilledfundedtraders",
+            facebookLink: "https://www.facebook.com/skilledfundedtraders/",
+            discordLink: "https://discord.gg/3U5XggnY6a",
+            youtubeLink: "https://www.youtube.com/@skilledfundedtraders",
+            instagram: "https://www.instagram.com/skilledfundedtraders/",
+            xLink: "https://twitter.com/SFTFirm"
+        }
+    },
+    TFF: {
+        bussinessInfo: {
+            hq: "Móricz Zsigmond rkp. 1/B. fszt. 14, 9022, Győr, Hungary",
+            foundation: "2021",
+            ceo: "Richard Nagy",
+            trustPilotScore: "4.3",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733;"
+        },
+        techInfo: {
+            brokers: "Broker propio",
+            currency: "USD, EUR y GBP",
+            fee: "Divisas y metales: 3,5$/lote\<br>Crypto: 0,045%/lote\<br>Índices: 0.0005%",
+            leverage: "Divisas y materias primas ➤ 1:100\<br>Índices ➤ 1:50\<br> Acciones ➤ 1:10\<br> Crypto ➤ 1:5",
+            instruments: "Divisas, índices, acciones, materias primas y crypto",
+            platforms: "CTrader"
+        },
+        plansAndConditions: {
+            phases: "1 y 2",
+            maxAllocation: "400.000 $",
+            masSplit: "80%",
+            depositOptions: "Tarjeta y crypto",
+            withdrawalOptions: "ADVCash, Rise and crypto",
+            scaling: "Hasta 2.5 millones y 90% beneficio",
+            accountType: "Prueba de fondeo",
+            paymentType: "Único",
+            priceRange: "49€ - 998€",
+        },
+        rules: {
+            minDays: "1 Fase: 5 días\<br>2 Fases: 0 días",
+            maxDays: "1 Fase: 30 días\<br>2 Fases: Sin límite",
+            news: "Permitido",
+            ea: "Permitido",
+            stopLoss: "No es obligatorio",
+            martingale: "Permitido",
+            hedging: "Permitido",
+            grid: "No permitido",
+            tradeCopier: "Permitidio",
+            weekend: "Permitido"
+        },
+        social: {
+            facebookLink: "https://www.facebook.com/trueforexfunds",
+            discordLink: "https://discord.gg/5fbuf6qNsE",
+            youtubeLink: "https://www.youtube.com/channel/UCy7PJ2gJznmEFP9DPZJ44Hg",
+            instagram: "https://www.instagram.com/trueforexfunds",
+            xLink: "https://twitter.com/trueforexfunds"
+        }
+    },
+    FundingPips: {
+        bussinessInfo: {
+            hq: "Premises NO. 19948-001, IFZA Business Park, DDP Dubai U.A.E",
+            foundation: "2022",
+            ceo: "Khaled Ayesh",
+            trustPilotScore: "4.5",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733; &#9733;",
+        },
+        techInfo: {
+            brokers: "Broker propio",
+            currency: "USD",
+            fee: "Divisas y metales: 2$/lote\<br>Índices, crudo y crypto: Sin comisión",
+            leverage: "Divisas ➤ 1:100\<br>Metales ➤ 1:30\<br>Índices ➤ 1:20\<br>Crudo ➤ 1:10 \<br> Crypto ➤ 1:2",
+            instruments: "Divisas, índices, metales, crudo y crypto",
+            platforms: "CTrader y Match Trader"
+        },
+        plansAndConditions: {
+            phases: "2",
+            maxAllocation: "200.000 $",
+            maxSplit: "80%",
+            depositOptions: "Skrill, Crypto y Paypal",
+            withdrawalOptions: "Transferencia y Crypto",
+            scaling: "Hasta 2 millones y 90% de beneficio",
+            accountType: "Prueba de fondeo",
+            paymentType: "Único",
+            priceRange: "32$ - 100$",
+        },
+        rules: {
+            minDays: "0",
+            maxDays: "Sin límite",
+            news: "Restringido solo 2 minutos antes y despues de noticia de alto impacto. La operación no se ejecutara y no habrá violación de ninguna regla",
+            ea: "Permitido",
+            stopLoss: "No es obligatorio",
+            hedging: "No permitido",
+            tradeCopier: "Permitido",
+            weekend: "Permitido"
+        },
+        social: {
+            facebookLink: "https://www.facebook.com/fundingpipscom",
+            xLink: "https://twitter.com/fundingpips",
+            instagramLink: "https://www.instagram.com/fundingpips/",
+            youtubeLink: "https://www.youtube.com/channel/UC1ROfUOAjKQJIeGgJHDk_pA",
+            discordLink: "https://discord.com/invite/fundingpips",
+        }
+    },
+    FundingTraders: {
+        bussinessInfo: {
+            hq: "IFZA Business Park, DDP, 26656 - 001, A1 - 3641379065 Dubai UAE",
+            foundation: "2023",
+            ceo: "Desconocido",
+            trustPilotScore: "4.6",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733; &#9733;",
+        },
+        techInfo: {
+            brokers: "Blueberry Markets y CBT Limited",
+            currency: "USD",
+            fee: "Challenge: Sin comisión\<br>Cuenta fondeada: 3$/lote",
+            leverage: "Divisas ➤ 1:100\<br>Materias primas e Índices ➤ 1:50 \<br> Crypto ➤ 1:5",
+            instruments: "Divisas, índices, materias primas y crypto",
+            platforms: "Tradelocker y Metatrader 5"
+        },
+        plansAndConditions: {
+            phases: "1 y 2",
+            maxAllocation: "750.000 $",
+            maxSplit: "80% y 100% con add-on",
+            depositOptions: "Tarjeta y Crypto",
+            withdrawalOptions: "Transferencia(Rise) y Crypto",
+            scaling: "Hasta 2 millones",
+            accountType: "Prueba de fondeo",
+            paymentType: "Único",
+            priceRange: "50$ - 2500$",
+        },
+        rules: {
+            minDays: "1",
+            maxDays: "Sin límite",
+            news: "Permitido",
+            ea: "Permitido límites. Consultar antes con ellos preferiblemente",
+            stopLoss: "No es obligatorio",
+            martingale: "No permitido",
+            hedging: "No permitido",
+            tradeCopier: "Permitido",
+            weekend: "Permitido"
+        },
+        social: {
+            xLink: "https://twitter.com/Funding_Traders",
+            instagramLink: "https://instagram.com/fundingtraderscom",
+            discordLink: "https://discord.gg/fundingtraders",
+            telegramLink: "https://t.me/fundingtraders"
+        }
+    },
+    DarwinexZero: {
+        bussinessInfo: {
+            hq: "Level 39, 1 Canada Square Canary Wharf, London, England, E14 5AB, United Kingdom",
+            foundation: "2012",
+            ceo: "Juan Colón",
+            trustPilotScore: "4",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733;",
+        },
+        techInfo: {
+            brokers: "Propio",
+            currency: "USD",
+            fee: "<a href='https://www.darwinexzero.com/es/activos' style='color: #4cccd3;'>Link</a>",
+            leverage: "Divisas ➤ 1:30\<br>Materias primas e Índices ➤ 1:20 \<br> Acciones y ETFs ➤ 1:5",
+            instruments: "Divisas, índices, materias primas, acciones y ETFs",
+            platforms: "Metatrader 4 y Metatrader 5"
+        },
+        plansAndConditions: {
+            phases: "No hay fases.",
+            maxAllocation: "DarwinIA Silver: 375.000$\<br>DarwinIA Gold: 500.000$ + Inversores externos",
+            maxSplit: "15%",
+            depositOptions: "Tarjeta",
+            withdrawalOptions: "Transferencia",
+            scaling: "Sin límite",
+            accountType: "Cada mes, el trader puede conseguir capital en base a los resultados de su estrategia. Asignación mensual con validez de 3 meses para DarwinIA Silver y de 6 meses para DarwinIA Gold",
+            paymentType: "Suscripción mensual",
+            priceRange: "38€",
+        },
+        rules: {
+            news: "Permitido",
+            ea: "Permitido",
+            stopLoss: "No es obligatorio",
+            martingale: "Permitido",
+            hedging: "Permitido",
+            tradeCopier: "Permitido",
+            weekend: "Permitido"
+        },
+        social: {
+            xLink: "https://twitter.com/DarwinexZero",
+            instagramLink: "https://www.instagram.com/darwinexzero/",
+            youtubeLink: "https://www.youtube.com/@DarwinexZero/featured",
+            discordLink: "https://discord.com/invite/A5NjGduWbp",
+        }
+    },
+    E8: {
+        bussinessInfo: {
+            hq: "100 Crescent Ct, Unit 700, Dallas, Texas 75201, US",
+            foundation: "2021",
+            ceo: "Dylan Elchami",
+            trustPilotScore: "4.8",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733; &#9733;",
+        },
+        techInfo: {
+            brokers: "Virtual Markets",
+            currency: "USD",
+            fee: "Sin comisiones",
+            leverage: "Divisas ➤ 1:50\<br>Materias primas e Índices ➤ 1:25 \<br> Crypto ➤ 1:5",
+            instruments: "Divisas, índices, materias primas y crypto",
+            platforms: "Match Trader"
+        },
+        plansAndConditions: {
+            phases: "1 (próximamente),2 y 3",
+            maxAllocation: "400.000 $",
+            maxSplit: "80%",
+            depositOptions: "Tarjeta y Crypto",
+            withdrawalOptions: "Transferencia (Plane) y Crypto (Riseworks)",
+            scaling: "400.000$",
+            accountType: "Prueba de fondeo",
+            paymentType: "Único",
+            priceRange: "47$ - 790$",
+        },
+        rules: {
+            minDays: "1",
+            maxDays: "Sin límite",
+            news: "Permitido, pero las ganancias obtenidas en los momentos de mayor volatilidad pueden ser anuladas por no ser replicables",
+            ea: "Permitido",
+            stopLoss: "No es obligatorio",
+            martingale: "No permitido",
+            tradeCopier: "Permitido",
+            weekend: "Permitido"
+        },
+        social: {
+            facebookLink: "https://www.facebook.com/E8Markets",
+            xLink: "https://twitter.com/e8markets",
+            instagramLink: "https://www.instagram.com/E8Marketscom",
+            youtubeLink: "https://www.youtube.com/channel/UCHGznmL3rdnsDKDgrRyK_VQ",
+            telegramLink: "https://t.me/e8fundinggroup"
+        }
+    },
+    Audacity: {
+        bussinessInfo: {
+            hq: "Office 8.05 One Canada Square, London, England, E14 5AA, United Kingdom",
+            foundation: "2012",
+            ceo: "Karim Yousfi",
+            trustPilotScore: "4.6",
+            trustPilotStars: "&#9733; &#9733; &#9733; &#9733; &#9733;",
+        },
+        techInfo: {
+            brokers: "Propio",
+            currency: "USD, EUR, GBP",
+            fee: "Sin comisiones",
+            leverage: "1:30",
+            instruments: "Divisas, índices, oro",
+            platforms: "Metatrader 4 y Metatrader 5"
+        },
+        plansAndConditions: {
+            phases: "2",
+            maxAllocation: "240.000 $",
+            maxSplit: "70%. 80% si ese mes tiene un beneficio mayor de 10%",
+            depositOptions: "Tarjeta, Paypal, transferencia y crypto (Coinbase)",
+            withdrawalOptions: "Transferencia y Crypto",
+            scaling: "Escalado trimestral hasta 2 millones de dólares",
+            accountType: "Prueba de fondeo",
+            paymentType: "Único",
+            priceRange: "129$ - 1559$",
+        },
+        rules: {
+            minDays: "4",
+            maxDays: "Sin límite",
+            news: "Permitido",
+            ea: "Permitido",
+            stopLoss: "No es obligatorio",
+            martingale: "No ermitido",
+            hedging: "Permitido",
+            tradeCopier: "Permitido",
+            weekend: "Permitido"
+        },
+        social: {
+            facebook: "https://www.facebook.com/audacitycapital",
+            linkedinLink: "https://www.linkedin.com/company/audacity-capital",
+            xLink: "https://twitter.com/Audacitycap",
+            instagramLink: "https://www.instagram.com/audacity.capital/",
+            youtubeLink: "https://www.youtube.com/@AudaCityCapital",
         }
     }
 }
