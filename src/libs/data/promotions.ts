@@ -23,10 +23,7 @@ export const promotions: { [key: string]: Promotion[] } = {
                 description: "100% coste de la prueba recuperado + 12.5% beneficio de la evaluación. Válido para todo tipo de cuentas",
                 code: "TFTDECEMBER25",
             endDate: new Date(2023, 11, 31),
-                logoUrl: "images/firms/TFT/TFT-logo-white-500x250.webp"
-            }
-    ]
-,
+                logoUrl: "images/firms/TFT/TFT-logo-white-500x250.webp"}],
     FundedNext: [],
     BlueGuardian: [
         {
@@ -48,5 +45,16 @@ export const promotions: { [key: string]: Promotion[] } = {
             condition: "Solo cuentas 8K, 15k y 25k",
             logoUrl: "images/firms/GFT/GFT-logo-white-500x250.webp"
         }
-    ]
+    ],
+    The5ers: [],
+    TTP: [],
+    Topstep: [],
+    Apex: [],
+    STF: [],
+    TFF: [],
+    FundingPips:  [],
+    FundingTraders: [],
+    DarwinexZero: [],
+    E8: [],
+    Audacity: []
 }

@@ -6,12 +6,22 @@ import { promotions } from "@/libs/data/promotions";
 import { mapIds } from "@/utils.ts";
 import HeroPage from "@/components/HeroPage.astro";
 import CardPromoDetails from "@/components/cards/CardPromoDetails.astro";
+import { getPathnameItems } from "@/utils";
 
 export function getStaticPaths() {
   return mapIds(firms);
 }
 
 const { id } = Astro.params;
+const items = getPathnameItems(Astro.url.pathname);
+
+const firmName = items[items.length - 1].title;
+const markdownDescriptions = await Astro.glob(
+  "../../libs/data/descriptions/*.md"
+);
+const matchedDescription = markdownDescriptions.find(
+  (file) => file.frontmatter.title === firms[firmName].name
+);
 ---
 
 <Layout title={`Promociones en ${firms[id].name}`}>
@@ -26,13 +36,15 @@ const { id } = Astro.params;
       button2Link={firms[id].hasReview
         ? `/review/${firms[id].name}`
         : `/info/${firms[id].name}`}
-    />
+    >
+      {matchedDescription && <matchedDescription.Content />}
+    </HeroPage>
     <div class="flex justify-center w-full">
       <div
         class="flex flex-col items-center justify-start responsive-section margin-section w-full lg:gap-[40px] xs:gap-[30px] gap-[20px]"
       >
         {
-          promotions[id].length >0 ? (
+          promotions[id].length > 0 ? (
             promotions[id]?.map((promotion) => (
               <CardPromoDetails
                 code={promotion.code}

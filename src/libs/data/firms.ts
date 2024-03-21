@@ -76,7 +76,7 @@ export const firms: { [key: string]: Firm } = {
         hasReview: false
     },
     Apex: {
-        name: "Apex Trading Fuding",
+        name: "Apex Trading Funding",
         logoText: "/images/firms/Apex/Apex-logo-500x250.webp",
         logoPromos: "/images/firms/Apex/Apex-logo-white.webp",
         link: "https://apextraderfunding.com/",
@@ -93,7 +93,7 @@ export const firms: { [key: string]: Firm } = {
     TFF: {
         name: "True Forex Funds",
         logoText: "/images/firms/TFF/TFF-logo-500x250.webp",
-        logoPromos: "/images/firms/TFF/TFF-logo-white-500x250.webp",
+        logoPromos: "/images/firms/TFF/TFF-logo-white.webp",
         link: "https://trueforexfunds.com/",
         hasReview: false
     },

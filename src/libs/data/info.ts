@@ -279,7 +279,7 @@ export const info: {[key: string]: Info} = {
     TTP: {
         bussinessInfo: {
             hq: "Landstrasse 63, 9490, Vaduz, Liechtenstein",
-            foundation: "2002",
+            foundation: "2022",
             ceo: "Thomas Heyden y Daniela Egli",
             trustPilotScore: "4.4",
             trustPilotStars: "&#9733; &#9733; &#9733; &#9733;",
