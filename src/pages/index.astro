@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import hero_image from "../../public/images/Home-hero-ready.png";
+import hero_image from "../../public/images/Home-hero-ready.jpg";
 import CardReview from "../components/cards/CardReview.astro";
 import CardList from "../components/cards/CardList.astro";
 import CardPromo from "../components/cards/CardPromoHome.astro";
@@ -53,34 +53,54 @@ import {
               </h2>
               <a
                 href="/reviews"
-                class="flex flex-col justify-center items-center gap-[10px]"
+                class="xs:flex flex-col justify-end items-center gap-[10px] sm:text-2xl text-xl pr-[10px] hidden underline underline-offset-4"
               >
-                <svg viewBox="0 0 512 512" class="arrow-more"
+                <!-- <svg viewBox="0 0 512 512" class="arrow-more"
                   ><path
                     d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
                   ></path></svg
-                >
+                > -->
+                Ver más
               </a>
             </div>
             <div
               class="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 lg:gap-[30px] md:gap-[20px] gap-[15px]"
             >
+              <CardReview logo={firms.FTMO.logoText} id="FTMO" />
+              <CardReview logo={firms.The5ers.logoText} id="The5ers" />
+              <CardReview logo={firms.TTP.logoText} id="TTP" />
+              <CardReview logo={firms.E8.logoText} id="E8" />
               <CardReview
-                logo={firms.FTMO.logoText}
-                webLink={firms.FTMO.link}
-                id="FTMO"
+                logo={firms.TFT.logoText}
+                id="TFT"
+                extraClass="xs:block hidden"
               />
-              <CardReview logo={firms.TFT.logoText} id="TFT" />
-              <CardReview logo={firms.FundedNext.logoText} id="FundedNext" />
-              <div class="lg:block md:hidden block">
-                <CardReview logo={firms.GFT.logoText} id="GFT" />
-              </div>
+              <CardReview
+                logo={firms.FundedNext.logoText}
+                id="FundedNext"
+                extraClass="xs:block hidden"
+              />
+              <CardReview
+                logo={firms.GFT.logoText}
+                id="GFT"
+                extraClass="xs:block hidden"
+              />
+              <CardReview
+                logo={firms.SFT.logoText}
+                id="SFT"
+                extraClass="xs:block hidden"
+              />
+              <CardReview
+                logo={firms.FundingPips.logoText}
+                id="FundingPips"
+                extraClass="lg:hidden md:block hidden"
+              />
             </div>
             <a class="xs:hidden w-full" href="/reviews">
               <button
                 class="border-dark-grey border-[3px] rounded-lg w-full p-[4px]"
               >
-                Más reviews &rarr;
+                Ver más &rarr;
               </button>
             </a>
           </div>
@@ -97,13 +117,9 @@ import {
               </h2>
               <a
                 href="/promociones"
-                class="flex flex-col justify-center items-center gap-[10px]"
+                class="xs:flex flex-col justify-end items-center gap-[10px] sm:text-2xl text-xl mr-[10px] hidden underline underline-offset-4"
               >
-                <svg viewBox="0 0 512 512" class="arrow-more"
-                  ><path
-                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
-                  ></path></svg
-                >
+                Ver más
               </a>
             </div>
             <div
@@ -153,13 +169,9 @@ import {
               </h2>
               <a
                 href="/listas"
-                class="flex flex-col justify-center items-center gap-[10px]"
+                class="xs:flex flex-col justify-end items-center gap-[10px] sm:text-2xl text-xl pr-[10px] hidden underline underline-offset-4"
               >
-                <svg viewBox="0 0 512 512" class="arrow-more"
-                  ><path
-                    d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"
-                  ></path></svg
-                >
+                Ver más
               </a>
             </div>
             <div
@@ -218,10 +230,10 @@ import {
         line-height: 1.6;
       }
       .title-index-lg {
-        @apply lg:text-7xl sm:text-6xl text-5xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
+        @apply lg:text-6xl sm:text-5xl text-5xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
       }
       .title-index-sm {
-        @apply lg:text-7xl sm:text-6xl text-4xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center w-full;
+        @apply lg:text-6xl sm:text-5xl text-4xl inline-block text-transparent font-bold col-span-3 xs:text-left text-center;
       }
       .arrow-more {
         @apply fill-dark-grey lg:w-[65px] lg:h-[65px] sm:w-[55px] sm:h-[55px]

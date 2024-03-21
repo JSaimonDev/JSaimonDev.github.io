@@ -410,7 +410,7 @@ export const info: {[key: string]: Info} = {
             youtubeLink: "https://www.youtube.com/c/ApexTraderFunding/videos"
         }
     },
-    STF: {
+    SFT: {
         bussinessInfo: {
             hq: "Estados Unidos",
             foundation: "2023",

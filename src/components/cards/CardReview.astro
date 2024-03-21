@@ -3,12 +3,12 @@ import "../../styles/dual-button.css";
 
 interface Props {
   logo: string;
-  webLink?: string;
   isReview?: boolean;
   id?: string;
+  extraClass?: string
 }
 
-const { logo, id, webLink, isReview } = Astro.props;
+const { logo, id, isReview, extraClass } = Astro.props;
 ---
 
 <!-- <div>
@@ -44,7 +44,7 @@ const { logo, id, webLink, isReview } = Astro.props;
 </div> -->
 <a
   href={isReview ? `/review/${id}` : `/info/${id}`}
-  class="w-full scale-100 hover:scale-105 ease-in-out duration-300 transform shadow-lg"
+  class=`w-full scale-100 hover:scale-105 ease-in-out duration-300 transform shadow-lg ${extraClass}`
 >
   <img src={logo} class="rounded-xl" />
 </a>

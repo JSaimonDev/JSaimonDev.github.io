@@ -83,10 +83,10 @@ export const firms: { [key: string]: Firm } = {
         hasReview: false
 
     },
-    STF: {
+    SFT: {
         name: "Skilled Funded Traders",
-        logoText: "/images/firms/STF/STF-logo-500x250.webp",
-        logoPromos: "/images/firms/STF/STF-logo-white.webp",
+        logoText: "/images/firms/SFT/SFT-logo-500x250.webp",
+        logoPromos: "/images/firms/SFT/SFT-logo-white.webp",
         link: "https://skilledfundedtraders.com/",
         hasReview: false
     },
