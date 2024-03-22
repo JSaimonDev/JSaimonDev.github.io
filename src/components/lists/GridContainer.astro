@@ -23,7 +23,7 @@ const listKeys = Object.keys(lists);
   <h2
     style=`background: linear-gradient(to right, ${startColor}, ${endColor});
     -webkit-background-clip:text`
-    class="md:text-6xl sm:text-5xl xs:text-4xl text-3xl mb-[20px] inline-block text-transparent
+    class="md:text-5xl sm:text-4xl xs:text-4xl text-3xl mb-[20px] inline-block text-transparent
       p-[10px] font-bold"
   >
     {title}
@@ -36,7 +36,7 @@ const listKeys = Object.keys(lists);
           shortDescription={lists[key].shortDescription}
           id={key}
           type={type}
-          shadowColor={shadowColor}
+          color={shadowColor}
         />
       ))
     }

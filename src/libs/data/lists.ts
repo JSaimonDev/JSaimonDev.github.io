@@ -6,34 +6,70 @@ export interface List {
 
 export const softwareList: { [key: string]: List } = {
     tradingView: {
-        name: "Empresas de fondeo compatibles con Tradigview",
-        shortDescription: "Opera comodamente desde el software de analisis técnico más popular"
+        name: "Tradigview",
+        firms: [
+            {
+                id: 'Apex',
+                notes: "Es posible operar desde Tradingview a través de Tradovate"
+            }
+        ]
     },
-        EA: {
-        name: "Empresas de fondeo que permiten Expert Advisors",
-        shortDescription: "Si eres trader algorítimco podrás operar en estas empresas"
+    mt4: {
+        name: "Metatrader 4"
     },
+    mt5: {
+        name: "Metatrader 5"
+    },
+    DXTrade: {
+        name: "DXTrade",
+    },
+    CTrader: {
+     name:   "cTrader"
+    },
+    NijaTrader: {
+        name: "NinjaTrader"
+    },
+    Quantoser: {
+        name: "Quantower"
+    },
+    MatchTrader: {
+        name: "Match Trader"
+    }
 }
 
 export const instrumentList: { [key: string]: List } = {
         crypto: {
-        name: "Empresas de fondeo que ofrecen Criptomonedas",
-        shortDescription: "Si te gusta el mundo crypto también tienes opciones para conseguir capital"
+        name: "Crypto",
     },
+    commodities: {
+        name: "Materias primas"
+    },
+    forex: {
+        name: "Divisas"
+    },
+    futures: {
+        name: "Futuros"
+    },
+    index: {
+        name: "Índices"
+    },
+    Stocks: {
+        name: "Acciones"
+    }
 }
 
-export const featureList: { [key: string]: List } = {
+export const rulesList: { [key: string]: List } = {
      noSL: {
-        name: "Cuentas fondeadas sin Stop Loss",
-        shortDescription: "Cuentas y empresas en las que puedes operar ni necesidad de Stop Loss"
+        name: "Stop loss",
+        shortDescription: "No es necesario tener un stop loss"
     },
     noTimeLimit: {
         name: "Sin límite de tiempo",
-        shortDescription: "Originalmente la mayoría de las pruebas de fondeo tenía un maximo de tiempo para superarlas, lo cual añade un extra de dificultad a los traders menos agresivos. Por suerte, hoy en día un gran número de empresas ofrecen pruebas sin límite de tiempo."
+        shortDescription: "Tómate todo el tiempo que necesites para terminar la prueba"
     },
     weekend: {
-        name: "Operaciones abiertas durante el fin de semana",
-        shortDescription: "Mantener operaciones durante muchos dias puede ser imprescindible para algunos swing traders",
+        name: "Fin de semana",
+        shortDescription: "Está permitido mantener ordenes abiertas durante el fin de semana",
         firms: [
             {
                 id: "FTMO",
@@ -54,9 +90,29 @@ export const featureList: { [key: string]: List } = {
                 id: "GFT",
             }
         ]
+    },
+    balanceBased: {
+        name: "Drawdown basado en balance",
+        shortDescription: "El nivel de drawdown máximo no aumenta cuando tus operación estan en positivo"
+    },
+    news: {
+        name: "Noticias",
+        shortDescription: "Está permitido operar durante las noticias de alto impacto"
+    },
+    EA: {
+        name: "Empresas de fondeo que permiten Expert Advisors",
+        shortDescription: "Se pueden usar Expert Advisors"
+    },
+    scalingL: {
+        name: "Plan de escalado escalado",
+        shortDescription: "La compañía tiene un plan de escalado"
+    },
+    swapFree: {
+        name: "Swap free",
+        shortDescription: "Opera si pagar comisiones swap"
+    },
+    tradeCopier: {
+        name: "Trade copier",
+        shortDescription: "Está permitido utilizar un trade copier para replicar tus operaciones en varias cuentas"
     }
-}
-
-export const brokerList: { [key: string]: List } = {
-    
 }

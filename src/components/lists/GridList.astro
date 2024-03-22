@@ -1,9 +1,8 @@
 ---
 import {
-  featureList,
+  rulesList,
   instrumentList,
   softwareList,
-  brokerList,
 } from "@/libs/data/lists";
 import GridContainer from "@/components/lists/GridContainer.astro";
 ---
@@ -12,9 +11,9 @@ import GridContainer from "@/components/lists/GridContainer.astro";
   class="flex flex-col lg:gap-[40px] md:gap-[30px] gap-[20px] responsive-section margin-section"
 >
   <GridContainer
-    lists={featureList}
+    lists={rulesList}
     type="feature"
-    title="Reglas y características"
+    title="Reglas"
     startColor="#D95613"
     endColor="#d3a717"
   />
@@ -33,13 +32,5 @@ import GridContainer from "@/components/lists/GridContainer.astro";
     startColor="#46823b"
     endColor="#38c168"
     shadowColor="green"
-  />
-  <GridContainer
-    lists={brokerList}
-    type="broker"
-    title="Broker"
-    startColor="#454545"
-    endColor="#828282"
-    shadowColor="grey"
   />
 </div>

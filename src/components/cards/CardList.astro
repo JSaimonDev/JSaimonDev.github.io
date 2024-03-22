@@ -6,34 +6,45 @@ interface Props {
   shortDescription?: string;
   id: string;
   type?: TypeList;
-  shadowColor?: "blue" | "green" | "grey" | "orangeFull";
+  color?: "blue" | "green" | "grey" | "orangeFull";
 }
 
-const { name, shortDescription, id, shadowColor } = Astro.props;
+const { name, shortDescription, id, color } = Astro.props;
 
 let shadowClass = "hover:shadow-[0_0_10px_2px_rgba(217,86,19,0.5)] ";
-if (shadowColor === "blue")
+let lineClass = "border-orange";
+if (color === "blue") {
   shadowClass = "hover:shadow-[0_0_10px_2px_rgba(86,84,188,0.5)]";
-else if (shadowColor === "green")
+  lineClass = "border-blue";
+} else if (color === "green") {
   shadowClass = "hover:shadow-[0_0_10px_2px_rgba(70,130,59,0.5)]";
-else if (shadowColor === "orangeFull")
+  lineClass = "border-green";
+} else if (color === "orangeFull")
   shadowClass = "hover:shadow-[0_0_10px_2px_rgba(217,86,19,1)]";
-else if (shadowColor === "grey")
+else if (color === "grey") {
   shadowClass = "hover:shadow-[0_0_10px_2px_rgba(69,69,69,0.5)]";
+  lineClass = "border-medium-grey";
+}
 ---
 
 <a
   href={`/lists/${id}`}
-  class={`${shadowClass} flex md:gap-[15px] gap-[10px] shadow-md cursor-pointer rounded-xl h-full bg-[#FFFFFF] p-6 duration-300 ease-in-out`}
+  class={`${shadowClass}  shadow-md cursor-pointer rounded-xl h-full bg-[#FFFFFF] p-6 duration-300 ease-in-out`}
 >
-  <img src="/icons/bullet-list.svg" class="lg:h-[30px] md:h-[25px] xs:h-[20px] h-[15px]
-  lg:mt-0 md:mt-[1px] xs:mt-[4px] mt-[6px]" />
-  <div>
+  <div class="flex md:gap-[15px] gap-[10px]">
+    <!-- <div class="flex items-center w-[30%]">
+      <img
+        src="/icons/bullet-list.svg"
+        class="lg:h-[30px] md:h-[25px] xs:h-[20px] h-[15px]
+    lg:mt-0 md:mt-[1px] xs:mt-[4px] mt-[6px]"
+      />
+    </div> -->
     <p class="xl:text-xl text-lg font-bold">{name}</p>
-    {
-      shortDescription && (
-        <p class="text-base text-medium-grey mt-4">{shortDescription}</p>
-      )
-    }
   </div>
+  {
+    shortDescription && (
+      <hr class=`${lineClass} mt-[10px]` />
+      <p class="text-base text-medium-grey mt-4">{shortDescription}</p>
+    )
+  }
 </a>
