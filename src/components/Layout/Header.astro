@@ -27,9 +27,15 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
         font-[600] text-[#212121]
         md:flex items-center"
       >
-        <li><a href="/reviews">Reviews</a></li>
-        <li><a href="/listas">Listas</a></li>
-        <li><a href="/promociones">Promociones</a></li>
+        <li class="link-underline link-underline-black link-underline:hover">
+          <a href="/reviews">Reviews</a>
+        </li>
+        <li class="link-underline link-underline-black link-underline:hover">
+          <a href="/listas">Listas</a>
+        </li>
+        <li class="link-underline link-underline-black link-underline:hover">
+          <a href="/promociones">Promociones</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -38,7 +44,9 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
       <ul
         class="font-[600] text-[#212121] flex flex-col gap-[10px] pl-[15px] border-t-2 py-[15px]"
       >
-        <li><a href="/reviews">Reviews</a></li>
+        <li>
+          <a href="/reviews">Reviews</a>
+        </li>
         <li><a href="/listas">Listas</a></li>
         <li><a href="/promociones">Promociones</a></li>
       </ul>
@@ -95,5 +103,24 @@ import logo from "../../../public/icons/The-GodFunded-logo.svg";
 
   .line3.clicked {
     transform: rotate(-45deg);
+  }
+  .link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#fff, #fff);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in-out;
+  }
+
+  .link-underline-black {
+    background-image: linear-gradient(transparent, transparent),
+      linear-gradient(#333, #333);
+  }
+
+  .link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%;
   }
 </style>

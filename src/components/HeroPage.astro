@@ -121,7 +121,7 @@ const {
     class="z-20 text-light-grey w-full h-full flex justify-center items-center"
   >
     <div class="responsive-section margin-section w-full flex justify-between">
-      <div class="md:pr-[50px] lg:pr-[150px]">
+      <div class="md:pr-[50px] lg:pr-[150px] flex flex-col w-full">
         {
           titleLogo ? (
             <h1 class="w-full flex md:justify-start justify-center">
@@ -133,7 +133,7 @@ const {
               </a>
             </h1>
           ) : isList ? (
-            <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px]">
+            <h1 class="w-full lg:text-7xl xs:text-6xl text-4xl md:text-left text-center greatVibes mb-[20px] self-center">
               {title}
             </h1>
           ) : (

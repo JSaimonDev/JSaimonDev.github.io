@@ -5,7 +5,7 @@ interface Props {
   logo: string;
   isReview?: boolean;
   id?: string;
-  extraClass?: string
+  extraClass?: string;
 }
 
 const { logo, id, isReview, extraClass } = Astro.props;
@@ -44,7 +44,10 @@ const { logo, id, isReview, extraClass } = Astro.props;
 </div> -->
 <a
   href={isReview ? `/review/${id}` : `/info/${id}`}
-  class=`w-full scale-100 hover:scale-105 ease-in-out duration-300 transform shadow-lg ${extraClass}`
+  class=`w-full scale-100 overflow-hidden shadow-lg ${extraClass} rounded-xl`
 >
-  <img src={logo} class="rounded-xl" />
+  <img
+    src={logo}
+    class="rounded-xl hover:scale-105 ease-in-out duration-300 transform"
+  />
 </a>

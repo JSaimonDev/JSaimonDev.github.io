@@ -27,7 +27,16 @@ else
 
 <Layout title={``}>
   <main class="min-h-[80vh]">
-    <HeroPage hero_image={hero_image} title={foundList[id].name} isList />
+    <HeroPage
+      hero_image={hero_image}
+      title={foundList[id].name}
+      isList
+      altTitle="Listas"
+      altIndex={1}
+    
+    >
+    {foundList[id].mainDescription}
+    </HeroPage>
     <div class="flex justify-center w-full">
       <div
         class="flex flex-col w-full responsive-section design-section margin-section"
