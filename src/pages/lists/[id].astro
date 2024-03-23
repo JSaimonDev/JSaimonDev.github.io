@@ -1,21 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import hero_image from "/public/images/Archive-hero.webp";
+import hero_image from "/public/images/Lists-hero.jpg";
 import { mapIds } from "@/utils";
 import { firms } from "@/libs/data/firms";
 import HeroPage from "@/components/HeroPage.astro";
 import {
-  featureList,
+  rulesList,
   softwareList,
   instrumentList,
-  brokerList,
 } from "@/libs/data/lists";
 
 export function getStaticPaths() {
-  return mapIds(featureList).concat(
+  return mapIds(rulesList).concat(
     mapIds(softwareList),
     mapIds(instrumentList),
-    mapIds(brokerList)
   );
 }
 
@@ -23,14 +21,12 @@ const { id } = Astro.params;
 
 let foundList;
 
-if (Object.keys(featureList).includes(id))
-  foundList = featureList;
+if (Object.keys(rulesList).includes(id))
+  foundList = rulesList;
 else if (Object.keys(softwareList).includes(id))
   foundList = softwareList;
 else if (Object.keys(instrumentList).includes(id))
   foundList = instrumentList;
-else if (Object.keys(brokerList).includes(id))
-  foundList = brokerList;
 else
   foundList = {
     id: {

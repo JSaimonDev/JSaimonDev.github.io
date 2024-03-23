@@ -11,61 +11,493 @@ export const softwareList: { [key: string]: List } = {
             {
                 id: 'Apex',
                 notes: "Es posible operar desde Tradingview a través de Tradovate"
+            },
+                        {
+                id: 'Topstep',
+                notes: "Es posible operar desde Tradingview a través de Tradovate"
             }
         ]
     },
     mt4: {
-        name: "Metatrader 4"
+        name: "Metatrader 4",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "The Trading Pit"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     mt5: {
-        name: "Metatrader 5"
+        name: "Metatrader 5",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "Darwinex Zero"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     DXTrade: {
         name: "DXTrade",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "SFT"
+            }
+        ]
     },
     CTrader: {
-     name:   "cTrader"
+        name: "cTrader",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            }
+        ]
     },
     NijaTrader: {
-        name: "NinjaTrader"
+        name: "NinjaTrader",
+        firms: [
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            }
+        ]
     },
-    Quantoser: {
-        name: "Quantower"
+    Quantower: {
+        name: "Quantower",
+        firms: [
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            }
+        ]
     },
     MatchTrader: {
-        name: "Match Trader"
+        name: "Match Trader",
+        firms: [
+            {
+                id: "GFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "E8"
+            }
+        ]
     }
 }
 
 export const instrumentList: { [key: string]: List } = {
         crypto: {
         name: "Crypto",
+        firms: [
+            {
+                    id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "GFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "E8"
+            },
+            
+            ]
     },
     commodities: {
-        name: "Materias primas"
+        name: "Materias primas",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "GFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     forex: {
-        name: "Divisas"
+        name: "Divisas",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "GFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     futures: {
-        name: "Futuros"
+        name: "Futuros",
+        firms: [
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "Darwinex"
+            }
+        ]
     },
     index: {
-        name: "Índices"
+        name: "Índices",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "GFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     Stocks: {
-        name: "Acciones"
+        name: "Acciones",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "DarwinexZero"
+            }
+        ]
     }
 }
 
 export const rulesList: { [key: string]: List } = {
      noSL: {
         name: "Stop loss",
-        shortDescription: "No es necesario tener un stop loss"
+        shortDescription: "No es necesario tener un stop loss",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "GFT"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers",
+                notes: "Obligatorio solo en la cuenta Bootcamp"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     noTimeLimit: {
         name: "Sin límite de tiempo",
-        shortDescription: "Tómate todo el tiempo que necesites para terminar la prueba"
+        shortDescription: "Tómate todo el tiempo que necesites para terminar la prueba",
+        firms: [
+            {
+                id: "FTMO"
+            },
+            {
+                id: "TFT"
+            },
+            {
+                id: "Funded Next",
+                notes: "Solo en las cuentas Stellas y Express"
+            },
+            {
+                id: "GFT",
+                notes: "Solo en las cuentas Goat y No Time Limit"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT"
+            },
+            {
+                id: "TFF",
+                notes: "Solo en la cuenta de 2 fases"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     weekend: {
         name: "Fin de semana",
@@ -77,40 +509,248 @@ export const rulesList: { [key: string]: List } = {
             },
             {
                 id: "TFT",
-                notes: "Solo disponible en la cuenta royal y en las modalidad swind de las otras cuentas"
+                notes: "Permitido excepto en las versión Regular de las cuentas Standard, Rapid y Dragon"
             },
             {
                 id: "FundedNext",
-                notes: "Permitido en todas las cuentas excepto en Express-consistency"
+                notes: "Permitido excepto en la cuenta Express Consistency"
             },
             {
                 id: "BlueGuardian",
             },
             {
                 id: "GFT",
+            },
+            {
+                id:  "Thee5ers"
+            },
+            {
+                id: "TTP",
+                notes: "Permitido en CFDs, no en futuros"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT",
+                notes: "Permitido solo en cuentas swing"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
             }
         ]
     },
-    balanceBased: {
-        name: "Drawdown basado en balance",
-        shortDescription: "El nivel de drawdown máximo no aumenta cuando tus operación estan en positivo"
-    },
+    // balanceBased: {
+    //     name: "Drawdown basado en balance",
+    //     shortDescription: "El nivel de drawdown máximo no aumenta cuando tus operación estan en positivo"
+    // },
     news: {
         name: "Noticias",
-        shortDescription: "Está permitido operar durante las noticias de alto impacto"
+        shortDescription: "Está permitido operar durante las noticias de alto impacto",
+        firms: [
+            {
+                id: "FTMO",
+                notes: "Permitido sólo durante la prueba"
+            },
+            {
+                id: "TFT",
+                notes: "Permitido en todas las pruebas. Restringido en la cuentas Regular"
+            },
+            {
+                id: "FundedNext",
+                notes: "Permitido excepto en la cuenta Express"
+            },
+            {
+                id: "GFT",
+                notes: "Permitido con restricciones. Es posible tener posiciones abiertas pero no operar lo momentos de máxima volatilidad en noticias de alto impacto"
+            },
+            {
+                id: "BlueGuardian"
+            },
+            {
+                id: "The5ers",
+                notes: "Permitido mantener posiciones. No permitide abrir o cerrar 2 minutos antes y después"
+            },
+            {
+                id: "TTP",
+                notes: "Restringido operar 2 minutos antes o después de noticias de alto impacto"
+            },
+            {
+                id: "Topstep"
+            },
+            {
+                id: "Apex"
+            },
+            {
+                id: "SFT",
+                notes: "Solo permitido durante la prueba"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips",
+                notes: "Restringido solo 2 minutos antes y despues de noticia de alto impacto. La operación no se ejecutara y no habrá violación de ninguna regla"
+            },
+            {
+                id: "FundingTraders"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8",
+                notes: "Permitido, pero las ganancias obtenidas en los momentos de mayor volatilidad pueden ser anuladas por no ser replicables"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     EA: {
-        name: "Empresas de fondeo que permiten Expert Advisors",
-        shortDescription: "Se pueden usar Expert Advisors"
+        name: "Expert Advisor",
+        shortDescription: "Se pueden usar Expert Advisors",
+        firms: [
+            {
+                id: "FTMO",
+            },
+            {
+                id: "TFT",
+                notes: "Permitido en las cuentas Dragon, Royal, Knight. En Standard solo con add-on"
+            },
+            {
+                id: "FundedNext"
+            },
+            {
+                id: "GFT"
+            },
+            {
+                id: "Blue Guardian"
+            },
+            {
+                id: "The5ers"
+            },
+            {
+                id: "TTP"
+            },
+            {
+                id: "SFT",
+                notes: "Solo permitido en las cuentas Standard y Skilled"
+            },
+            {
+                id: "TFF"
+            },
+            {
+                id: "FundingPips"
+            },
+            {
+                id: "FundingTraders",
+                notes: "Permitido límites. Consultar antes con ellos preferiblemente"
+            },
+            {
+                id: "DarwinexZero"
+            },
+            {
+                id: "E8"
+            },
+            {
+                id: "Audacity"
+            }
+        ]
     },
     scalingL: {
         name: "Plan de escalado escalado",
-        shortDescription: "La compañía tiene un plan de escalado"
+        shortDescription: "La compañía tiene un plan de escalado",
+            firms: [
+            {
+            id: "FTMO",
+                notes: "Hasta 2 millones de dólares y 90% de beneficio"
+                },
+                {
+                    id: "TFT",
+                    notes: "Hasta 1.5 millones de dólares y 90% de beneficio"
+                },
+                {
+                    id: "FundedNext",
+                    notes: "Hasta 4 millones de dólares"
+                },
+                {
+                    id: "GFT",
+                    notes: "Hasta 2 millones de dólares, 95% de beneficio, y 500$ de salario mensual"
+                },
+                {
+                    id: "BlueGuardian",
+                    notes: "Hasta 2 millones"
+                },
+                {
+                    id: "The5ers",
+                    notes: "Hasta 4 millones y 100% de beneficio"
+                },
+                {
+                    id: "TTP",
+                    notes: "Desafíos de 10 niveles. Cada nivel aumenta el tamaño de la cuenta (hasta 5 millones de dólares) y el beneficio (hasta 80%)"
+                },
+                {
+                    id: "Topstep",
+                    notes: "No es como las demás firmas. En Topstep el scaling plan limita la cantidad de contratos que puedes arriesgar dependiendo de tu cuenta"
+                },
+                {
+                    id: "SFT",
+                    notes: "Hasta 2 millones de dólares y 90% beneficio"
+                },
+                {
+                    id: "TFF",
+                    notes: "Hasta 2.5 millones de dólares y 90% beneficio"
+                },
+                {
+                    id: "FundingPips",
+                    notes: "Hasta 2 millones dólares y 90% de beneficio"
+                },
+                {
+                    id: "FundingTraders",
+                    notes: "Hasta 2 millones de dólares"
+                },
+                {
+                    id: "Darwinex Zero",
+                    notes: "Sin límite"
+                },
+                {
+                    id: "E8",
+                    notes: "Hasta 1 millón de dólares"
+                },
+                {
+                    id: "Audacity",
+                    notes: "Escalado trimestral hasta 2 millones de dólares"
+                }
+        ]
     },
-    swapFree: {
-        name: "Swap free",
-        shortDescription: "Opera si pagar comisiones swap"
-    },
+    // swapFree: {
+    //     name: "Swap free",
+    //     shortDescription: "Opera sin pagar comisiones swap",
+    //     firms: [
+    //         {
+    //             id: ""
+    //         }
+    //     ]
+    // },
     tradeCopier: {
         name: "Trade copier",
         shortDescription: "Está permitido utilizar un trade copier para replicar tus operaciones en varias cuentas"

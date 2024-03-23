@@ -7,36 +7,37 @@ import CardList from "../components/cards/CardList.astro";
 import CardPromo from "../components/cards/CardPromoHome.astro";
 import { firms } from "@/libs/data/firms";
 import { promotions } from "@/libs/data/promotions";
-import {
-  rulesList,
-  instrumentList,
-  softwareList,
-} from "@/libs/data/lists";
+import { rulesList, instrumentList, softwareList } from "@/libs/data/lists";
+import "@/styles/scroll-down.css";
 ---
 
 <Layout title="The GodFunded">
   <main>
-    <div
+    <!-- <div
       class="xl:h-[480px] xs:h-[400px] h-[550px] overflow-hidden arrow-clip-wrap relative"
-    >
+    ></div> -->
+    <div class="overflow-hidden relative lg:h-screen-90 h-screen-70">
       <div
-        class="absolute z-10 top-[50%] xl:top-[55%] left-[50%] text-center translate-x-[-50%]
-         text-light-grey greatVibes xl:w-[600px] lg:w-[500px] md:w-[440px]"
+        class="absolute z-10 top-[50%] left-[50%] text-center translate-x-[-50%] translate-y-[20%] w-full px-[10%] md:px-0
+         text-light-grey greatVibes max-w-[600px] pb-[10%]"
       >
-        <p class="xl:text-6xl md:text-5xl text-4xl mb-[10px]">
+        <p class="lg:text-[8vh] text-[6.5vh] text-5xl mb-[20px]">
           Le voy a hacer una oferta que no podrá rechazar
         </p>
-        <h1 class="w-full translate-x-[0px] translate-y-[0px] text-center">
+        <h1
+          class="w-full translate-x-[0px] translate-y-[0px] text-center"
+        >
           The GodFunded
         </h1>
+        <!-- <div class="flex w-full justify-center">
+          <div class="mouse-scroll-down scale-[60%]"></div>
+        </div> -->
       </div>
-      <div class="h-full">
-        <Image
-          src={hero_image}
-          alt="Hero image"
-          class="lg:object-contain min-w-full h-full lg:h-auto object-cover scale-105 translate-y-[-60px]"
-        />
-      </div>
+      <Image
+        src={hero_image}
+        alt="Hero image"
+        class="object-cover relative min-w-full min-h-full scale-125"
+      />
     </div>
     <div class="w-full flex flex-col justify-center items-center">
       <div class="margin-section responsive-section gap-[40px] flex flex-col">
@@ -174,7 +175,7 @@ import {
               </a>
             </div>
             <div
-              class="responsive-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] w-full text-dark-grey"
+              class="responsive-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-[30px] md:gap-[20px] gap-[15px] w-full text-dark-grey"
             >
               <CardList
                 name={rulesList.noSL.name}
@@ -187,11 +188,7 @@ import {
                 id="noTimeLimit"
                 color="orangeFull"
               />
-              <CardList
-                name={rulesList.EA.name}
-                id="EA"
-                color="orangeFull"
-              />
+              <CardList name={rulesList.EA.name} id="EA" color="orangeFull" />
               <CardList
                 name={softwareList.tradingView.name}
                 id="tradingView"

@@ -1,9 +1,5 @@
 ---
-import {
-  rulesList,
-  instrumentList,
-  softwareList,
-} from "@/libs/data/lists";
+import { rulesList, instrumentList, softwareList } from "@/libs/data/lists";
 import GridContainer from "@/components/lists/GridContainer.astro";
 ---
 
@@ -24,6 +20,14 @@ import GridContainer from "@/components/lists/GridContainer.astro";
     endColor="#649cef"
     startColor="#5654bc"
     shadowColor="blue"
+  />
+  <GridContainer
+    lists={softwareList}
+    type="software"
+    title="Software"
+    startColor="#46823b"
+    endColor="#38c168"
+    shadowColor="green"
   />
   <GridContainer
     lists={softwareList}

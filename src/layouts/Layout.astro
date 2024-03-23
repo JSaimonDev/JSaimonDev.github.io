@@ -62,7 +62,13 @@ const { title } = Astro.props;
     @apply flex flex-col justify-center flex-1 text-base;
   }
   .info-grid {
-    @apply grid lg:grid-cols-3 sm:grid-cols-2 gap-y-[15px] lg:gap-x-[40px] md:gap-x-[30px] sm:gap-x-[20px] ;
+    @apply grid lg:grid-cols-3 sm:grid-cols-2 gap-y-[15px] lg:gap-x-[40px] md:gap-x-[30px] sm:gap-x-[20px];
+  }
+  .h-screen-70 {
+    height: calc(100vh - 70px);
+  }
+  .h-screen-90 {
+    height: calc(100vh - 90px);
   }
   .gradient-title-lg {
     @apply lg:text-8xl md:text-7xl sm:text-8xl xs:text-6xl text-5xl inline-block text-transparent 

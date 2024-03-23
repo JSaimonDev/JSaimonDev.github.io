@@ -50,7 +50,7 @@ export const promotions: { [key: string]: Promotion[] } = {
     TTP: [],
     Topstep: [],
     Apex: [],
-    STF: [],
+    SFT: [],
     TFF: [],
     FundingPips:  [],
     FundingTraders: [],
