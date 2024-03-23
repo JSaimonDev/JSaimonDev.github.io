@@ -456,7 +456,7 @@ export const rulesList: { [key: string]: List } = {
                 id: "TFT"
             },
             {
-                id: "Funded Next",
+                id: "FundedNext",
                 notes: "Solo en las cuentas Stellas y Express"
             },
             {
