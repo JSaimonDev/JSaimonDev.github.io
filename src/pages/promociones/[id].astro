@@ -30,12 +30,10 @@ const matchedDescription = markdownDescriptions.find(
       hero_image={hero_image}
       titleLogo={firms[id].logoPromos}
       hasButtons
-      button1Text="Utiliza tu promoción"
+      button1Text="Utiliza tu código"
       button1Link={firms[id].link}
       button2Text={`Review de ${firms[id].name}`}
-      button2Link={firms[id].hasReview
-        ? `/review/${firms[id].name}`
-        : `/info/${firms[id].name}`}
+      button2Link={firms[id].hasReview ? `/review/${id}` : `/info/${id}`}
     >
       {matchedDescription && <matchedDescription.Content />}
     </HeroPage>

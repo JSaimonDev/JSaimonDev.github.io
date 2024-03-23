@@ -457,7 +457,7 @@ export const rulesList: { [key: string]: List } = {
             },
             {
                 id: "FundedNext",
-                notes: "Solo en las cuentas Stellas y Express"
+                notes: "Solo en las cuentas Stellar y Express"
             },
             {
                 id: "GFT",
