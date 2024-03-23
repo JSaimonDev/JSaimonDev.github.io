@@ -5,6 +5,7 @@ import { mapIds } from "@/utils";
 import { firms } from "@/libs/data/firms";
 import HeroPage from "@/components/HeroPage.astro";
 import { rulesList, softwareList, instrumentList } from "@/libs/data/lists";
+import type { List } from "@/libs/data/lists";
 
 export function getStaticPaths() {
   return mapIds(rulesList).concat(mapIds(softwareList), mapIds(instrumentList));
@@ -12,7 +13,7 @@ export function getStaticPaths() {
 
 const { id } = Astro.params;
 
-let foundList;
+let foundList: { [key: string]: List };
 
 if (Object.keys(rulesList).includes(id)) foundList = rulesList;
 else if (Object.keys(softwareList).includes(id)) foundList = softwareList;
@@ -20,7 +21,8 @@ else if (Object.keys(instrumentList).includes(id)) foundList = instrumentList;
 else
   foundList = {
     id: {
-      name: "This list doesn't exist",
+      name: "Esta lista no existe",
+      mainDescription: "Esta lista no existe"
     },
   };
 ---
@@ -33,9 +35,8 @@ else
       isList
       altTitle="Listas"
       altIndex={1}
-    
     >
-    {foundList[id].mainDescription}
+      {foundList[id].mainDescription}
     </HeroPage>
     <div class="flex justify-center w-full">
       <div

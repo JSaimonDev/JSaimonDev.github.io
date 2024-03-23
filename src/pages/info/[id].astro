@@ -20,7 +20,9 @@ const items = getPathnameItems(Astro.url.pathname);
 const firmName = items[items.length - 1].title;
 const infoFirm = info[firmName];
 
-const markdownDescriptions = await Astro.glob("../../libs/data/descriptions/*.md");
+const markdownDescriptions = await Astro.glob(
+  "../../libs/data/descriptions/*.md"
+);
 const matchedDescription = markdownDescriptions.find(
   (file) => file.frontmatter.title === firms[firmName].name
 );
@@ -43,13 +45,33 @@ const matchedDescription = markdownDescriptions.find(
       titleLogo={firms[firmName].logoPromos}
       titleLogoLink={firms[firmName].link}
     >
-      {matchedDescription && <matchedDescription.Content /> }
+      {matchedDescription && <matchedDescription.Content />}
     </HeroPage>
     <div class="w-full flex justify-center">
       <div
         class="flex flex-col info-design-section margin-section responsive-section
       items-center gap-[40px] w-full"
       >
+        <div
+          class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"
+        >
+          <a class="w-full" href={firms[firmName].link}>
+            <button
+              class="border-[4px] border-orange text-orange
+            xs:text-xl text-lg p-[10px] w-full rounded-lg"
+            >
+              Consigue ahora tu cuenta
+            </button>
+          </a>
+          <a class="w-full" href={`/promociones/${firms[firmName].name}`}>
+            <button
+              class="bg-orange text-[#FFF]
+            xs:text-xl text-lg p-[14px] w-full rounded-lg"
+            >
+              Promociones en {firms[firmName].name}
+            </button>
+          </a>
+        </div>
         <BusinessInfo
           firm={firms[firmName]}
           hq={infoFirm?.bussinessInfo.hq}
@@ -99,26 +121,6 @@ const matchedDescription = markdownDescriptions.find(
           telegramLink={infoFirm?.social.telegramLink}
           redditLink={infoFirm?.social.redditLink}
         />
-        <div
-          class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"
-        >
-          <a class="w-full" href={firms[firmName].link}>
-            <button
-              class="border-[4px] border-orange text-orange
-            xs:text-xl text-lg p-[10px] w-full rounded-lg shadow-[0_0px_10px_3px_rgba(217,86,19,0.5)]"
-            >
-              Consigue ahora tu cuenta
-            </button>
-          </a>
-          <a class="w-full" href={`/promociones/${firms[firmName].name}`}>
-            <button
-              class="bg-orange text-[#FFF]
-            xs:text-xl text-lg p-[14px] w-full rounded-lg"
-            >
-              Promociones en {firms[firmName].name}
-            </button>
-          </a>
-        </div>
       </div>
     </div>
   </main>
