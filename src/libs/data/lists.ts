@@ -31,7 +31,7 @@ export const softwareList: { [key: string]: List } = {
                 id: "FundedNext"
             },
             {
-                id: "The Trading Pit"
+                id: "TTP"
             },
             {
                 id: "DarwinexZero"
@@ -60,7 +60,7 @@ export const softwareList: { [key: string]: List } = {
                 id: "FundingTraders"
             },
             {
-                id: "Darwinex Zero"
+                id: "DarwinexZero"
             },
             {
                 id: "Audacity"
@@ -313,7 +313,7 @@ export const instrumentList: { [key: string]: List } = {
                 id: "Apex"
             },
             {
-                id: "Darwinex"
+                id: "DarwinexZero"
             }
         ]
     },
@@ -522,7 +522,7 @@ export const rulesList: { [key: string]: List } = {
                 id: "GFT",
             },
             {
-                id:  "Thee5ers"
+                id:  "The5ers"
             },
             {
                 id: "TTP",
@@ -643,7 +643,7 @@ export const rulesList: { [key: string]: List } = {
                 id: "GFT"
             },
             {
-                id: "Blue Guardian"
+                id: "BlueGuardian"
             },
             {
                 id: "The5ers"
@@ -676,7 +676,7 @@ export const rulesList: { [key: string]: List } = {
             }
         ]
     },
-    scalingL: {
+    scaling: {
         name: "Plan de escalado escalado",
         shortDescription: "La compañía tiene un plan de escalado",
             firms: [
@@ -729,7 +729,7 @@ export const rulesList: { [key: string]: List } = {
                     notes: "Hasta 2 millones de dólares"
                 },
                 {
-                    id: "Darwinex Zero",
+                    id: "DarwinexZero",
                     notes: "Sin límite"
                 },
                 {
