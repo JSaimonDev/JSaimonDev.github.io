@@ -12,12 +12,23 @@ const { firm, key } = Astro.props;
 
 <a
   href={`/promociones/${key}`}
-  class={`w-full ease-in-out duration-300 transform shadow-lg relative rounded-xl ${promotions[key].length > 0 ? "hover:scale-105" : "cursor-auto"}`}
+  class={`w-full shadow-lg relative rounded-xl overflow-hidden`}
 >
   {
-    promotions[key].length === 0 && (
-      <div class="bg-light-grey opacity-70 absolute z-10 inset-0 rounded-xl" />
+    promotions[key].length === 0 ? (
+      <div>
+        <img src={firm.logoText} class="rounded-xl opacity-5" />
+        <div class="w-full h-full flex absolute z-30 items-center justify-center inset-0">
+          <p class="text-xl w-full text-center text-medium-grey">
+            Sin promociones
+          </p>
+          </div>
+      </div>
+    ) : (
+      <img
+        src={firm.logoText}
+        class={`rounded-xl  ease-in-out duration-300 transform ${promotions[key].length > 0 ? "hover:scale-105" : "cursor-auto"}`}
+      />
     )
   }
-  <img src={firm.logoText} class="rounded-xl" />
 </a>
