@@ -17,7 +17,7 @@ const { firm, key } = Astro.props;
   {
     promotions[key].length === 0 ? (
       <div>
-        <img src={firm.logoText} class="rounded-xl opacity-5" />
+        <img src={firm.logoText} class="rounded-xl opacity-5" alt={`Logo ${firm.name} sin promociones`}/>
         <div class="w-full h-full flex absolute z-30 items-center justify-center inset-0">
           <p class="text-xl w-full text-center text-medium-grey">
             Sin promociones
@@ -28,6 +28,7 @@ const { firm, key } = Astro.props;
       <img
         src={firm.logoText}
         class={`rounded-xl  ease-in-out duration-300 transform ${promotions[key].length > 0 ? "hover:scale-105" : "cursor-auto"}`}
+        alt={`Logo ${firm.name} con promociones`}
       />
     )
   }

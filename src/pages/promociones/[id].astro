@@ -41,6 +41,31 @@ const matchedDescription = markdownDescriptions.find(
       <div
         class="flex flex-col items-center justify-start responsive-section margin-section w-full lg:gap-[40px] xs:gap-[30px] gap-[20px]"
       >
+        <div
+          class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"
+        >
+          <a class="w-full" href={firms[id].link}>
+            <button
+              class="border-[4px] border-orange text-orange
+            xs:text-xl text-lg p-[10px] w-full rounded-lg"
+            >
+              Utiliza tu código
+            </button>
+          </a>
+          <a
+            class="w-full"
+            href={firms[id].hasReview
+              ? `/review/${firms[id].name}`
+              : `/info/${firmName}`}
+          >
+            <button
+              class="bg-dark-grey text-[#FFF]
+            xs:text-xl text-lg p-[14px] w-full rounded-lg"
+            >
+              Review de {firms[id].name}
+            </button>
+          </a>
+        </div>
         {
           promotions[id].length > 0 ? (
             promotions[id]?.map((promotion) => (
@@ -55,31 +80,6 @@ const matchedDescription = markdownDescriptions.find(
             <CardPromoDetails isNoPromo />
           )
         }
-        <div
-          class="w-full flex gap-[20px] items-center md:hidden flex-col sm:flex-row"
-        >
-          <a class="w-full" href={firms[id].link}>
-            <button
-              class="border-[4px] border-orange text-orange
-            xs:text-xl text-lg p-[10px] w-full rounded-lg shadow-[0_0px_10px_3px_rgba(217,86,19,0.5)]"
-            >
-              Utiliza tu código
-            </button>
-          </a>
-          <a
-            class="w-full"
-            href={firms[id].hasReview
-              ? `/review/${firms[id].name}`
-              : `/info/${firms[id].name}`}
-          >
-            <button
-              class="bg-orange text-[#FFF]
-            xs:text-xl text-lg p-[14px] w-full rounded-lg"
-            >
-              Review de {firms[id].name}
-            </button>
-          </a>
-        </div>
       </div>
     </div>
   </main>

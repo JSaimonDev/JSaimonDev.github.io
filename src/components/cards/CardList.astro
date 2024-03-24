@@ -32,18 +32,11 @@ else if (color === "grey") {
   class={`${shadowClass}  shadow-md cursor-pointer rounded-xl h-full bg-[#FFFFFF] p-6 duration-300 ease-in-out`}
 >
   <div class="flex md:gap-[15px] gap-[10px]">
-    <!-- <div class="flex items-center w-[30%]">
-      <img
-        src="/icons/bullet-list.svg"
-        class="lg:h-[30px] md:h-[25px] xs:h-[20px] h-[15px]
-    lg:mt-0 md:mt-[1px] xs:mt-[4px] mt-[6px]"
-      />
-    </div> -->
     <p class="xl:text-xl text-lg font-bold">{name}</p>
   </div>
   {
     shortDescription && (
-      <hr class=`${lineClass} mt-[10px]` />
+      <hr class={`${lineClass} mt-[10px]`} />
       <p class="text-base text-medium-grey mt-4">{shortDescription}</p>
     )
   }

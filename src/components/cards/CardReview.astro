@@ -4,44 +4,13 @@ import "../../styles/dual-button.css";
 interface Props {
   logo: string;
   isReview?: boolean;
-  id?: string;
+  id: string;
   extraClass?: string;
 }
 
 const { logo, id, isReview, extraClass } = Astro.props;
 ---
 
-<!-- <div>
-  <div class="w-full">
-    <img src={logo} class="rounded-xl" />
-  </div>
-  <div class="w-full border-2 border-light-grey"></div>
-  <div class="flex items-center buttons">
-    <button class="h-full flex-1 group duration-200 relative">
-      <a
-        href={isReview ? `/review/${id}` : `/info/${id}`}
-        class="w-full h-full"
-      >
-        <div class="rounded-l-xl absolute bg-orange top-0 left-0 w-full h-full">
-        </div>
-        <p class="scale-100 group-hover:scale-105 ease-in-out duration-200">
-          {isReview ? <span>Review</span> : <span>Info</span>}
-        </p>
-      </a>
-    </button>
-    <button class="h-full flex-1 group duration-200 relative">
-      <a href={webLink} class="w-full h-full">
-        <div
-          class="rounded-r-xl absolute bg-dark-grey top-0 left-0 w-full h-full"
-        >
-        </div>
-        <p class="scale-100 group-hover:scale-105 ease-in-out duration-200">
-          Web
-        </p>
-      </a>
-    </button>
-  </div>
-</div> -->
 <a
   href={isReview ? `/review/${id}` : `/info/${id}`}
   class=`w-full scale-100 overflow-hidden shadow-lg ${extraClass} rounded-xl`
@@ -49,5 +18,6 @@ const { logo, id, isReview, extraClass } = Astro.props;
   <img
     src={logo}
     class="rounded-xl hover:scale-105 ease-in-out duration-300 transform"
+    alt={`Logo review ${id}`}
   />
 </a>
