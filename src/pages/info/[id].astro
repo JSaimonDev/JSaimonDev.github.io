@@ -28,7 +28,10 @@ const matchedDescription = markdownDescriptions.find(
 );
 ---
 
-<Layout title="Reseñas" description={`Información detallada de la empresa de fondeo ${firms[firmName].name}. Información de la empresa, reglas, instrumentos, social media y muchos más`}>
+<Layout
+  title={`Review de ${firms[firmName].name}`}
+  description={`Información detallada de la empresa de fondeo ${firms[firmName].name}. Información de la empresa, reglas, instrumentos, social media y muchos más`}
+>
   <main class="flex flex-col justify-center items-center min-h-[85vh]">
     <HeroPage
       hero_image={hero_image}
