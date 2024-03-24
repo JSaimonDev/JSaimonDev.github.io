@@ -1,0 +1,72 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  isArticle?: boolean;
+}
+
+const { title, description, isArticle } = Astro.props;
+let contentType;
+{
+  isArticle ? (contentType = "article") : "website";
+}
+---
+
+<!-- Global Metadata -->
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+{
+  description ? (
+    <meta
+      name="description"
+      content="The God Funded es el portal de referencia en español sobre prop firms. Las prop firms, o empresas de fondeo, con compañías que ayudan al trader a multiplicar sus ganancias en el mercado.Gracias a nuestras reseñas, promociones, listas y contenido de utilidad, podrás sacarles el máximo partido y llevar tu trading al siguiente nivel"
+    />
+  ) : (
+    <meta name="description" content={description} />
+  )
+}
+<title>
+  {`${title} | The Godfunded`}
+</title>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={`${title} | The Godfunded`} />
+{
+  description ? (
+    <meta property="og:description" content={description} />
+  ) : (
+    <meta
+      property="og:description"
+      content="The God Funded es el portal de referencia en español sobre prop firms. Las prop firms, o empresas de fondeo, con compañías que ayudan al trader a multiplicar sus ganancias en el mercado.Gracias a nuestras reseñas, promociones, listas y contenido de utilidad, podrás sacarles el máximo partido y llevar tu trading al siguiente nivel"
+    />
+  )
+}
+<meta
+  property="og:image"
+  content="https://thegodfunded/images/metadata/thegodfunded-og.webp"
+/>
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content={contentType} />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@thegodfunded" />
+<meta name="twitter:title" content={`${title} | The Godfunded`} />
+{
+  description ? (
+    <meta name="twitter:description" content={description} />
+  ) : (
+    <meta
+      name="twitter:description"
+      content="The God Funded es el portal de referencia en español sobre prop firms. Las prop firms, o empresas de fondeo, con compañías que ayudan al trader a multiplicar sus ganancias en el mercado.Gracias a nuestras reseñas, promociones, listas y contenido de utilidad, podrás sacarles el máximo partido y llevar tu trading al siguiente nivel"
+    />
+  )
+}
+<meta
+  name="twitter:image"
+  content="https://thegodfunded/images/metadata/thegodfunded-og.webp"
+/>
