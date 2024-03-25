@@ -2,7 +2,9 @@
 import Header from "../components/Layout/Header.astro";
 import Footer from "@/components/Layout/Footer.astro";
 import Metadata from "@/components/metadata/Metadata.astro";
-import GA from "@/libs/scripts/google-analytics.astro"
+import GA from "@/libs/scripts/google-analytics.astro";
+import "src/styles/cookieconsent.css";
+
 interface Props {
   title: string;
   description: string;
@@ -19,10 +21,8 @@ const { title, description, isArticle = false } = Astro.props;
     <GA />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link
-      rel="stylesheet"
-      href="node_modules/vanilla-cookieconsent/dist/cookieconsent.css"
-    />
+    <!-- <script type="module" src="./libs/scripts/cookieconsent-config.js"></script> -->
+    <script src="src/libs/scripts/cookieconsent-config.js"></script>
   </head>
   <body>
     <div id="header">
@@ -30,7 +30,7 @@ const { title, description, isArticle = false } = Astro.props;
     </div>
     <slot />
     <Footer />
-    <script type="module" src="src/libs/scripts/cookieconsent-config.js"></script>
+
     <style is:global>
       :root {
         --orange-shadow-light: rgba(217, 86, 19, 0.5);
