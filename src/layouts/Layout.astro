@@ -1,11 +1,14 @@
 ---
 import Header from "../components/Layout/Header.astro";
 import Footer from "@/components/Layout/Footer.astro";
-import Metadata from "@/components/metadata/Metadata.astro"
+import Metadata from "@/components/metadata/Metadata.astro";
+import GA from "@/libs/scripts/google-analytics.astro";
+import "src/styles/cookieconsent.css";
+
 interface Props {
   title: string;
-  description: string
-  isArticle?: boolean
+  description: string;
+  isArticle?: boolean;
 }
 
 const { title, description, isArticle = false } = Astro.props;
@@ -14,105 +17,108 @@ const { title, description, isArticle = false } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <Metadata {isArticle} {title} {description}/>
+    <Metadata {isArticle} {title} {description} />
+    <GA />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <script src="src/libs/scripts/cookieconsent-config.js"></script>
   </head>
   <body>
     <div id="header">
-      <Header title={title}/>
+      <Header title={title} />
     </div>
     <slot />
     <Footer />
+
+    <style is:global>
+      :root {
+        --orange-shadow-light: rgba(217, 86, 19, 0.5);
+        --blue-shadow-light: rgba(86, 84, 188, 0.5);
+        --green-shadow-light: rgba(70, 130, 59, 0.5);
+        --grey-shadow-light: rgba(69, 69, 69, 0.5);
+      }
+      html {
+        font-family: "RobotoCondensed", system-ui, sans-serif;
+        background: #e9e9e9;
+      }
+      .margin-section {
+        @apply lg:m-[40px] xs:m-[30px] m-[20px];
+      }
+      .responsive-section {
+        @apply md:max-w-[800px] lg:max-w-[980px] xl:max-w-[1200px];
+      }
+      .design-section {
+        @apply md:p-[50px] xs:p-[40px] p-[20px] border-[#FFF] border-[6px] rounded-xl shadow-xl bg-ligther-grey;
+      }
+      .design-section-dark {
+        @apply md:p-[50px] xs:p-[40px] p-[20px] border-[#FFF] border-[6px] rounded-xl shadow-xl;
+      }
+      .info-design-section {
+        @apply md:p-[50px]  md:border-[#FFF] md:border-[6px] md:rounded-xl md:shadow-xl md:bg-ligther-grey;
+      }
+      .info-section {
+        @apply p-[40px] bg-[#FFF] rounded-[10px] text-center shadow-md w-full;
+      }
+      .info-cell {
+        @apply flex flex-col gap-[10px];
+      }
+      .info-cell-text {
+        @apply flex flex-col justify-center flex-1 text-base;
+      }
+      .info-grid {
+        @apply grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-[15px] lg:gap-x-[40px] md:gap-x-[30px] sm:gap-x-[20px];
+      }
+      .h-screen-70 {
+        height: calc(100vh - 70px);
+      }
+      .h-screen-90 {
+        height: calc(100vh - 90px);
+      }
+      .gradient-title-lg {
+        @apply lg:text-8xl md:text-7xl sm:text-8xl xs:text-6xl text-5xl inline-block text-transparent 
+    font-bold col-span-3 xs:text-left text-center w-full;
+      }
+      .gradient-title-md {
+        @apply lg:text-7xl md:text-6xl sm:text-6xl xs:text-[2.6rem] text-4xl inline-block text-transparent
+       font-bold col-span-3 xs:text-left text-center w-full;
+      }
+      .gradient-title-sm {
+        @apply lg:text-4xl sm:text-3xl xs:text-2xl text-xl inline-block text-transparent
+      font-bold;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+      .greatVibes {
+        font-family: "GreatVibes", system-ui, sans-serif;
+      }
+      #header {
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 1px 8px rgb(0 0 0 / 0.3);
+      }
+      @font-face {
+        font-family: "GreatVibes";
+        src: url("/fonts/GreatVibes.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "RobotoCondensed";
+        src: url("/fonts/RobotoCondensed.ttf") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  :root {
-    --orange-shadow-light: rgba(217, 86, 19, 0.5);
-    --blue-shadow-light: rgba(86, 84, 188, 0.5);
-    --green-shadow-light: rgba(70, 130, 59, 0.5);
-    --grey-shadow-light: rgba(69, 69, 69, 0.5);
-  }
-  html {
-    font-family: "RobotoCondensed", system-ui, sans-serif;
-    background: #e9e9e9;
-  }
-  .margin-section {
-    @apply lg:m-[40px] xs:m-[30px] m-[20px];
-  }
-  .responsive-section {
-    @apply md:max-w-[800px] lg:max-w-[980px] xl:max-w-[1200px];
-  }
-  .design-section {
-    @apply md:p-[50px] xs:p-[40px] p-[20px] border-[#FFF] border-[6px] rounded-xl shadow-xl bg-ligther-grey;
-  }
-  .design-section-dark {
-    @apply md:p-[50px] xs:p-[40px] p-[20px] border-[#FFF] border-[6px] rounded-xl shadow-xl;
-  }
-  .info-design-section {
-    @apply md:p-[50px]  md:border-[#FFF] md:border-[6px] md:rounded-xl md:shadow-xl md:bg-ligther-grey;
-  }
-  .info-section {
-    @apply p-[40px] bg-[#FFF] rounded-[10px] text-center shadow-md w-full;
-  }
-  .info-cell {
-    @apply flex flex-col gap-[10px];
-  }
-  .info-cell-text {
-    @apply flex flex-col justify-center flex-1 text-base;
-  }
-  .info-grid {
-    @apply grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-[15px] lg:gap-x-[40px] md:gap-x-[30px] sm:gap-x-[20px];
-  }
-  .h-screen-70 {
-    height: calc(100vh - 70px);
-  }
-  .h-screen-90 {
-    height: calc(100vh - 90px);
-  }
-  .gradient-title-lg {
-    @apply lg:text-8xl md:text-7xl sm:text-8xl xs:text-6xl text-5xl inline-block text-transparent 
-    font-bold col-span-3 xs:text-left text-center w-full;
-  }
-  .gradient-title-md {
-    @apply lg:text-7xl md:text-6xl sm:text-6xl xs:text-[2.6rem] text-4xl inline-block text-transparent
-       font-bold col-span-3 xs:text-left text-center w-full;
-  }
-  .gradient-title-sm {
-    @apply lg:text-4xl sm:text-3xl xs:text-2xl text-xl inline-block text-transparent
-      font-bold;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-  .greatVibes {
-    font-family: "GreatVibes", system-ui, sans-serif;
-  }
-  #header {
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 1px 8px rgb(0 0 0 / 0.3);
-  }
-  @font-face {
-    font-family: "GreatVibes";
-    src: url("/fonts/GreatVibes.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "RobotoCondensed";
-    src: url("/fonts/RobotoCondensed.ttf") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-</style>
