@@ -33,7 +33,7 @@ CookieConsent.run({
           acceptNecessaryBtn: "Rechazar todo",
           showPreferencesBtn: "Gestionar preferencias",
           footer:
-            '<a href="#link">Política de privacidad</a>\n<a href="#link">Términos y condiciones</a>',
+            '<a href="#link">Política de privacidad</a>\n<a href="#link">Condiciones de uso</a>',
         },
         preferencesModal: {
           title: "Preferencias de Consentimiento",
