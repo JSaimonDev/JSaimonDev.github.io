@@ -1,0 +1,25 @@
+---
+import hero_image from "@/images/Legal-hero.webp";
+import Layout from "@/layouts/Layout.astro";
+import HeroPage from "@/components/HeroPage.astro";
+import "@/styles/legal.css";
+const { frontmatter } = Astro.props;
+---
+
+<Layout
+  title={frontmatter.title}
+  description={`${frontmatter.title}de The Godfunded`}
+>
+  <main class="min-h-[85vh]">
+    <HeroPage hero_image={hero_image} title={frontmatter.title} />
+
+    <div class="flex flex-col items-center justify-center">
+      <div
+        class="flex flex-col responsive-section margin-section
+design-section content"
+      >
+        <slot />
+      </div>
+    </div>
+  </main>
+</Layout>

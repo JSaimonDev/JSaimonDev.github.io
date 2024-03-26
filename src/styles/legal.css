@@ -1,0 +1,9 @@
+.content p {
+    @apply mb-[10px]
+}
+.content h2 {
+    @apply text-xl font-bold my-[10px]
+}
+.content ul{
+    @apply list-disc ml-[18px] mb-[10px]
+}
