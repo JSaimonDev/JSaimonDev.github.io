@@ -1,5 +1,5 @@
 ---
-import { getPathnameItems } from "@/utils";
+import { getPathnameItems, replaceHyphensWithSpaces } from "@/utils";
 
 interface Props {
   altTitle?: string;
@@ -17,9 +17,7 @@ if (altTitle && altIndex) {
 }
 ---
 
-<nav
-  class=""
->
+<nav class="">
   <ol class="flex flex-wrap">
     {
       breadcrumbsItems.map((item, index) => (
@@ -27,11 +25,13 @@ if (altTitle && altIndex) {
           {index > 0 && <span class="ml-[8px] mr-[4px]">{">"}</span>}
           {index < breadcrumbsItems.length - 1 ? (
             <a href={item.url}>
-              {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
+              {item.title.charAt(0).toUpperCase() +
+                replaceHyphensWithSpaces(item.title.slice(1))}
             </a>
           ) : (
             <span class="text-medium-grey">
-              {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
+              {item.title.charAt(0).toUpperCase() +
+                replaceHyphensWithSpaces(item.title.slice(1))}
             </span>
           )}
         </li>

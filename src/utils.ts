@@ -29,3 +29,7 @@ export const decodeHtmlEntity = (str: string) => {
     return String.fromCharCode(dec);
  });
 }
+
+export const replaceHyphensWithSpaces = (str: string) => {
+    return str.replace(/-/g, ' ');
+}
