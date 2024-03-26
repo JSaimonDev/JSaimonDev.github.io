@@ -21,28 +21,13 @@ const { promotion, logo, firm } = Astro.props;
     {promotion.discount}%
   </p>
   {
-    promotion.benefit1 && (
-      <div class="w-full">
-        <hr />
-        {promotion.benefit1}
-      </div>
-    )
-  }
-  {
-    promotion.benefit2 && (
-      <div class="w-full">
-        <hr />
-        {promotion.benefit2}
-      </div>
-    )
-  }
-  {
-    promotion.benefit3 && (
-      <div class="w-full">
-        <hr />
-        {promotion.benefit3}
-      </div>
-    )
+    promotion.benefitsShort &&
+      promotion.benefitsShort.map((benefit) => (
+        <div class="w-full">
+          <hr />
+          {benefit}
+        </div>
+      ))
   }
   <div class="flex-1 justify-end flex flex-col">
     <a href={`/promociones/${firm}`}>

@@ -4,12 +4,14 @@ import { formatDate } from "@/utils.ts";
 interface Props {
   discount?: number;
   description?: string;
+  benefits?: string[];
   code?: string;
   endDate?: Date;
   isNoPromo?: boolean;
 }
 
-const { discount, description, code, endDate, isNoPromo } = Astro.props;
+const { discount, description, code, endDate, isNoPromo, benefits } =
+  Astro.props;
 ---
 
 <section class="design-section text-center w-full">
@@ -23,7 +25,7 @@ const { discount, description, code, endDate, isNoPromo } = Astro.props;
         <div class="lg:col-span-2 sm:col-span-3 col-span-6 cell">
           <div class="text-medium-grey">Consigue un descuento del</div>
           <div class="flex justify-center items-center flex-1">
-            <div class="xl:text-6xl lg:text-5xl md:text-6xl text-green xs:text-5xl text-4xl">
+            <div class="xl:text-5xl lg:text-4xl md:text-5xl text-green xs:text-4xl text-3xl">
               {discount}%
             </div>
           </div>
@@ -31,7 +33,7 @@ const { discount, description, code, endDate, isNoPromo } = Astro.props;
         <div class="lg:col-span-2 sm:col-span-3 col-span-6 cell">
           <div class="text-medium-grey">Finaliza el</div>
           <div class="flex justify-center items-center flex-1">
-            <div class="xl:text-4xl lg:text-3xl md:text-4xl xs:text-3xl text-2xl">
+            <div class="xl:text-3xl lg:text-2xl md:text-3xl xs:text-3xl text-xl">
               {endDate && formatDate(endDate)}
             </div>
           </div>
@@ -39,14 +41,21 @@ const { discount, description, code, endDate, isNoPromo } = Astro.props;
         <div class="lg:col-span-2 col-span-6 cell">
           <div class="text-medium-grey">Introduce el código</div>
           <div class="flex justify-center items-center flex-1">
-            <div class="xl:text-4xl lg:text-3xl md:text-4xl xs:text-3xl text-2xl">
+            <div class="xl:text-3xl lg:text-2xl md:text-3xl xs:text-3xl text-xl">
               {code}
             </div>
           </div>
         </div>
-        <div class="col-span-6 cell xl:text-xl sm:text-lg text-base">
-          {description}
-        </div>
+        {benefits &&
+          benefits.map((benefit, index) => {
+            return benefits.length % 2 != 0 && index === benefits.length - 1 ? (
+              <div class="col-span-6 cell xl:text-lg text-base">{benefit}</div>
+            ) : (
+              <div class="sm:col-span-3 col-span-6 cell xl:text-lg text-base">
+                {benefit}
+              </div>
+            );
+          })}
       </div>
     )
   }
