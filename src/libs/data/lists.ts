@@ -345,7 +345,7 @@ export const instrumentList: { [key: string]: List } = {
     },
     index: {
         name: "Índices",
-        id: "index",
+        id: "indexList",
         mainDescription: "Empresas de fondeo en las que se pueden operar índices",
         firms: [
             {

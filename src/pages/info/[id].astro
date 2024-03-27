@@ -26,6 +26,13 @@ const markdownDescriptions = await Astro.glob(
 const matchedDescription = markdownDescriptions.find(
   (file) => file.frontmatter.title === firms[firmName].name
 );
+
+let titleLogo;
+{
+  firms[firmName].logoPromosNarrow
+    ? (titleLogo = firms[firmName].logoPromosNarrow)
+    : (titleLogo = firms[firmName].logoPromos);
+}
 ---
 
 <Layout
@@ -45,7 +52,7 @@ const matchedDescription = markdownDescriptions.find(
       button1Link={firms[firmName].link}
       button2Text={`Promociones en ${firms[firmName].name}`}
       button2Link={`/promociones/${firmName}`}
-      titleLogo={firms[firmName].logoPromos}
+      titleLogo={titleLogo}
       titleLogoLink={firms[firmName].link}
     >
       {matchedDescription && <matchedDescription.Content />}

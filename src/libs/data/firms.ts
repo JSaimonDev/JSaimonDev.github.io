@@ -1,5 +1,6 @@
 export interface Firm{
-    logoPromos?: string
+    logoPromos: string
+    logoPromosNarrow?: string
     logoText: string
     logo?: string
     bgColor?: string
@@ -78,7 +79,8 @@ export const firms: { [key: string]: Firm } = {
     Apex: {
         name: "Apex Trading Funding",
         logoText: "/images/firms/Apex/Apex-logo-500x250.webp",
-        logoPromos: "/images/firms/Apex/Apex-logo-white.webp",
+        logoPromos: "/images/firms/Apex/Apex-logo-white-500x250.webp",
+        logoPromosNarrow: "/images/firms/Apex/Apex-logo-white.webp",
         link: "https://apextraderfunding.com/",
         hasReview: false
 

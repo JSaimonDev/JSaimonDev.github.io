@@ -22,13 +22,23 @@ const markdownDescriptions = await Astro.glob(
 const matchedDescription = markdownDescriptions.find(
   (file) => file.frontmatter.title === firms[firmName].name
 );
+
+let titleLogo;
+{
+  firms[firmName].logoPromosNarrow
+    ? (titleLogo = firms[firmName].logoPromosNarrow)
+    : (titleLogo = firms[firmName].logoPromos);
+}
 ---
 
-<Layout title={`Promociones en ${firms[id].name}`} description={`Encuentra aquí todas la promociones actualizadas de ${firms[id].name}. Beneficios, fecha de finalización y código.`}>
+<Layout
+  title={`Promociones en ${firms[id].name}`}
+  description={`Encuentra aquí todas la promociones actualizadas de ${firms[id].name}. Beneficios, fecha de finalización y código.`}
+>
   <main class="min-h-[80vh]">
     <HeroPage
       hero_image={hero_image}
-      titleLogo={firms[id].logoPromos}
+      titleLogo={titleLogo}
       hasButtons
       button1Text="Utiliza tu código"
       button1Link={firms[id].link}
