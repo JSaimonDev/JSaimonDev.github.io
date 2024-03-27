@@ -1,5 +1,6 @@
 export interface List {
     name: string
+    id: string
     shortDescription?: string
     mainDescription: string
     firms?: {id: string, notes?: string} []
@@ -8,6 +9,7 @@ export interface List {
 export const softwareList: { [key: string]: List } = {
     tradingView: {
         name: "Tradigview",
+        id: "tradingView",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de Tradingview",
         firms: [
             {
@@ -22,6 +24,7 @@ export const softwareList: { [key: string]: List } = {
     },
     mt4: {
         name: "Metatrader 4",
+        id: "mt4",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de Metatrader 4",
         firms: [
             {
@@ -46,6 +49,7 @@ export const softwareList: { [key: string]: List } = {
     },
     mt5: {
         name: "Metatrader 5",
+        id: "mt5",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de Metatrader 5",
         firms: [
             {
@@ -73,6 +77,7 @@ export const softwareList: { [key: string]: List } = {
     },
     DXTrade: {
         name: "DXTrade",
+        id: "DXTrade",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de DXTrade",
         firms: [
             {
@@ -91,6 +96,7 @@ export const softwareList: { [key: string]: List } = {
     },
     cTrader: {
         name: "cTrader",
+        id: "cTrader",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de cTrader",
         firms: [
             {
@@ -115,6 +121,7 @@ export const softwareList: { [key: string]: List } = {
     },
     NinjaTrader: {
         name: "NinjaTrader",
+        id: "NinjaTrader",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de Ninja Trader",
         firms: [
             {
@@ -127,6 +134,7 @@ export const softwareList: { [key: string]: List } = {
     },
     Quantower: {
         name: "Quantower",
+        id: "Quantower",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de Quantower",
         firms: [
             {
@@ -142,6 +150,7 @@ export const softwareList: { [key: string]: List } = {
     },
     MatchTrader: {
         name: "Match Trader",
+        id: "MatchTrader",
         mainDescription: "Empresas de fondeo en las que se puede operar a través de MatchTrader",
         firms: [
             {
@@ -163,6 +172,7 @@ export const softwareList: { [key: string]: List } = {
 export const instrumentList: { [key: string]: List } = {
         crypto: {
         name: "Crypto",
+            id: "crypto",
             mainDescription: "Empresas de fondeo en las que se pueden operar criptomonedas",
         firms: [
             {
@@ -206,6 +216,7 @@ export const instrumentList: { [key: string]: List } = {
     },
     commodities: {
         name: "Materias primas",
+        id: 'commodities',
         mainDescription: "Empresas de fondeo en las que se pueden operar materias primas",
         firms: [
             {
@@ -260,6 +271,7 @@ export const instrumentList: { [key: string]: List } = {
     },
     forex: {
         name: "Divisas",
+        id: "forex",
         mainDescription: "Empresas de fondeo en las que se puede operar forex",
         firms: [
             {
@@ -314,6 +326,7 @@ export const instrumentList: { [key: string]: List } = {
     },
     futures: {
         name: "Futuros",
+        id: "futures",
         mainDescription: "Empresas de fondeo en las que se pueden operar futuros",
         firms: [
             {
@@ -332,6 +345,7 @@ export const instrumentList: { [key: string]: List } = {
     },
     index: {
         name: "Índices",
+        id: "index",
         mainDescription: "Empresas de fondeo en las que se pueden operar índices",
         firms: [
             {
@@ -386,6 +400,7 @@ export const instrumentList: { [key: string]: List } = {
     },
     stocks: {
         name: "Acciones",
+        id: "stocks",
         mainDescription: "Empresas de fondeo en las que se pueden operar acciones",
         firms: [
             {
@@ -407,6 +422,7 @@ export const instrumentList: { [key: string]: List } = {
 export const rulesList: { [key: string]: List } = {
      noSL: {
         name: "Stop loss",
+         id: "noSL",
         shortDescription: "No es necesario tener un stop loss",
         mainDescription: "Empresas de fondeo en las que no es obligatorio utilizar stop loss",
         firms: [
@@ -463,6 +479,7 @@ export const rulesList: { [key: string]: List } = {
     },
     noTimeLimit: {
         name: "Sin límite de tiempo",
+        id: "noTimeLimit",
         shortDescription: "Tómate todo el tiempo que necesites para terminar la prueba",
         mainDescription: "Empresas de fondeo en las que no hay límite de tiempo para pasar la prueba de evaluación",
         firms: [
@@ -518,6 +535,7 @@ export const rulesList: { [key: string]: List } = {
     },
     weekend: {
         name: "Fin de semana",
+        id: "weekend",
         shortDescription: "Está permitido mantener ordenes abiertas durante el fin de semana",
         mainDescription: "Empresas de fondeo en las que está permitido mantener operaciones abiertas durante el fin de semana",
         firms: [
@@ -582,6 +600,7 @@ export const rulesList: { [key: string]: List } = {
     // },
     news: {
         name: "Noticias",
+        id: "news",
         shortDescription: "Está permitido operar durante las noticias de alto impacto",
         mainDescription: "Empresas de fondeo en las que está permitido operar durante las noticias de alto impacto",
         firms: [
@@ -646,6 +665,7 @@ export const rulesList: { [key: string]: List } = {
     },
     EA: {
         name: "Expert Advisor",
+        id: "EA",
         shortDescription: "Se pueden usar Expert Advisors",
         mainDescription: "Empresas de fondeo en las que está permitido utilizar Expert Advisors (EA)",
         firms: [
@@ -698,6 +718,7 @@ export const rulesList: { [key: string]: List } = {
     },
     scaling: {
         name: "Plan de escalado escalado",
+        id: "scaling",
         shortDescription: "La compañía tiene un plan de escalado",
         mainDescription: "Empresas de fondeo en las que ofrecen programa de escalado de capital",
             firms: [
@@ -765,6 +786,7 @@ export const rulesList: { [key: string]: List } = {
     },
     // swapFree: {
     //     name: "Swap free",
+    //      id: "swapFree"
     //     shortDescription: "Opera sin pagar comisiones swap",
     //     firms: [
     //         {
@@ -774,6 +796,7 @@ export const rulesList: { [key: string]: List } = {
     // },
     tradeCopier: {
         name: "Trade copier",
+        id: "tradeCopier",
         shortDescription: "Está permitido utilizar un trade copier para replicar tus operaciones en varias cuentas",
         mainDescription: "Empresas de fondeo en las que está permitido utilizar herramientas para copiar tus propios trades entre cuentas",
         firms: [
@@ -826,3 +849,9 @@ export const rulesList: { [key: string]: List } = {
         ]
     }
 }
+
+const rulesListArray = Object.values(rulesList)
+const softwareListArray = Object.values(softwareList)
+const instrumentListArray = Object.values(instrumentList)
+
+export const allListArray = rulesListArray.concat(softwareListArray, instrumentListArray)

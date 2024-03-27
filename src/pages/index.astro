@@ -7,12 +7,18 @@ import CardList from "../components/cards/CardList.astro";
 import CardPromo from "../components/cards/CardPromoHome.astro";
 import { firms } from "@/libs/data/firms";
 import { promotions, allPromotions } from "@/libs/data/promotions";
-import { rulesList, instrumentList, softwareList } from "@/libs/data/lists";
+import {
+  rulesList,
+  instrumentList,
+  softwareList,
+  allListArray,
+} from "@/libs/data/lists";
 import "@/styles/scroll-down.css";
 import { shuffleArray } from "@/utils";
 
 const firmsKeys = shuffleArray(Object.keys(firms));
 const allPromotionsRandom = shuffleArray(allPromotions);
+const allListRandom = shuffleArray(allListArray);
 ---
 
 <Layout
@@ -163,6 +169,7 @@ const allPromotionsRandom = shuffleArray(allPromotions);
             </a>
           </div>
         </section>
+
         <section class="flex justify-center w-full">
           <div class="design-section-dark flex flex-col gap-[30px] w-full">
             <div class="flex xs:justify-between justify-center">
@@ -183,33 +190,13 @@ const allPromotionsRandom = shuffleArray(allPromotions);
             <div
               class="responsive-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-[30px] md:gap-[20px] gap-[15px] w-full text-dark-grey"
             >
-              <CardList
-                name={rulesList.noSL.name}
-                id="noSL"
-                color="orangeFull"
-              />
+              <CardList name={allListArray[0].name} id={allListArray[0].id} />
 
-              <CardList
-                name={rulesList.noTimeLimit.name}
-                id="noTimeLimit"
-                color="orangeFull"
-              />
-              <CardList name={rulesList.EA.name} id="EA" color="orangeFull" />
-              <CardList
-                name={softwareList.tradingView.name}
-                id="tradingView"
-                color="orangeFull"
-              />
-              <CardList
-                name={instrumentList.crypto.name}
-                id="crypto"
-                color="orangeFull"
-              />
-              <CardList
-                name={rulesList.weekend.name}
-                id="weekend"
-                color="orangeFull"
-              />
+              <CardList name={allListArray[1].name} id={allListArray[1].id} />
+              <CardList name={allListArray[2].name} id={allListArray[2].id} />
+              <CardList name={allListArray[3].name} id={allListArray[3].id} />
+              <CardList name={allListArray[4].name} id={allListArray[4].id} />
+              <CardList name={allListArray[5].name} id={allListArray[5].id} />
             </div>
             <a class="xs:hidden w-full" href="/reviews">
               <button
@@ -218,6 +205,34 @@ const allPromotionsRandom = shuffleArray(allPromotions);
                 Ver más &rarr;
               </button>
             </a>
+          </div>
+        </section>
+        <section>
+          <div class="design-section flex flex-col gap-[30px]">
+            <h2
+              style=`background: linear-gradient(to right, #D95613, #e2a828);
+        -webkit-background-clip:text`
+              class="title-index-sm"
+            >
+              ¿Qué es una empresa de fondeo?
+            </h2>
+            <div class="text-base mb-[10px] flex flex-col gap-[15px]">
+              <p>
+                Las empresas de fondeo, comúnmente llamadas prop firms, ofrecen
+                un novedoso servicio financiero que está revolucionando el mundo
+                del trading. El concepto es simple, paga para acceder a una
+                prueba, y si consigues superarla cumpliendo todas las
+                condiciones, obtendrás una cuenta con gran capital, y una parte
+                de los beneficios que consigas con esas cuenta serán para ti.
+              </p>
+              <p>
+                Uno de los grandes problemas a la hora de empezar en el mundo
+                del trading es la falta de fondos, lo que se conoce como "buying
+                power". Este nuevo modelo de negocio cambia las reglas del
+                juego, y permite a buenos traders acceder a ese capital de una
+                forma mucho más rápida.
+              </p>
+            </div>
           </div>
         </section>
       </div>
