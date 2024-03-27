@@ -6,9 +6,13 @@ import CardReview from "../components/cards/CardReview.astro";
 import CardList from "../components/cards/CardList.astro";
 import CardPromo from "../components/cards/CardPromoHome.astro";
 import { firms } from "@/libs/data/firms";
-import { promotions } from "@/libs/data/promotions";
+import { promotions, allPromotions } from "@/libs/data/promotions";
 import { rulesList, instrumentList, softwareList } from "@/libs/data/lists";
 import "@/styles/scroll-down.css";
+import { shuffleArray } from "@/utils";
+
+const firmsKeys = shuffleArray(Object.keys(firms));
+const allPromotionsRandom = shuffleArray(allPromotions);
 ---
 
 <Layout
@@ -56,33 +60,45 @@ import "@/styles/scroll-down.css";
             <div
               class="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 lg:gap-[30px] md:gap-[20px] gap-[15px]"
             >
-              <CardReview logo={firms.FTMO.logoText} id="FTMO" />
-              <CardReview logo={firms.The5ers.logoText} id="The5ers" />
-              <CardReview logo={firms.TTP.logoText} id="TTP" />
-              <CardReview logo={firms.E8.logoText} id="E8" />
               <CardReview
-                logo={firms.TFT.logoText}
-                id="TFT"
+                logo={firms[firmsKeys[0]].logoText}
+                id={firmsKeys[0]}
+              />
+              <CardReview
+                logo={firms[firmsKeys[1]].logoText}
+                id={firmsKeys[1]}
+              />
+              <CardReview
+                logo={firms[firmsKeys[2]].logoText}
+                id={firmsKeys[2]}
+              />
+              <CardReview
+                logo={firms[firmsKeys[3]].logoText}
+                id={firmsKeys[3]}
+              />
+              <CardReview
+                logo={firms[firmsKeys[4]].logoText}
+                id={firmsKeys[4]}
                 extraClass="xs:block hidden"
               />
               <CardReview
-                logo={firms.FundedNext.logoText}
-                id="FundedNext"
+                logo={firms[firmsKeys[5]].logoText}
+                id={firmsKeys[5]}
                 extraClass="xs:block hidden"
               />
               <CardReview
-                logo={firms.GFT.logoText}
-                id="GFT"
+                logo={firms[firmsKeys[6]].logoText}
+                id={firmsKeys[6]}
                 extraClass="xs:block hidden"
               />
               <CardReview
-                logo={firms.SFT.logoText}
-                id="SFT"
+                logo={firms[firmsKeys[7]].logoText}
+                id={firmsKeys[7]}
                 extraClass="xs:block hidden"
               />
               <CardReview
-                logo={firms.FundingPips.logoText}
-                id="FundingPips"
+                logo={firms[firmsKeys[8]].logoText}
+                id={firmsKeys[8]}
                 extraClass="lg:hidden md:block hidden"
               />
             </div>
@@ -116,25 +132,25 @@ import "@/styles/scroll-down.css";
               class="grid lg:grid-cols-4 md:grid-cols-3 xs:grid-cols-2 grid-cols-1 place-items-center lg:gap-[30px] md:gap-[20px] gap-[15px]"
             >
               <CardPromo
-                promotion={promotions.BlueGuardian[0]}
-                logo={firms.BlueGuardian.logo}
-                firm="BlueGuardian"
+                promotion={allPromotionsRandom[0]}
+                logo={firms[allPromotionsRandom[0].firmId].logo}
+                firm={allPromotionsRandom[0].firmId}
               />
               <CardPromo
-                promotion={promotions.TFT[0]}
-                logo={firms.TFT.logo}
-                firm="TFT"
+                promotion={allPromotionsRandom[1]}
+                logo={firms[allPromotionsRandom[1].firmId].logo}
+                firm={allPromotionsRandom[1].firmId}
               />
               <CardPromo
-                promotion={promotions.GFT[0]}
-                logo={firms.GFT.logo}
-                firm="GFT"
+                promotion={allPromotionsRandom[2]}
+                logo={firms[allPromotionsRandom[2].firmId].logo}
+                firm={allPromotionsRandom[2].firmId}
               />
               <div class="lg:block md:hidden block h-full">
                 <CardPromo
-                  promotion={promotions.GFT[0]}
-                  logo={firms.GFT.logo}
-                  firm="GFT"
+                  promotion={allPromotionsRandom[3]}
+                  logo={firms[allPromotionsRandom[3].firmId].logo}
+                  firm={allPromotionsRandom[3].firmId}
                 />
               </div>
             </div>

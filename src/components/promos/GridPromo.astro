@@ -9,6 +9,6 @@ design-section">
   <div
     class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[40px] md:gap-[30px] gap-[20px]"
   >
-   {keys.map((key) => <CardFirmPromo firm={firms[key]} key={key} />)}
+   {keys.sort().map((key) => <CardFirmPromo firm={firms[key]} key={key} />)}
   </div>
 </div>

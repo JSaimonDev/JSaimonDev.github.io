@@ -1,6 +1,6 @@
 ---
 import { type Promotion } from "@/libs/data/promotions";
-import {firms} from "@/libs/data/firms"
+import { firms } from "@/libs/data/firms";
 
 interface Props {
   promotion: Promotion;
@@ -19,7 +19,7 @@ const { promotion, logo, firm } = Astro.props;
     Descuento
   </p>
   <p class="xl:text-6xl md:text-5xl sm:text-6xl text-5xl text-green">
-    {promotion.discount}%
+    {promotion.discount ? `${promotion.discount}%` : "0%"}
   </p>
   {
     promotion.benefitsShort &&

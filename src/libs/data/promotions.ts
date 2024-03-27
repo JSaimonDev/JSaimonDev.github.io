@@ -1,3 +1,5 @@
+import { shuffleArray } from "@/utils"
+
 export interface Promotion {
     discount?: number
     benefits?: string[]
@@ -127,6 +129,7 @@ export const promotions: { [key: string]: Promotion[] } = {
     SFT: [
         {
             firmId: "SFT",
+            discount: 35,
             benefits: [
                 "Sólo valido para cuentas de hasta 25k", "Limitado a 5 usos por persona"
             ],
@@ -178,3 +181,7 @@ export const promotions: { [key: string]: Promotion[] } = {
         }
     ]
 }
+
+
+export const allPromotions = Object.values(promotions)
+    .flatMap(array => array)
