@@ -108,7 +108,7 @@ export const firms: { [key: string]: Firm } = {
         name: "Funding Traders",
         logoText: "/images/firms/FundingTraders/FundingTraders-logo-500x250.webp",
         logoPromos: "/images/firms/FundingTraders/FundingTraders-logo-white.webp",
-        link: "https://fundingpips.com/",
+        link: "https://fundingtraders.com/",
         hasReview: false
     },
     DarwinexZero: {
@@ -129,7 +129,7 @@ export const firms: { [key: string]: Firm } = {
         name: "Audacity",
         logoText: "/images/firms/Audacity/Audacity-logo-500x250.webp",
         logoPromos: "/images/firms/Audacity/Audacity-logo-white.webp",
-        link: "https://e8markets.com/",
+        link: "https://www.audacitycapital.co.uk/es/",
         hasReview: false
     }
 }

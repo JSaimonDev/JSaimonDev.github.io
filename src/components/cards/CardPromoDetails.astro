@@ -17,7 +17,7 @@ const { discount, description, code, endDate, isNoPromo, benefits } =
 <section class="design-section text-center w-full">
   {
     isNoPromo ? (
-      <div class="xl:text-2xl sm:text-xl xs:text-lg text-base">
+      <div class="xl:text-xl sm:text-lg text-base">
         No hay ningúna promoción actualmente para esta empresa de fondeo.
       </div>
     ) : (
@@ -33,17 +33,24 @@ const { discount, description, code, endDate, isNoPromo, benefits } =
         <div class="lg:col-span-2 sm:col-span-3 col-span-6 cell">
           <div class="text-medium-grey">Finaliza el</div>
           <div class="flex justify-center items-center flex-1">
-            <div class="xl:text-3xl lg:text-2xl md:text-3xl xs:text-3xl text-xl">
-              {endDate && formatDate(endDate)}
-            </div>
+            {endDate ? (
+              <div class="xl:text-3xl lg:text-2xl md:text-3xl xs:text-3xl text-xl">
+                {formatDate(endDate)}
+              </div>
+            ) : (
+              <div class="xl:text-xl lg:text-lg md:text-xl xs:text-xl text-lg">
+                Sin fecha de límite
+              </div>
+            )}
           </div>
         </div>
         <div class="lg:col-span-2 col-span-6 cell">
           <div class="text-medium-grey">Introduce el código</div>
           <div class="flex justify-center items-center flex-1">
-            <div class="xl:text-3xl lg:text-2xl md:text-3xl xs:text-3xl text-xl">
-              {code}
-            </div>
+            <div
+              class="xl:text-3xl lg:text-2xl md:text-3xl xs:text-3xl text-xl"
+              set:html={code}
+            />
           </div>
         </div>
         {benefits &&
