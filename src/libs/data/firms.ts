@@ -43,7 +43,7 @@ export const firms: { [key: string]: Firm } = {
         logoPromos: "/images/firms/BlueGuardian/Blue-guardian-logo-white-500x250.webp",
         logo: "/images/firms/BlueGuardian/Blue-guardian-logo-400x400.webp",
         bgColor: "#FFF",
-        link: "https://www.blueguardian.com/",
+        link: "https://dashboard.blueguardian.com/newevaluation/?sl=2142",
         hasReview: false
     },
     GFT: {
@@ -52,7 +52,7 @@ export const firms: { [key: string]: Firm } = {
         logoPromos: "/images/firms/GFT/GFT-logo-white-500x250.webp",
         logo: "/images/firms/GFT/GFT-logo-400x400.webp",
         bgColor: "#002988",
-        link: "https://goatfundedtrader.com/",
+        link: "https://goatfundedtrader.com/aff/815/",
         hasReview: false
     },
     The5ers: {
@@ -89,14 +89,14 @@ export const firms: { [key: string]: Firm } = {
         name: "Skilled Funded Traders",
         logoText: "/images/firms/SFT/SFT-logo-500x250.webp",
         logoPromos: "/images/firms/SFT/SFT-logo-white.webp",
-        link: "https://skilledfundedtraders.com/",
+        link: "https://skilledfundedtraders.com/sl/824/",
         hasReview: false
     },
     TFF: {
         name: "True Forex Funds",
         logoText: "/images/firms/TFF/TFF-logo-500x250.webp",
         logoPromos: "/images/firms/TFF/TFF-logo-white.webp",
-        link: "https://trueforexfunds.com/",
+        link: "https://trueforexfunds.com/#73744",
         hasReview: false
     },
     FundingPips: {
@@ -110,7 +110,7 @@ export const firms: { [key: string]: Firm } = {
         name: "Funding Traders",
         logoText: "/images/firms/FundingTraders/FundingTraders-logo-500x250.webp",
         logoPromos: "/images/firms/FundingTraders/FundingTraders-logo-white.webp",
-        link: "https://fundingtraders.com/",
+        link: "https://app.fundingtraders.com/Login?ref=ztcwzju",
         hasReview: false
     },
     DarwinexZero: {
@@ -124,7 +124,7 @@ export const firms: { [key: string]: Firm } = {
         name: "E8 Markets",
         logoText: "/images/firms/E8/E8-logo-500x250.webp",
         logoPromos: "/images/firms/E8/E8-logo-white.webp",
-        link: "https://e8markets.com/",
+        link: "https://e8markets.com/a/thegodfunded",
         hasReview: false
     },
     Audacity: {
